@@ -48,6 +48,7 @@ jobs:
           mkdir -p public/data
           cp index.html public/index.html
           cp data/daily_jobs.json public/data/daily_jobs.json
+          cp data/cv_search_profiles.json public/data/cv_search_profiles.json
           touch public/.nojekyll
       - name: Configure Pages
         uses: actions/configure-pages@v5
