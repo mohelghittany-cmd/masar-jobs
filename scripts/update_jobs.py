@@ -3,7 +3,8 @@
 import datetime as dt
 import html, json, re, urllib.request
 from pathlib import Path
-from matcher import assess, plain
+from matcher import assess, plain, required_section
+from profile_matcher import rank_profiles
 
 HERE=Path(__file__).resolve().parents[1]
 OUT=HERE/"data"/"daily_jobs.json"
@@ -52,13 +53,24 @@ def add(out,title,company,location,url,desc,posted,source,remote=False,salary=""
     if not destinations:return
     assessment=assess(title, desc, location, destinations)
     if assessment is None:return
+    description=plain(desc)
+    cv_matches=rank_profiles(title, required_section(description), description,
+                              assessment["field"], destinations[0])
+    if not cv_matches:return
+    strongest=cv_matches[0]
+    assessment["matchScore"]=strongest["score"]
+    assessment["matchTier"]="strong" if strongest["score"]>=78 else "review"
+    assessment["cvMatches"]=cv_matches
+    assessment["bestCVId"]=strongest["id"]
+    assessment["bestCVLabel"]=strongest["nameEn"]
+    assessment["screeningMethod"]="title_and_requirements_plus_cv_profiles_v3"
     out.append({
         "id":source+":"+re.sub(r"[^a-zA-Z0-9]","_",url)[-140:],
         "title":title,"company":company,"countries":destinations,
         "country":destinations[0],"url":url,"source":source,
         "publishedAt":d.date().isoformat() if d else "","location":location,
         "remote":bool(remote),"salary":str(salary or ""),
-        "excerpt":re.sub(r"\s+"," ",plain(desc))[:320],
+        "excerpt":re.sub(r"\s+"," ",description)[:320],
         **assessment
     })
 def arbeitnow():
@@ -123,7 +135,7 @@ def main():
     rows=sorted(merged.values(),key=lambda x:(x.get("publishedAt") or "",x["title"]),reverse=True)
     OUT.parent.mkdir(parents=True,exist_ok=True)
     OUT.write_text(json.dumps({"lastUpdateUtc":NOW.isoformat(timespec="seconds"),"sourcesSucceeded":passed,
-        "sourcesFailed":failed,"limitations":"Role title AND full description screened automatically. Not employer, eligibility, or visa verified.",
+        "sourcesFailed":failed,"limitations":"Title, responsibilities and job requirements compared to sanitized CV role profiles. Estimated ATS-like score, not employer ATS, work authorization, or a visa decision.",
         "jobs":rows},ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print("Saved",len(rows),"jobs")
 if __name__=="__main__":main()
