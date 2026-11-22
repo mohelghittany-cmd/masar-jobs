@@ -1,7 +1,1755 @@
 {
-  "lastUpdateUtc": null,
-  "sourcesSucceeded": [],
+  "lastUpdateUtc": "2026-11-22T15:18:53+00:00",
+  "sourcesSucceeded": [
+    "Arbeitnow",
+    "Remotive",
+    "Jobicy"
+  ],
   "sourcesFailed": [],
-  "limitations": "Initial snapshot. Run GitHub Actions to collect job listings. Not independently verified.",
-  "jobs": []
+  "limitations": "Partial public feeds only; not employer, visa or opening verified.",
+  "jobs": [
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_com_jobs_companies_acemateai_werkstudentin_growth_business_development_berlin_116041",
+      "title": "Werkstudent:in Growth & Business Development (m/w/d)",
+      "company": "acemate.ai",
+      "countries": [
+        "DE"
+      ],
+      "country": "DE",
+      "field": "Business Development",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.com/jobs/companies/acemateai/werkstudentin-growth-business-development-berlin-116041",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "Berlin",
+      "remote": false,
+      "salary": "",
+      "excerpt": "acemate baut die KI-Infrastruktur für die Bildung von morgen. Unsere erste Finanzierungsrunde ist abgeschlossen und wir stehen vor einer spannenden Wachstumsphase. Dafür suchen wir dich als treibende Kraft für unser weiteres Wachstum. Über acemate Jeder Mensch lernt anders, aber kaum jemand bekommt ",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:tps___www_arbeitnow_com_jobs_companies_kirstein_gmbh_technische_systeme_technical_sales_manager_defence_industrial_solutions_augsburg_261975",
+      "title": "Technical Sales Manager Defence & Industrial Solutions (m/w/d)",
+      "company": "Kirstein GmbH Technische Systeme",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Business Development",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.com/jobs/companies/kirstein-gmbh-technische-systeme/technical-sales-manager-defence-industrial-solutions-augsburg-261975",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "Augsburg",
+      "remote": false,
+      "salary": "",
+      "excerpt": "Die Kirstein GmbH Technische Systeme mit Sitz in Augsburg/Kriegshaber ist ein mittelständischer, familiengeführter Entwicklungs- und Fertigungspartner mit rund 70 Mitarbeitern. Wir entwickeln und fertigen komplexe elektronische, mechanische und mechatronische Systeme für nationale und internationale",
+      "verified": false
+    },
+    {
+      "id": "Jobicy:https___jobicy_com_jobs_163818_technical_account_manager_c_uas",
+      "title": "Technical Account Manager - C-UAS",
+      "company": "Axon",
+      "countries": [
+        "BE"
+      ],
+      "country": "BE",
+      "field": "Client Relationship Management",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://jobicy.com/jobs/163818-technical-account-manager-c-uas",
+      "source": "Jobicy",
+      "publishedAt": "2026-11-22",
+      "location": "Belgium",
+      "remote": true,
+      "salary": "",
+      "excerpt": "Join Axon and be a Force for Good. At Axon, we’re on a mission to Protect Life. We’re explorers, pursuing society’s most critical safety and justice issues with our ecosystem of devices and cloud software. Like our products, we work better together. We connect with candor and care, seeking out diver",
+      "verified": false
+    },
+    {
+      "id": "Jobicy:https___jobicy_com_jobs_163817_technical_account_manager_15",
+      "title": "Technical Account Manager",
+      "company": "Axon",
+      "countries": [
+        "DE"
+      ],
+      "country": "DE",
+      "field": "Client Relationship Management",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://jobicy.com/jobs/163817-technical-account-manager-15",
+      "source": "Jobicy",
+      "publishedAt": "2026-11-22",
+      "location": "Germany",
+      "remote": true,
+      "salary": "",
+      "excerpt": "Join Axon and be a Force for Good. At Axon, we’re on a mission to Protect Life. We’re explorers, pursuing society’s most critical safety and justice issues with our ecosystem of devices and cloud software. Like our products, we work better together. We connect with candor and care, seeking out diver",
+      "verified": false
+    },
+    {
+      "id": "Jobicy:https___jobicy_com_jobs_163844_sr_account_manager_amer",
+      "title": "Sr Account Manager, AMER",
+      "company": "Customer.io",
+      "countries": [
+        "CA",
+        "US"
+      ],
+      "country": "CA",
+      "field": "Client Relationship Management",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://jobicy.com/jobs/163844-sr-account-manager-amer",
+      "source": "Jobicy",
+      "publishedAt": "2026-11-22",
+      "location": "Canada, USA",
+      "remote": true,
+      "salary": "",
+      "excerpt": "About Customer.io Over 8,000 companies — from scrappy startups to global brands — use our platform to send billions of emails, push notifications, in-app messages, and SMS every day. Customer.io powers automated communication that people actually want to receive. We help teams send smarter, more rel",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_com_jobs_companies_asus_computer_gmbh_service_operations_specialist_ratingen_438120",
+      "title": "Service Operations Specialist (m/w/d)",
+      "company": "ASUS Computer GmbH",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Operations",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.com/jobs/companies/asus-computer-gmbh/service-operations-specialist-ratingen-438120",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "Ratingen",
+      "remote": false,
+      "salary": "",
+      "excerpt": "Standort: 40880 Ratingen | Bereich: Service Operations | Einstieg: Ab sofort | Anstellungsart: Vollzeit | Homeoffice: hybrid | Befristung: Ja ÜBER ASUS Als vielfach ausgezeichnetes Unternehmen liegt unsere Leidenschaft in der Innovation. Wir entwickeln Produkte für das digitale Leben der Gegenwart s",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:tnow_com_jobs_companies_personalberatung_pillong_senior_sales_manager_international_key_account_manager_pv_montagesysteme_saarbrucken_226872",
+      "title": "Senior Sales Manager International / Key Account Manager PV-Montagesysteme (m/w/d)",
+      "company": "Personalberatung Pillong",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Client Relationship Management",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.com/jobs/companies/personalberatung-pillong/senior-sales-manager-international-key-account-manager-pv-montagesysteme-saarbrucken-226872",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "Saarbrücken",
+      "remote": true,
+      "salary": "",
+      "excerpt": "Internationale Kunden gewinnen. Marktanteile ausbauen. Energiewende industriell skalieren. Unser Mandant ist eine weltweit tätige, mittelständisch geprägte Industriegruppe mit mehreren tausend Mitarbeitenden, hoher Fertigungstiefe und einer starken internationalen Marktpräsenz. Die Gruppe steht seit",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_com_jobs_companies_perfect_jobs_senior_sales_manager_national_hanover_440916",
+      "title": "Senior Sales Manager - National (M/W/D)",
+      "company": "Perfect Jobs",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Business Development",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.com/jobs/companies/perfect-jobs/senior-sales-manager-national-hanover-440916",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "Hanover",
+      "remote": false,
+      "salary": "",
+      "excerpt": "Nationale Verantwortung für Wachstum im industriellen Umfeld Viele Vertriebspositionen versprechen Verantwortung. Diese Rolle entscheidet darüber, wie schnell ein Marktführer im Bereich industrieller Dienstleistungen in den kommenden Jahren wächst. Gesucht wird keine Person, die bestehende Kunden ve",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_com_jobs_companies_perfect_jobs_senior_sales_manager_national_dortmund_343505",
+      "title": "Senior Sales Manager - National (M/W/D)",
+      "company": "Perfect Jobs",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Business Development",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.com/jobs/companies/perfect-jobs/senior-sales-manager-national-dortmund-343505",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "Dortmund",
+      "remote": false,
+      "salary": "",
+      "excerpt": "Nationale Verantwortung für Wachstum im industriellen Umfeld Viele Vertriebspositionen versprechen Verantwortung. Diese Rolle entscheidet darüber, wie schnell ein Marktführer im Bereich industrieller Dienstleistungen in den kommenden Jahren wächst. Gesucht wird keine Person, die bestehende Kunden ve",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_com_jobs_companies_perfect_jobs_senior_sales_manager_national_munich_433642",
+      "title": "Senior Sales Manager - National (M/W/D)",
+      "company": "Perfect Jobs",
+      "countries": [
+        "DE"
+      ],
+      "country": "DE",
+      "field": "Business Development",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.com/jobs/companies/perfect-jobs/senior-sales-manager-national-munich-433642",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "Munich",
+      "remote": false,
+      "salary": "",
+      "excerpt": "Nationale Verantwortung für Wachstum im industriellen Umfeld Viele Vertriebspositionen versprechen Verantwortung. Diese Rolle entscheidet darüber, wie schnell ein Marktführer im Bereich industrieller Dienstleistungen in den kommenden Jahren wächst. Gesucht wird keine Person, die bestehende Kunden ve",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_com_jobs_companies_perfect_jobs_senior_sales_manager_national_hamburg_315912",
+      "title": "Senior Sales Manager - National (M/W/D)",
+      "company": "Perfect Jobs",
+      "countries": [
+        "DE"
+      ],
+      "country": "DE",
+      "field": "Business Development",
+      "language": "English + German B1",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.com/jobs/companies/perfect-jobs/senior-sales-manager-national-hamburg-315912",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "Hamburg",
+      "remote": false,
+      "salary": "",
+      "excerpt": "Nationale Verantwortung für Wachstum im industriellen Umfeld Viele Vertriebspositionen versprechen Verantwortung. Diese Rolle entscheidet darüber, wie schnell ein Marktführer im Bereich industrieller Dienstleistungen in den kommenden Jahren wächst. Gesucht wird keine Person, die bestehende Kunden ve",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_com_jobs_companies_perfect_jobs_senior_sales_manager_national_berlin_305694",
+      "title": "Senior Sales Manager - National (M/W/D)",
+      "company": "Perfect Jobs",
+      "countries": [
+        "DE"
+      ],
+      "country": "DE",
+      "field": "Business Development",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.com/jobs/companies/perfect-jobs/senior-sales-manager-national-berlin-305694",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "Berlin",
+      "remote": false,
+      "salary": "",
+      "excerpt": "Nationale Verantwortung für Wachstum im industriellen Umfeld Viele Vertriebspositionen versprechen Verantwortung. Diese Rolle entscheidet darüber, wie schnell ein Marktführer im Bereich industrieller Dienstleistungen in den kommenden Jahren wächst. Gesucht wird keine Person, die bestehende Kunden ve",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_com_jobs_companies_perfect_jobs_senior_sales_manager_national_thundorf_in_unterfranken_169987",
+      "title": "Senior Sales Manager - National (M/W/D)",
+      "company": "Perfect Jobs",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Business Development",
+      "language": "English + German B1",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.com/jobs/companies/perfect-jobs/senior-sales-manager-national-thundorf-in-unterfranken-169987",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "Thundorf in Unterfranken",
+      "remote": true,
+      "salary": "",
+      "excerpt": "Nationale Verantwortung für Wachstum im industriellen Umfeld Viele Vertriebspositionen versprechen Verantwortung. Diese Rolle entscheidet darüber, wie schnell ein Marktführer im Bereich industrieller Dienstleistungen in den kommenden Jahren wächst. Gesucht wird keine Person, die bestehende Kunden ve",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_com_jobs_companies_perfect_jobs_senior_sales_manager_national_cologne_349622",
+      "title": "Senior Sales Manager - National (M/W/D)",
+      "company": "Perfect Jobs",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Business Development",
+      "language": "English + German B1",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.com/jobs/companies/perfect-jobs/senior-sales-manager-national-cologne-349622",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "Cologne",
+      "remote": false,
+      "salary": "",
+      "excerpt": "Nationale Verantwortung für Wachstum im industriellen Umfeld Viele Vertriebspositionen versprechen Verantwortung. Diese Rolle entscheidet darüber, wie schnell ein Marktführer im Bereich industrieller Dienstleistungen in den kommenden Jahren wächst. Gesucht wird keine Person, die bestehende Kunden ve",
+      "verified": false
+    },
+    {
+      "id": "Jobicy:https___jobicy_com_jobs_156447_senior_manager_customer_success_management_emea_apj",
+      "title": "Senior Manager, Customer Success Management - EMEA/APJ",
+      "company": "Chainguard",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Client Relationship Management",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://jobicy.com/jobs/156447-senior-manager-customer-success-management-emea-apj",
+      "source": "Jobicy",
+      "publishedAt": "2026-11-22",
+      "location": "EMEA",
+      "remote": true,
+      "salary": "",
+      "excerpt": "Chainguard is the trusted source for open source. By delivering hardened, secure, and production-ready builds of all the open source software engineers and AI agents rely on, Chainguard helps organizations build faster, stay compliant, and eliminate risk. Our customers include Fortune 500 enterprise",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_co_uk_jobs_companies_coreweaveu_senior_director_emea_enterprise_business_development_london_397080",
+      "title": "Senior Director - EMEA Enterprise Business Development",
+      "company": "Coreweaveu",
+      "countries": [
+        "UK"
+      ],
+      "country": "UK",
+      "field": "Business Development",
+      "language": "English only",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.co.uk/jobs/companies/coreweaveu/senior-director-emea-enterprise-business-development-london-397080",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "London",
+      "remote": false,
+      "salary": "",
+      "excerpt": "<div class=\"content-intro\"><div> <div> <div class=\"gmail_quote\"> <div> <div><span id=\"m_-113912706363268805m_-2746164444908759431gmail-docs-internal-guid-131e4fb0-7fff-b4e9-ff50-e8cf32449b1b\">CoreWeave is The Essential Cloud for AI™. Built for pioneers by pioneers, CoreWeave delivers a platform of t",
+      "verified": false
+    },
+    {
+      "id": "Jobicy:https___jobicy_com_jobs_163755_senior_customer_success_manager_federal_3",
+      "title": "Senior Customer Success Manager - Federal",
+      "company": "Tenable",
+      "countries": [
+        "US"
+      ],
+      "country": "US",
+      "field": "Client Relationship Management",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://jobicy.com/jobs/163755-senior-customer-success-manager-federal-3",
+      "source": "Jobicy",
+      "publishedAt": "2026-11-22",
+      "location": "USA",
+      "remote": true,
+      "salary": "",
+      "excerpt": "Who is Tenable ? Tenable® is the Exposure Management company. Over 40,000 organizations around the globe rely on Tenable to understand and reduce cyber risk. Our global employees support 65 percent of the Fortune 500, 50 percent of the Global 2000, and large government agencies. Come be part of our ",
+      "verified": false
+    },
+    {
+      "id": "Jobicy:https___jobicy_com_jobs_163849_senior_customer_success_emea",
+      "title": "Senior Customer Success - EMEA",
+      "company": "Filigran",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Client Relationship Management",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://jobicy.com/jobs/163849-senior-customer-success-emea",
+      "source": "Jobicy",
+      "publishedAt": "2026-11-22",
+      "location": "Europe",
+      "remote": true,
+      "salary": "",
+      "excerpt": "🌀 The Company Founded in 2022, Filigran is a global cybersecurity company on a mission to empower defense teams to be proactive through open-source solutions that uncover threats and drive action. Filigran stands out in the cybersecurity ecosystem through its open-source, AI-powered and threat-infor",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_fr_jobs_companies_alan_senior_account_executive_and_key_account_management_recruitment_day_paris_france_451985",
+      "title": "Senior Account Executive and Key Account Management Recruitment Day 💫",
+      "company": "Alan",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Business Development",
+      "language": "English only",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.fr/jobs/companies/alan/senior-account-executive-and-key-account-management-recruitment-day-paris-france-451985",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "Paris, France",
+      "remote": false,
+      "salary": "",
+      "excerpt": "Health can’t wait . Not for symptoms to get worse. Not for a six‑month appointment. Not for a system to catch up. But that’s exactly how healthcare works today. You wait, until you can’t. Alan exists to end the wait. Health is a universal right, and we believe this right can only become real when it",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_fr_jobs_companies_agicap_senior_account_executive_france_lyon_366320",
+      "title": "Senior Account Executive - FRANCE",
+      "company": "Agicap",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Business Development",
+      "language": "English only",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.fr/jobs/companies/agicap/senior-account-executive-france-lyon-366320",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "Lyon 🇫🇷",
+      "remote": false,
+      "salary": "",
+      "excerpt": "About Agicap Created in Lyon in 2016 by three French entrepreneurs, Agicap is one of the fastest growing scale-ups in Europe, with over 8000 customers, 700 employees and fast revenue growth (7x between 2021 and 2024). Agicap is part of the French Tech 120, rewarding the most promising startups in Fr",
+      "verified": false
+    },
+    {
+      "id": "Jobicy:https___jobicy_com_jobs_163799_sales_manager_anz",
+      "title": "Sales Manager, ANZ",
+      "company": "Cloudbeds",
+      "countries": [
+        "AU",
+        "NZ"
+      ],
+      "country": "AU",
+      "field": "Business Development",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://jobicy.com/jobs/163799-sales-manager-anz",
+      "source": "Jobicy",
+      "publishedAt": "2026-11-22",
+      "location": "Australia, New Zealand",
+      "remote": true,
+      "salary": "",
+      "excerpt": "What Makes Cloudbeds Unique At Cloudbeds , we're not just building software, we're transforming hospitality. Our platform powers hotels across 150 countries, processing billions in bookings annually. From boutique properties to large hotel groups, we help hoteliers transform operations and uplevel t",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_com_jobs_companies_hurracom_sales_manager_usa_100_remote_stuttgart_145855",
+      "title": "Sales Manager USA (f/m/d) | 100% Remote",
+      "company": "hurra.com",
+      "countries": [
+        "DE"
+      ],
+      "country": "DE",
+      "field": "Business Development",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.com/jobs/companies/hurracom/sales-manager-usa-100-remote-stuttgart-145855",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "Stuttgart",
+      "remote": true,
+      "salary": "",
+      "excerpt": "Languages: German + Native-Level English Full-time | Start Immediately You don’t sell hype. You deliver measurable business results. At Ads Defender, we help companies protect their advertising budgets from click fraud and recover 10–15% of wasted ad spend. With a proven track record across the DACH",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_com_jobs_companies_perfect_jobs_sales_manager_industrie_technische_dienstleistungen_berlin_123073",
+      "title": "Sales Manager Industrie / Technische Dienstleistungen (m/w/d)",
+      "company": "Perfect Jobs",
+      "countries": [
+        "DE"
+      ],
+      "country": "DE",
+      "field": "Business Development",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.com/jobs/companies/perfect-jobs/sales-manager-industrie-technische-dienstleistungen-berlin-123073",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "Berlin",
+      "remote": false,
+      "salary": "",
+      "excerpt": "Ihre Aufgabe - Sales im produktionsnahen Umfeld Sie sind im Sales und Außendienst zu Hause, verstehen industrielle Abläufe und bewegen sich sicher im Umfeld von Produktion, Maschinen und technischen Prozessen? Dann erwartet Sie hier eine Aufgabe, in der Sie Neukunden aktiv gewinnen, Märkte erschließ",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_com_jobs_companies_perfect_jobs_sales_manager_vertriebsmanager_industrie_magdeburg_72153",
+      "title": "Sales Manager / Vertriebsmanager Industrie (m/w/d)",
+      "company": "Perfect Jobs",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Business Development",
+      "language": "English only",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.com/jobs/companies/perfect-jobs/sales-manager-vertriebsmanager-industrie-magdeburg-72153",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "Magdeburg",
+      "remote": false,
+      "salary": "",
+      "excerpt": "Ihre Aufgabe - Ihr Vertriebsgebiet führen mit Kunden im produktionsnahen Umfeld Sie sind im Vertrieb und Außendienst zu Hause, verstehen industrielle Abläufe und bewegen sich sicher im Umfeld von Produktion, Maschinen und technischen Prozessen? Dann erwartet Sie hier eine Aufgabe, in der Sie Neukund",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_com_jobs_companies_salespotentials_sales_manager_i_exhibition_display_solutions_b2b_berlin_306882",
+      "title": "Sales Manager (m/w/x) I Exhibition & Display Solutions (B2B)",
+      "company": "SalesPotentials",
+      "countries": [
+        "DE"
+      ],
+      "country": "DE",
+      "field": "Business Development",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.com/jobs/companies/salespotentials/sales-manager-i-exhibition-display-solutions-b2b-berlin-306882",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "Berlin",
+      "remote": false,
+      "salary": "",
+      "excerpt": "Unser Auftraggeber ist ein international führender Anbieter im Bereich modularer Messebau- und Präsentationssysteme und verfügt über langjährige Erfahrung in der Entwicklung innovativer, nachhaltiger Systemlösungen. Das Unternehmen entwickelt und vertreibt hochwertige Aluminium-Rahmensysteme, mit de",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:_arbeitnow_com_jobs_companies_galvanek_energiesysteme_sachbearbeiter_fordermittelmanagement_customer_support_warmepumpen_pv_nuremberg_243120",
+      "title": "Sachbearbeiter Fördermittelmanagement / Customer Support - Wärmepumpen & PV (m/w/d)",
+      "company": "Galvanek Energiesysteme",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Customer Service",
+      "language": "English only",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.com/jobs/companies/galvanek-energiesysteme/sachbearbeiter-fordermittelmanagement-customer-support-warmepumpen-pv-nuremberg-243120",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "Nuremberg",
+      "remote": false,
+      "salary": "",
+      "excerpt": "Als Customer Support Manager bist du die erste Stimme für unsere Kunden nach dem Vertragsabschluss, begrüßt sie telefonisch, unterstützt sie bei allen Anliegen zu Fördermitteln und sorgst für eine exzellente Customer Journey. Galvanek Energiesysteme ist ein eigenfinanziertes Scale up. Wir vertreiben",
+      "verified": false
+    },
+    {
+      "id": "Jobicy:https___jobicy_com_jobs_163795_renewals_account_manager",
+      "title": "Renewals Account Manager",
+      "company": "Zscaler",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Client Relationship Management",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://jobicy.com/jobs/163795-renewals-account-manager",
+      "source": "Jobicy",
+      "publishedAt": "2026-11-22",
+      "location": "Singapore",
+      "remote": true,
+      "salary": "",
+      "excerpt": "Zscaler (NASDAQ: ZS) accelerates digital transformation so customers can be more agile, efficient, resilient, and secure. The Zscaler Zero Trust Exchange platform protects thousands of customers from cyberattacks and data loss by securely connecting users, devices, and applications in any location. ",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_com_jobs_companies_werkia_praktikum_customer_success_onboarding_berlin_106485",
+      "title": "Praktikum Customer Success & Onboarding (m/w/d)",
+      "company": "Werkia",
+      "countries": [
+        "DE"
+      ],
+      "country": "DE",
+      "field": "Client Relationship Management",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.com/jobs/companies/werkia/praktikum-customer-success-onboarding-berlin-106485",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "Berlin",
+      "remote": false,
+      "salary": "",
+      "excerpt": "Du willst in einem Unternehmen arbeiten, in dem Deine Stärken im Umgang mit Menschen geschätzt werden – und wo Du echten Impact hast? Dann bist Du bei Werkia richtig! Wir sind ein dynamisches Startup aus Berlin, das 2024 gegründet wurde und sich voll und ganz auf das Handwerk spezialisiert: SHK (San",
+      "verified": false
+    },
+    {
+      "id": "Jobicy:https___jobicy_com_jobs_163802_partner_sales_manager_3",
+      "title": "Partner Sales Manager",
+      "company": "Fivetran",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Business Development",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://jobicy.com/jobs/163802-partner-sales-manager-3",
+      "source": "Jobicy",
+      "publishedAt": "2026-11-22",
+      "location": "Japan",
+      "remote": true,
+      "salary": "",
+      "excerpt": "From Fivetran ’s founding until now, our mission has remained the same: to make access to data as simple and reliable as electricity. With Fivetran, customer data arrives in their warehouses, canonical and ready to query, with no engineering or maintenance required. We’re proud that more organizatio",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_co_uk_jobs_companies_twilio_new_business_account_executive_hebrew_speaker_499476",
+      "title": "New Business Account Executive (Hebrew speaker)",
+      "company": "Twilio",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Business Development",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.co.uk/jobs/companies/twilio/new-business-account-executive-hebrew-speaker-499476",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "",
+      "remote": false,
+      "salary": "",
+      "excerpt": "<div class=\"content-intro\"><p><strong>Who we are&nbsp;</strong></p> <p>At Twilio, we’re shaping the future of communications, all from the comfort of our homes. We deliver innovative solutions to<a class=\"c-link\" href=\"https://customers.twilio.com/\" target=\"_blank\" data-stringify-link=\"https://custo",
+      "verified": false
+    },
+    {
+      "id": "Jobicy:https___jobicy_com_jobs_163740_named_account_manager_federal_dow",
+      "title": "Named Account Manager - Federal DOW",
+      "company": "Tenable",
+      "countries": [
+        "US"
+      ],
+      "country": "US",
+      "field": "Client Relationship Management",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://jobicy.com/jobs/163740-named-account-manager-federal-dow",
+      "source": "Jobicy",
+      "publishedAt": "2026-11-22",
+      "location": "USA",
+      "remote": true,
+      "salary": "",
+      "excerpt": "Who is Tenable ? Tenable® is the Exposure Management company. Over 40,000 organizations around the globe rely on Tenable to understand and reduce cyber risk. Our global employees support 65 percent of the Fortune 500, 50 percent of the Global 2000, and large government agencies. Come be part of our ",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_fr_jobs_companies_alan_key_account_manager_public_sector_paris_france_319956",
+      "title": "Key Account Manager - Public Sector",
+      "company": "Alan",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Client Relationship Management",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.fr/jobs/companies/alan/key-account-manager-public-sector-paris-france-319956",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "Paris, France",
+      "remote": false,
+      "salary": "",
+      "excerpt": "Health can’t wait . Not for symptoms to get worse. Not for a six‑month appointment. Not for a system to catch up. But that’s exactly how healthcare works today. You wait, until you can’t. Alan exists to end the wait. Health is a universal right, and we believe this right can only become real when it",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_fr_jobs_companies_alan_key_account_manager_paris_france_bordeaux_france_marseille_france_86084",
+      "title": "Key Account Manager",
+      "company": "Alan",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Client Relationship Management",
+      "language": "English only",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.fr/jobs/companies/alan/key-account-manager-paris-france-bordeaux-france-marseille-france-86084",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "Paris, France; Bordeaux, France; Marseille, France",
+      "remote": false,
+      "salary": "",
+      "excerpt": "Health can’t wait . Not for symptoms to get worse. Not for a six‑month appointment. Not for a system to catch up. But that’s exactly how healthcare works today. You wait, until you can’t. Alan exists to end the wait. Health is a universal right, and we believe this right can only become real when it",
+      "verified": false
+    },
+    {
+      "id": "Jobicy:https___jobicy_com_jobs_163731_key_account_manager_4",
+      "title": "Key Account Manager",
+      "company": "Pair Eyewear, Inc.",
+      "countries": [
+        "CA",
+        "US"
+      ],
+      "country": "CA",
+      "field": "Client Relationship Management",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://jobicy.com/jobs/163731-key-account-manager-4",
+      "source": "Jobicy",
+      "publishedAt": "2026-11-22",
+      "location": "Canada, USA",
+      "remote": true,
+      "salary": "",
+      "excerpt": "At Pair Eyewear, we believe in placing our people at the center of everything we do. We are dedicated to fostering a joyful and dynamic workplace, providing our employees with an environment where they can thrive and make a meaningful impact. Pair Eyewear is looking for a Key Account Manager (North ",
+      "verified": false
+    },
+    {
+      "id": "Jobicy:https___jobicy_com_jobs_163781_head_of_marketing_compliance_2",
+      "title": "Head of Marketing Compliance",
+      "company": "OKX",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Compliance",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://jobicy.com/jobs/163781-head-of-marketing-compliance-2",
+      "source": "Jobicy",
+      "publishedAt": "2026-11-22",
+      "location": "EMEA",
+      "remote": true,
+      "salary": "",
+      "excerpt": "Who We Are At OKX , we believe that the future will be reshaped by crypto, and ultimately contribute to every individual's freedom. OKX is a leading crypto exchange, and the developer of OKX Wallet, giving millions access to crypto trading and decentralized crypto applications (dApps). OKX is also a",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_com_jobs_companies_rentsales_head_of_key_account_management_business_development_bremen_477501",
+      "title": "Head of Key Account Management & Business Development (m/w/d)",
+      "company": "RentSales",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Business Development",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.com/jobs/companies/rentsales/head-of-key-account-management-business-development-bremen-477501",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "Bremen",
+      "remote": true,
+      "salary": "",
+      "excerpt": "Als Experte für Vertrieb unterstützt Sales Recruiters by RentSales Unternehmen bei der Personalsuche, Ausbildung und Führung von Vertriebsprofis, wobei ein spezieller Fokus auf den vertrieblichen Erfolgsfaktoren liegt. Unser Auftraggeber ist ein international tätiges, familiengeführtes Industrieunte",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_co_uk_jobs_companies_cfoinsights_graduate_sales_executive_at_cfo_london_212641",
+      "title": "Graduate sales executive at CFO",
+      "company": "Cfoinsights",
+      "countries": [
+        "UK"
+      ],
+      "country": "UK",
+      "field": "Business Development",
+      "language": "English only",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.co.uk/jobs/companies/cfoinsights/graduate-sales-executive-at-cfo-london-212641",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "London",
+      "remote": false,
+      "salary": "",
+      "excerpt": "<p>Do you thrive in a fast-paced environment, where you gain a tremendous amount of responsibility? Do you want to be part of an exceptional entrepreneurial team with motivated and extremely driven people? Are you curious or passionate about creating events? If so, you might be our Graduate sales ex",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_com_jobs_companies_resus_consult_gmbh_export_sales_manager_tiefbau_schwerpunkt_uk_irland_skandinavien_munster_455094",
+      "title": "Export Sales Manager Tiefbau (m/w/d) Schwerpunkt UK, Irland, Skandinavien",
+      "company": "ReSus Consult GmbH",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Business Development",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.com/jobs/companies/resus-consult-gmbh/export-sales-manager-tiefbau-schwerpunkt-uk-irland-skandinavien-munster-455094",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "Münster",
+      "remote": false,
+      "salary": "",
+      "excerpt": "Die ReSus Consult GmbH ist die auf das Bauwesen spezialisierte Boutique- Personalberatung . Wir führen Besetzungen von Fach- und Führungskräften in den Geschäftsfeldern BAU , SHK|TGA und Maschinenbau bis hin zur Vorstandsebene aus. Executive Search mit unserem Fokus auf Nachhaltigkeit - sustainable ",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_fr_jobs_companies_illumio_enterprise_sales_executive_paris_37261",
+      "title": "Enterprise Sales Executive",
+      "company": "Illumio",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Business Development",
+      "language": "English only",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.fr/jobs/companies/illumio/enterprise-sales-executive-paris-37261",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "France",
+      "remote": false,
+      "salary": "",
+      "excerpt": "Onwards Together! Illumio is the leader in ransomware and breach containment, redefining how organizations contain cyberattacks and enable operational resilience. Powered by the Illumio AI Security Graph, our breach containment platform identifies and contains threats across hybrid multi-cloud envir",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_nl_jobs_companies_jamf_enterprise_account_executive_new_logo_mea_amsterdam_486394",
+      "title": "Enterprise Account Executive | New Logo | MEA",
+      "company": "Jamf",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Business Development",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.nl/jobs/companies/jamf/enterprise-account-executive-new-logo-mea-amsterdam-486394",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "Amsterdam",
+      "remote": false,
+      "salary": "",
+      "excerpt": "<div class=\"content-intro\"><p class=\"p1\">At Jamf, we believe in an open, flexible culture based on respect and trust. Our track record and thriving work environment all stem from the freedom we grant ourselves to get the job done right. We take pride in helping tens of thousands of customers around ",
+      "verified": false
+    },
+    {
+      "id": "Jobicy:https___jobicy_com_jobs_163782_enterprise_account_executive_new_logo_mea",
+      "title": "Enterprise Account Executive | New Logo | MEA",
+      "company": "Jamf",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Business Development",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://jobicy.com/jobs/163782-enterprise-account-executive-new-logo-mea",
+      "source": "Jobicy",
+      "publishedAt": "2026-11-22",
+      "location": "Netherlands",
+      "remote": true,
+      "salary": "",
+      "excerpt": "At Jamf , we believe in an open, flexible culture based on respect and trust. Our track record and thriving work environment all stem from the freedom we grant ourselves to get the job done right. We take pride in helping tens of thousands of customers around the globe succeed with Apple. The secret",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:lan_enterprise_account_executive_paris_france_bordeaux_france_lyon_france_marseille_france_biarritz_france_nantes_france_annecy_france_28017",
+      "title": "Enterprise Account Executive",
+      "company": "Alan",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Business Development",
+      "language": "English only",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.fr/jobs/companies/alan/enterprise-account-executive-paris-france-bordeaux-france-lyon-france-marseille-france-biarritz-france-nantes-france-annecy-france-28017",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "Paris, France; Bordeaux, France; Lyon, France; Marseille, France; Biarritz, France; Nantes, France; Annecy, France",
+      "remote": false,
+      "salary": "",
+      "excerpt": "Health can’t wait . Not for symptoms to get worse. Not for a six‑month appointment. Not for a system to catch up. But that’s exactly how healthcare works today. You wait, until you can’t. Alan exists to end the wait. Health is a universal right, and we believe this right can only become real when it",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_fr_jobs_companies_alan_enterprise_account_executive_paris_france_314998",
+      "title": "Enterprise Account Executive",
+      "company": "Alan",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Business Development",
+      "language": "English only",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.fr/jobs/companies/alan/enterprise-account-executive-paris-france-314998",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "Paris, France",
+      "remote": false,
+      "salary": "",
+      "excerpt": "Health can’t wait . Not for symptoms to get worse. Not for a six‑month appointment. Not for a system to catch up. But that’s exactly how healthcare works today. You wait, until you can’t. Alan exists to end the wait. Health is a universal right, and we believe this right can only become real when it",
+      "verified": false
+    },
+    {
+      "id": "Jobicy:https___jobicy_com_jobs_163809_customer_success_producer_south_korea",
+      "title": "Customer Success Producer (South Korea)",
+      "company": "Aghanim",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Client Relationship Management",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://jobicy.com/jobs/163809-customer-success-producer-south-korea",
+      "source": "Jobicy",
+      "publishedAt": "2026-11-22",
+      "location": "South Korea",
+      "remote": true,
+      "salary": "",
+      "excerpt": "Aghanim is an integrated commerce, liveops automation, community engagement, and payments platform for video games. Mobile games have traditionally depended on app stores for distribution, payments, and player relationships. We believe there is a better way. Aghanim helps game studios build direct r",
+      "verified": false
+    },
+    {
+      "id": "Jobicy:https___jobicy_com_jobs_163801_customer_success_producer_japan",
+      "title": "Customer Success Producer (Japan)",
+      "company": "Aghanim",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Client Relationship Management",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://jobicy.com/jobs/163801-customer-success-producer-japan",
+      "source": "Jobicy",
+      "publishedAt": "2026-11-22",
+      "location": "Japan",
+      "remote": true,
+      "salary": "",
+      "excerpt": "Aghanim is an integrated commerce, liveops automation, community engagement, and payments platform for video games. Mobile games have traditionally depended on app stores for distribution, payments, and player relationships. We believe there is a better way. Aghanim helps game studios build direct r",
+      "verified": false
+    },
+    {
+      "id": "Jobicy:https___jobicy_com_jobs_163806_customer_success_producer_china",
+      "title": "Customer Success Producer (China)",
+      "company": "Aghanim",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Client Relationship Management",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://jobicy.com/jobs/163806-customer-success-producer-china",
+      "source": "Jobicy",
+      "publishedAt": "2026-11-22",
+      "location": "China",
+      "remote": true,
+      "salary": "",
+      "excerpt": "Aghanim is an integrated commerce, liveops automation, community engagement, and payments platform for video games. Mobile games have traditionally depended on app stores for distribution, payments, and player relationships. We believe there is a better way. Aghanim helps game studios build direct r",
+      "verified": false
+    },
+    {
+      "id": "Jobicy:https___jobicy_com_jobs_156468_customer_success_manager_ii_emea",
+      "title": "Customer Success Manager II - EMEA",
+      "company": "Tines",
+      "countries": [
+        "IE"
+      ],
+      "country": "IE",
+      "field": "Client Relationship Management",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://jobicy.com/jobs/156468-customer-success-manager-ii-emea",
+      "source": "Jobicy",
+      "publishedAt": "2026-11-22",
+      "location": "Ireland",
+      "remote": true,
+      "salary": "",
+      "excerpt": "Tines is the intelligent workflow company that powers some of the world's most important workflows. Tines has been supporting IT and security teams from a diverse range of customers, including Canva, Reddit, SAP, Coinbase, Mars, Fin (Intercom), and McKesson. Tines 3B, launched in 2026, is the next g",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_com_jobs_companies_factfinder_customer_success_manager_all_genders_berlin_96217",
+      "title": "Customer Success Manager (all genders)",
+      "company": "FactFinder",
+      "countries": [
+        "DE"
+      ],
+      "country": "DE",
+      "field": "Client Relationship Management",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.com/jobs/companies/factfinder/customer-success-manager-all-genders-berlin-96217",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "Berlin",
+      "remote": false,
+      "salary": "",
+      "excerpt": "Your mission Strategisches Customer Success Management für ein definiertes Portfolio nationaler und internationaler Bestandskunden – mit klarem Fokus auf Adoption, Value Realization und langfristige Kundenbindung Aufbau und Pflege vertrauensvoller Kundenbeziehungen zu relevanten Stakeholdern – vom o",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:www_arbeitnow_fr_jobs_companies_verifone_customer_success_operations_coordinator_6_month_contract_boulogne_billancourt_hauts_de_seine_420888",
+      "title": "Customer Success & Operations Coordinator - 6 Month Contract",
+      "company": "Verifone",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Client Relationship Management",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.fr/jobs/companies/verifone/customer-success-operations-coordinator-6-month-contract-boulogne-billancourt-hauts-de-seine-420888",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "Boulogne-Billancourt, Hauts-de-Seine",
+      "remote": false,
+      "salary": "",
+      "excerpt": "<h2><span style=\"color: rgb(35, 111, 161);\"><span data-contrast=\"none\"><span data-ccp-parastyle=\"heading 1\">Pourquoi </span><span data-ccp-parastyle=\"heading 1\">Verifone</span></span><span data-ccp-props=\"{&quot;134245418&quot;:true,&quot;335559738&quot;:320,&quot;335559739&quot;:140}\">&nbsp;</span>",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_com_jobs_companies_tiens_europe_gmbh_customer_service_intern_berlin_430484",
+      "title": "Customer Service Intern (m/w/d)",
+      "company": "Tiens Europe GmbH",
+      "countries": [
+        "DE"
+      ],
+      "country": "DE",
+      "field": "Customer Service",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.com/jobs/companies/tiens-europe-gmbh/customer-service-intern-berlin-430484",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "Berlin",
+      "remote": false,
+      "salary": "",
+      "excerpt": "Tianshi GmbH is a part of Tiens Group, a multinational conglomerate specializing in health, wellness, and lifestyle products. With its business reaching over 224 countries, TIENS Group has set up branches in 117 countries & regions and has established strategic alliances with top ranked enterprises ",
+      "verified": false
+    },
+    {
+      "id": "Jobicy:https___jobicy_com_jobs_163835_customer_service_agent_spanish_1200_2100",
+      "title": "Customer Service Agent: Spanish (12:00 - 21:00)",
+      "company": "Fever",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Customer Service",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://jobicy.com/jobs/163835-customer-service-agent-spanish-1200-2100",
+      "source": "Jobicy",
+      "publishedAt": "2026-11-22",
+      "location": "Brazil",
+      "remote": true,
+      "salary": "",
+      "excerpt": "Hey there! We’re Fever , the world’s leading tech platform for culture and live entertainment. Our mission? To democratize access to culture and entertainment. With our proprietary cutting-edge technology and data-driven approach, we’re revolutionizing the way people engage with live entertainment. ",
+      "verified": false
+    },
+    {
+      "id": "Jobicy:https___jobicy_com_jobs_163829_customer_service_agent_korean_morning_shift",
+      "title": "Customer Service Agent: Korean (morning shift)",
+      "company": "Fever",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Customer Service",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://jobicy.com/jobs/163829-customer-service-agent-korean-morning-shift",
+      "source": "Jobicy",
+      "publishedAt": "2026-11-22",
+      "location": "Brazil",
+      "remote": true,
+      "salary": "",
+      "excerpt": "Hey there! We’re Fever , the world’s leading tech platform for culture and live entertainment. Our mission? To democratize access to culture and entertainment. With our proprietary cutting-edge technology and data-driven approach, we’re revolutionizing the way people engage with live entertainment. ",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_com_jobs_companies_onskinery_gmbh_co_kg_customer_service_digital_transformation_coordinator_pleinfeld_377800",
+      "title": "Customer Service & Digital Transformation Coordinator (m/w/d)",
+      "company": "ONSKINERY GmbH & Co. KG",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Customer Service",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.com/jobs/companies/onskinery-gmbh-co-kg/customer-service-digital-transformation-coordinator-pleinfeld-377800",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "Pleinfeld",
+      "remote": false,
+      "salary": "",
+      "excerpt": "Über ONSKINERY ONSKINERY ist der Spezialist für Body und Legwear und bietet die perfekte Bühne für Marken – und für Deine Erfolgsgeschichte. Als Experten schaffen wir für unsere Kunden jeden Tag Einfachheit, Komfort und Nutzen. Das verstehen wir unter: CREATING CONVENIENCE. Wir verbinden mittelständ",
+      "verified": false
+    },
+    {
+      "id": "Jobicy:https___jobicy_com_jobs_163828_customer_onboarding_operations_manager_2",
+      "title": "Customer Onboarding Operations Manager",
+      "company": "Dandy",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "KYC / CDD / EDD",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://jobicy.com/jobs/163828-customer-onboarding-operations-manager-2",
+      "source": "Jobicy",
+      "publishedAt": "2026-11-22",
+      "location": "Mexico",
+      "remote": true,
+      "salary": "",
+      "excerpt": "Dandy is transforming the massive and antiquated dental industry—an industry worth over $400B. Backed by some of the world’s leading venture capital firms, we’re on an ambitious mission to simplify and modernize every function of the dental practice through technology. As we expand our reach globall",
+      "verified": false
+    },
+    {
+      "id": "Jobicy:https___jobicy_com_jobs_163847_commercial_account_executive_belgium",
+      "title": "Commercial Account Executive, Belgium",
+      "company": "Horizon3.ai",
+      "countries": [
+        "BE"
+      ],
+      "country": "BE",
+      "field": "Business Development",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://jobicy.com/jobs/163847-commercial-account-executive-belgium",
+      "source": "Jobicy",
+      "publishedAt": "2026-11-22",
+      "location": "Belgium",
+      "remote": true,
+      "salary": "",
+      "excerpt": "Get to Know Us Horizon3 is a fast-growing, cybersecurity company dedicated to the mission of enabling organisations to proactively find and fix and verify exploitable attack vectors before criminals exploit them. Our flagship product, the NodeZeroTM platform, delivers production-safe autonomous pent",
+      "verified": false
+    },
+    {
+      "id": "Jobicy:https___jobicy_com_jobs_163785_commercial_account_executive_berlin",
+      "title": "Commercial Account Executive - Berlin",
+      "company": "Zscaler",
+      "countries": [
+        "DE"
+      ],
+      "country": "DE",
+      "field": "Business Development",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://jobicy.com/jobs/163785-commercial-account-executive-berlin",
+      "source": "Jobicy",
+      "publishedAt": "2026-11-22",
+      "location": "Germany",
+      "remote": true,
+      "salary": "",
+      "excerpt": "Zscaler (NASDAQ: ZS) accelerates digital transformation so customers can be more agile, efficient, resilient, and secure. The Zscaler Zero Trust Exchange platform protects thousands of customers from cyberattacks and data loss by securely connecting users, devices, and applications in any location. ",
+      "verified": false
+    },
+    {
+      "id": "Jobicy:https___jobicy_com_jobs_163822_clinical_compliance_specialist",
+      "title": "Clinical Compliance Specialist",
+      "company": "Alimentiv",
+      "countries": [
+        "CA"
+      ],
+      "country": "CA",
+      "field": "Compliance",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://jobicy.com/jobs/163822-clinical-compliance-specialist",
+      "source": "Jobicy",
+      "publishedAt": "2026-11-22",
+      "location": "Canada, Poland, Portugal, Romania",
+      "remote": true,
+      "salary": "",
+      "excerpt": "Alimentiv is a global CRO with a singular focus: advancing therapies for patients with gastrointestinal diseases. GI is our WHY and for more than 30 years that purpose has driven our scientific rigour, operational excellence, and deep therapeutic expertise, including supporting more than 70% of IBD ",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_com_jobs_companies_albatros_personal_gmbh_call_center_agent_montag_bis_freitag_kaarst_283774",
+      "title": "Call Center Agent m/w/d Montag bis Freitag",
+      "company": "Albatros Personal GmbH",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Customer Service",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.com/jobs/companies/albatros-personal-gmbh/call-center-agent-montag-bis-freitag-kaarst-283774",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "Kaarst",
+      "remote": false,
+      "salary": "",
+      "excerpt": "Wir suchen für unsere namhaften Kunden im Raum Kaarst mehrere Kundendienstberater (m/w/d) in Teil und Vollzeit. Keine Wochenendarbeit! Sie bearbeiten selbstständig Kundenanfragen und stehen den Kunden mit Rat und Tat zur Seite. Es erwartet Sie eine angemessene Entlohnung, ein komfortables Arbeitsumf",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_co_uk_jobs_companies_pandektes_business_development_representative_uk_london_269898",
+      "title": "Business Development Representative - UK",
+      "company": "Pandektes",
+      "countries": [
+        "UK"
+      ],
+      "country": "UK",
+      "field": "Business Development",
+      "language": "English only",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.co.uk/jobs/companies/pandektes/business-development-representative-uk-london-269898",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "London",
+      "remote": false,
+      "salary": "",
+      "excerpt": "We're looking for a driven and curious Business Development Representative to help us bring Pandektes to legal professionals across our UK market. You'll be the first point of contact for new customers and owning the full top-of-funnel: prospecting, outreach, and booking high-quality meetings. This ",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:om_jobs_companies_search4talent_gmbh_co_kg_business_development_manager_geografische_informationssysteme_gis_software_vertrieb_munich_480542",
+      "title": "Business Development Manager Geografische Informationssysteme (GIS) - Software Vertrieb",
+      "company": "Search4Talent GmbH & Co. KG",
+      "countries": [
+        "DE"
+      ],
+      "country": "DE",
+      "field": "Business Development",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.com/jobs/companies/search4talent-gmbh-co-kg/business-development-manager-geografische-informationssysteme-gis-software-vertrieb-munich-480542",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "Munich",
+      "remote": false,
+      "salary": "",
+      "excerpt": "Aufgaben: Vertrieb von Geo- und Infrastruktur-Lösungen (eigene Softwarelösung und individuelle IT-Projekte) Level: Professional (ab 2+ Jahren Berufserfahrung) oder Senior Professional Anstellungsart: Unbefristete Festanstellung Wir suchen einen Business Development- und Vertriebsmanager (m/w/d) für ",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_com_jobs_companies_mischok_gmbh_business_development_manager_individualsoftware_augsburg_289342",
+      "title": "Business Development Manager (m/w/d) - Individualsoftware",
+      "company": "Mischok GmbH",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Business Development",
+      "language": "English + German B2",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.com/jobs/companies/mischok-gmbh/business-development-manager-individualsoftware-augsburg-289342",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "Augsburg",
+      "remote": false,
+      "salary": "",
+      "excerpt": "Wir sind Mischok Wir entwickeln Software, die Unternehmen wirklich weiterbringt. Wir brennen für stabil laufende Systeme, die langfristig Mehrwert für unsere Kunden generieren. Wir arbeiten partnerschaftlich und transparent mit unseren Kunden zusammen mit dem Ziel, sie in die Lage zu versetzen, ihre",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_fr_jobs_companies_viralnation_account_manager_influencer_marketing_france_216368",
+      "title": "Account Manager, Influencer Marketing (France)",
+      "company": "Viralnation",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Client Relationship Management",
+      "language": "English only",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.fr/jobs/companies/viralnation/account-manager-influencer-marketing-france-216368",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "",
+      "remote": false,
+      "salary": "",
+      "excerpt": "<div class=\"content-intro\"><p><span style=\"font-weight: 400;\">At </span><strong>Viral Nation,</strong><span style=\"font-weight: 400;\"> we specialize in building social-first ecosystems for brands to connect with the modern consumer journey. Our integrated solutions align strategy, talent, media, and",
+      "verified": false
+    },
+    {
+      "id": "Jobicy:https___jobicy_com_jobs_163850_account_manager_france_benelux_m_f_x",
+      "title": "Account Manager, France & Benelux (M/F/X)",
+      "company": "Plasmidsaurus",
+      "countries": [
+        "BE"
+      ],
+      "country": "BE",
+      "field": "Client Relationship Management",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://jobicy.com/jobs/163850-account-manager-france-benelux-m-f-x",
+      "source": "Jobicy",
+      "publishedAt": "2026-11-22",
+      "location": "Belgium",
+      "remote": true,
+      "salary": "",
+      "excerpt": "About Plasmidsaurus Plasmidsaurus is on a mission to accelerate new cures and promote a healthier planet by unlocking a new level of productivity for scientists. Our sequencing services are used daily by thousands of innovators, including Nobel laureates, Fortune 100 pharma, and over 70,000 scientis",
+      "verified": false
+    },
+    {
+      "id": "Jobicy:https___jobicy_com_jobs_163848_account_manager_dach_m_f_d",
+      "title": "Account Manager, DACH (m/f/d)",
+      "company": "Plasmidsaurus",
+      "countries": [
+        "DE"
+      ],
+      "country": "DE",
+      "field": "Client Relationship Management",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://jobicy.com/jobs/163848-account-manager-dach-m-f-d",
+      "source": "Jobicy",
+      "publishedAt": "2026-11-22",
+      "location": "Germany",
+      "remote": true,
+      "salary": "",
+      "excerpt": "About Plasmidsaurus Plasmidsaurus is on a mission to accelerate new cures and promote a healthier planet by unlocking a new level of productivity for scientists. Our sequencing services are used daily by thousands of innovators, including Nobel laureates, Fortune 100 pharma, and over 70,000 scientis",
+      "verified": false
+    },
+    {
+      "id": "Jobicy:https___jobicy_com_jobs_163790_account_manager_ii",
+      "title": "Account Manager II",
+      "company": "StackAdapt",
+      "countries": [
+        "AU"
+      ],
+      "country": "AU",
+      "field": "Client Relationship Management",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://jobicy.com/jobs/163790-account-manager-ii",
+      "source": "Jobicy",
+      "publishedAt": "2026-11-22",
+      "location": "Australia",
+      "remote": true,
+      "salary": "",
+      "excerpt": "StackAdapt is the leading technology company that empowers marketers to reach, engage, and convert audiences with precision. With 465 billion automated optimizations per second, the AI-powered StackAdapt Marketing Platform seamlessly connects brand and performance marketing to drive measurable resul",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_co_uk_jobs_companies_vanta_account_executive_growth_uki_london_423682",
+      "title": "Account Executive, Growth - UK&I",
+      "company": "Vanta",
+      "countries": [
+        "UK"
+      ],
+      "country": "UK",
+      "field": "Business Development",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.co.uk/jobs/companies/vanta/account-executive-growth-uki-london-423682",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "London, UK",
+      "remote": false,
+      "salary": "",
+      "excerpt": "At Vanta, our mission is to help businesses earn and prove trust. We believe that security should be monitored and verified continuously, and we empower companies to practice better security and prove it with ease. Vanta has a kind and talented team, and while some have prior security experience, ma",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_fr_jobs_companies_alan_account_executive_small_businesses_paris_france_430631",
+      "title": "Account Executive 🇫🇷 (Small Businesses)",
+      "company": "Alan",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Business Development",
+      "language": "English only",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.fr/jobs/companies/alan/account-executive-small-businesses-paris-france-430631",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "Paris, France",
+      "remote": false,
+      "salary": "",
+      "excerpt": "Health can’t wait . Not for symptoms to get worse. Not for a six‑month appointment. Not for a system to catch up. But that’s exactly how healthcare works today. You wait, until you can’t. Alan exists to end the wait. Health is a universal right, and we believe this right can only become real when it",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:_account_executive_small_businesses_paris_france_bordeaux_france_lyon_france_marseille_france_biarritz_france_nantes_france_annecy_fr_138598",
+      "title": "Account Executive 🇫🇷 (Small Businesses)",
+      "company": "Alan",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Business Development",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.fr/jobs/companies/alan/account-executive-small-businesses-paris-france-bordeaux-france-lyon-france-marseille-france-biarritz-france-nantes-france-annecy-fr-138598",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "Paris, France; Bordeaux, France; Lyon, France; Marseille, France; Biarritz, France; Nantes, France; Annecy, France",
+      "remote": false,
+      "salary": "",
+      "excerpt": "Health can’t wait . Not for symptoms to get worse. Not for a six‑month appointment. Not for a system to catch up. But that’s exactly how healthcare works today. You wait, until you can’t. Alan exists to end the wait. Health is a universal right, and we believe this right can only become real when it",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:an_account_executive_mid_market_paris_france_bordeaux_france_lyon_france_marseille_france_biarritz_france_nantes_france_annecy_france_335442",
+      "title": "Account Executive 🇫🇷 (Mid-market)",
+      "company": "Alan",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Business Development",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.fr/jobs/companies/alan/account-executive-mid-market-paris-france-bordeaux-france-lyon-france-marseille-france-biarritz-france-nantes-france-annecy-france-335442",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-22",
+      "location": "Paris, France; Bordeaux, France; Lyon, France; Marseille, France; Biarritz, France; Nantes, France; Annecy, France",
+      "remote": false,
+      "salary": "",
+      "excerpt": "Health can’t wait . Not for symptoms to get worse. Not for a six‑month appointment. Not for a system to catch up. But that’s exactly how healthcare works today. You wait, until you can’t. Alan exists to end the wait. Health is a universal right, and we believe this right can only become real when it",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_fr_jobs_companies_doctolib_field_sales_fr_account_executive_lyon_386348",
+      "title": "[Field Sales - FR ] Account Executive Lyon (x/f/m)",
+      "company": "Doctolib",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Business Development",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.fr/jobs/companies/doctolib/field-sales-fr-account-executive-lyon-386348",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-21",
+      "location": "Lyon",
+      "remote": false,
+      "salary": "",
+      "excerpt": "Vos missions dans l'équipe commerciale La santé est l'une des choses les plus précieuses que nous ayons. Or, les soignants manquent parfois de temps et de moyens pour mener leur mission à bien. Chez Doctolib, nous voulons améliorer leur quotidien grâce à des services efficaces et innovants. Nos tech",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_fr_jobs_companies_equativ_senior_account_manager_demand_france_paris_496",
+      "title": "Senior Account Manager Demand, France",
+      "company": "Equativ",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Client Relationship Management",
+      "language": "English only",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.fr/jobs/companies/equativ/senior-account-manager-demand-france-paris-496",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-21",
+      "location": "Paris",
+      "remote": false,
+      "salary": "",
+      "excerpt": "About the role As Senior Account Manager Demand, you will own and grow our key demand relationships in your European market: DSPs, curators, agencies and holding company trading desks. You will be the trusted post-sale partner for these clients, making sure their programmatic campaigns on our curati",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_nl_jobs_companies_theydo_senior_account_executive_benelux_netherlands_439752",
+      "title": "Senior Account Executive - Benelux",
+      "company": "Theydo",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Business Development",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.nl/jobs/companies/theydo/senior-account-executive-benelux-netherlands-439752",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-21",
+      "location": "Netherlands",
+      "remote": false,
+      "salary": "",
+      "excerpt": "Help fix customer-centricity at scale Every company wants to become more customer-centric. At TheyDo, we make that ambition real. Our AI-powered journey management platform helps the world’s largest enterprises align around what matters most: their customers. By bringing scattered data and teams tog",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_nl_jobs_companies_grafanalabs_major_account_executive_remote_netherlands_435173",
+      "title": "Major Account Executive | Remote | Netherlands",
+      "company": "grafanalabs",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Business Development",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.nl/jobs/companies/grafanalabs/major-account-executive-remote-netherlands-435173",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-21",
+      "location": "",
+      "remote": false,
+      "salary": "",
+      "excerpt": "<div class=\"content-intro\"><p>Grafana Labs is the company behind Grafana Cloud, the fully managed observability platform trusted by more than 10,000 organizations to ensure reliability, resolve incidents faster, and optimize telemetry at scale. Built on open source and open standards and designed fo",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_fr_jobs_companies_parallel_key_account_manager_private_accounts_paris_122939",
+      "title": "Key Account Manager - Private Accounts",
+      "company": "Parallel",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Client Relationship Management",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.fr/jobs/companies/parallel/key-account-manager-private-accounts-paris-122939",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-21",
+      "location": "Paris",
+      "remote": false,
+      "salary": "",
+      "excerpt": "At Parallel, we build AI agents that help healthcare organizations automate their administrative processes and unlock additional revenue, starting with medical coding. Today, up to 25% of healthcare spending is lost to manual, repetitive administrative tasks. Legacy software hasn't helped: it has ma",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_ch_jobs_companies_prostaff_schweiz_gmbh_senior_customer_service_38_crm_consultant_bern_37008",
+      "title": "Senior Customer Service & CRM Consultant",
+      "company": "PROSTAFF Schweiz GmbH",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Customer Service",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.ch/jobs/companies/prostaff-schweiz-gmbh/senior-customer-service-38-crm-consultant-bern-37008",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-20",
+      "location": "Bern",
+      "remote": false,
+      "salary": "",
+      "excerpt": "Für ein Kundenprojekt im Bahn- und Logistikumfeld suchen wir eine erfahrene Persönlichkeit im Bereich Customer Service und CRM. Du unterstützt ein bestehendes Projektteam bei der Weiterentwicklung und Optimierung der Kundenserviceprozesse sowie bei der Implementierung und Automatisierung von CRM-Lös",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_nl_jobs_companies_exotec_remote_senior_account_manager_warehouse_automation_benelux_netherlands_21998",
+      "title": "Senior Account Manager - Warehouse Automation - BENELUX",
+      "company": "Exotec",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Client Relationship Management",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.nl/jobs/companies/exotec/remote-senior-account-manager-warehouse-automation-benelux-netherlands-21998",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-20",
+      "location": "Netherlands",
+      "remote": true,
+      "salary": "",
+      "excerpt": "At Exotec, we design elegant, plug-and-play, and reliable end-to-end warehouse robotics solutions. As a leading Original Equipment Manufacturer (OEM) and Integrator, we support some of the world’s most iconic brands in their transition to automation. We’re proud to design technology that doesn’t jus",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:tps___www_arbeitnow_nl_jobs_companies_exotec_remote_senior_account_manager_warehouse_automation_japanese_speaking_benelux_netherlands_325427",
+      "title": "Senior Account Manager - Warehouse Automation (Japanese Speaking) - BENELUX",
+      "company": "Exotec",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Client Relationship Management",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.nl/jobs/companies/exotec/remote-senior-account-manager-warehouse-automation-japanese-speaking-benelux-netherlands-325427",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-20",
+      "location": "Netherlands",
+      "remote": true,
+      "salary": "",
+      "excerpt": "At Exotec, we design elegant, plug-and-play, and reliable end-to-end warehouse robotics solutions. As a leading Original Equipment Manufacturer (OEM) and Integrator, we support some of the world’s most iconic brands in their transition to automation. We’re proud to design technology that doesn’t jus",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:obs_companies_patrique_mercier_recruitment_fr_remote_german_speaking_customer_service_representative_work_in_athens_greece_switzerland_43451",
+      "title": "German Speaking Customer Service Representative - Work In Athens, Greece",
+      "company": "Patrique Mercier Recruitment Fr",
+      "countries": [
+        "CH"
+      ],
+      "country": "CH",
+      "field": "Customer Service",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.ch/jobs/companies/patrique-mercier-recruitment-fr/remote-german-speaking-customer-service-representative-work-in-athens-greece-switzerland-43451",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-20",
+      "location": "Switzerland",
+      "remote": true,
+      "salary": "",
+      "excerpt": "Looking for a hassle-free hiring process? We've got you covered — from application to contract signing in just 48 hours! German Speaking Customer Service Representative About Mercier Consultancy Group Mercier Consultancy Group is a premier international staffing firm, serving as a trusted partner fo",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_nl_jobs_companies_flexport_account_executive_smb_amsterdam_398519",
+      "title": "Account Executive, SMB",
+      "company": "Flexport",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Business Development",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.nl/jobs/companies/flexport/account-executive-smb-amsterdam-398519",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-20",
+      "location": "Amsterdam",
+      "remote": false,
+      "salary": "",
+      "excerpt": "<div class=\"content-intro\"><h2><strong>About Flexport:&nbsp;</strong></h2> <p>At Flexport, we believe global trade can move the human race forward. That’s why it’s our mission to make global commerce so easy there will be more of it. We’re shaping the future of a $10T industry with solutions powered",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_nl_jobs_companies_gitlab_remote_new_business_account_executive_nordics_119212",
+      "title": "New Business Account Executive - Nordics",
+      "company": "gitlab",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Business Development",
+      "language": "English only",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.nl/jobs/companies/gitlab/remote-new-business-account-executive-nordics-119212",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-19",
+      "location": "Remote",
+      "remote": true,
+      "salary": "",
+      "excerpt": "<div class=\"content-intro\"><p>GitLab is the intelligent orchestration platform for DevSecOps. GitLab enables organizations to increase developer productivity, improve operational efficiency, reduce security and compliance risk, and accelerate digital transformation. More than 50 million registered u",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_nl_jobs_companies_churchdesk_junior_account_executive_groningen_280698",
+      "title": "Junior Account Executive",
+      "company": "ChurchDesk",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Business Development",
+      "language": "English only",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.nl/jobs/companies/churchdesk/junior-account-executive-groningen-280698",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-19",
+      "location": "Groningen, Groningen, Netherlands",
+      "remote": false,
+      "salary": "",
+      "excerpt": "We help churches develop. Behind every church are people who give their time and heart to their community, and we want to make their work easier. Our software brings administration and communication together in one platform, so there’s less time for paperwork and more time for people. More than 10,0",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_nl_jobs_companies_skynrg_director_business_development_amsterdam_349133",
+      "title": "Director Business Development",
+      "company": "Skynrg",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Business Development",
+      "language": "English only",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.nl/jobs/companies/skynrg/director-business-development-amsterdam-349133",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-19",
+      "location": "Amsterdam",
+      "remote": false,
+      "salary": "",
+      "excerpt": "About the Role As Director Business Development at SkyNRG, you will lead the team responsible for growing our SAFc business with large corporate customers. You will set the sales strategy, develop key customer relationships, and build the commercial capabilities needed to support the next stage of g",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_nl_jobs_companies_shopfully_digital_account_manager_netherlands_the_hague_358513",
+      "title": "Digital Account Manager - Netherlands",
+      "company": "Shopfully",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Client Relationship Management",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.nl/jobs/companies/shopfully/digital-account-manager-netherlands-the-hague-358513",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-19",
+      "location": "The Hague",
+      "remote": false,
+      "salary": "",
+      "excerpt": "We are the platform turning browsing into shopping . We connect 200 million shoppers with deals they love while boosting local sales for hundreds of top retailers and brands. We help consumers save time and money while making smart shopping decisions, and we support retailers and brands in engaging ",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_nl_jobs_companies_caseware_account_executive_apeldoorn_netherlands_13778",
+      "title": "Account Executive",
+      "company": "Caseware",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Business Development",
+      "language": "English only",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.nl/jobs/companies/caseware/account-executive-apeldoorn-netherlands-13778",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-19",
+      "location": "Apeldoorn, Netherlands",
+      "remote": false,
+      "salary": "",
+      "excerpt": "Caseware combines over 35 years of industry expertise with AI-powered technology to transform how audit and accounting professionals work. Serving organizations across 130 countries, we bring intelligent automation directly into audit and financial reporting workflows—helping professionals reduce ma",
+      "verified": false
+    },
+    {
+      "id": "Arbeitnow:https___www_arbeitnow_nl_jobs_companies_red_gate_account_executive_amsterdam_336577",
+      "title": "Account Executive",
+      "company": "Red Gate",
+      "countries": [
+        "GLOBAL"
+      ],
+      "country": "GLOBAL",
+      "field": "Business Development",
+      "language": "English only",
+      "visa": "unknown",
+      "url": "https://www.arbeitnow.nl/jobs/companies/red-gate/account-executive-amsterdam-336577",
+      "source": "Arbeitnow",
+      "publishedAt": "2026-11-19",
+      "location": "Amsterdam",
+      "remote": false,
+      "salary": "",
+      "excerpt": "At a glance Location: Amsterdam In-office expectation: At least twice a week Employment type: Permanent, 40 hours per week, Monday to Friday Salary: 52000 – 75000 EURO Base plus Commission (50/50 Split) Why this role exists: To grow Redgate's presence with mid-market companies across Benelux and the",
+      "verified": false
+    },
+    {
+      "id": "Remotive:https___remotive_com_remote_jobs_customer_service_customer_service_representative_2091171",
+      "title": "Customer Service Representative",
+      "company": "ShyftOff",
+      "countries": [
+        "US"
+      ],
+      "country": "US",
+      "field": "Customer Service",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://remotive.com/remote-jobs/customer-service/customer-service-representative-2091171",
+      "source": "Remotive",
+      "publishedAt": "2026-11-11",
+      "location": "USA",
+      "remote": true,
+      "salary": "$14 - $20/hour",
+      "excerpt": "Work From Home. Pick Your Schedule. Get Paid Weekly. Welcome to ShyftOff! Tired of traditional jobs that expect you to build your life around a fixed schedule? At ShyftOff, we believe work should fit into your life, not the other way around! We're changing the way customer service works by connectin",
+      "verified": false
+    },
+    {
+      "id": "Remotive:https___remotive_com_remote_jobs_customer_service_us_remote_patient_care_advocate_customer_service_2091168",
+      "title": "US Remote Patient Care Advocate (Customer Service)",
+      "company": "VXI Global Solutions",
+      "countries": [
+        "US"
+      ],
+      "country": "US",
+      "field": "Customer Service",
+      "language": "Other",
+      "visa": "unknown",
+      "url": "https://remotive.com/remote-jobs/customer-service/us-remote-patient-care-advocate-customer-service-2091168",
+      "source": "Remotive",
+      "publishedAt": "2026-11-06",
+      "location": "USA",
+      "remote": true,
+      "salary": "$25k - $35k",
+      "excerpt": "Job Title: Patient Care Advocate Job Location: Remote About Us: We are a dedicated team focused on improving access to affordable prescription medications for patients. By partnering with insurance companies, healthcare providers, and pharmacies, we work to reduce the financial burden of medications",
+      "verified": false
+    }
+  ]
 }
