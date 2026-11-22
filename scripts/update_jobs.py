@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """Masar: refresh job feed from public, key-free APIs. Not a visa verification service."""
 import datetime as dt
-import html, json, re, urllib.request
+import html, json, re, time, urllib.request
+from urllib.parse import urlencode
 from pathlib import Path
 from matcher import assess, plain, required_section
-from profile_matcher import rank_profiles
+from profile_matcher import rank_profiles, load as load_cv_profiles
 
 HERE=Path(__file__).resolve().parents[1]
 OUT=HERE/"data"/"daily_jobs.json"
@@ -86,12 +87,28 @@ def remotive():
             j.get("description"),j.get("publication_date"),"Remotive",True,j.get("salary"))
     return a
 def jobicy():
-    a=[]
-    for j in get("https://jobicy.com/api/v2/remote-jobs?count=100").get("jobs",[]):
-        salary=" - ".join(str(x) for x in (j.get("annualSalaryMin"),j.get("annualSalaryMax")) if x)
-        add(a,j.get("jobTitle"),j.get("companyName"),j.get("jobGeo"),j.get("url"),
-            j.get("jobDescription") or j.get("jobExcerpt"),j.get("pubDate"),"Jobicy",True,salary)
+    # Each keyword is derived from an actual sanitized CV career track.
+    # Jobicy officially supports tag= for title/description keyword search.
+    # Once per day, with a short delay, using its free keyless public feed.
+    a=[]; ok=0; errors=[]
+    profile_keywords=[p["apiSearchKeyword"] for p in load_cv_profiles()["profiles"]]
+    for q in dict.fromkeys(profile_keywords):
+        try:
+            url="https://jobicy.com/api/v2/remote-jobs?"+urlencode({"count":100,"tag":q})
+            for j in get(url).get("jobs",[]):
+                salary=" - ".join(str(x) for x in (j.get("annualSalaryMin"),j.get("annualSalaryMax")) if x)
+                add(a,j.get("jobTitle"),j.get("companyName"),j.get("jobGeo"),j.get("url"),
+                    j.get("jobDescription") or j.get("jobExcerpt"),j.get("pubDate"),"Jobicy",True,salary)
+            ok+=1
+        except Exception as e:
+            errors.append(str(q)+": "+type(e).__name__+" "+str(e)[:80])
+        time.sleep(0.3)
+    if not ok:
+        raise RuntimeError("All CV-keyword queries failed: "+"; ".join(errors[:3]))
+    if errors: print("Jobicy search partial failures",len(errors))
+    print("Jobicy successful CV keywords",ok,"of",len(profile_keywords))
     return a
+
 def greenhouse_board(board, label):
     """Live public employer ATS, with each posting's full job description."""
     a=[]
