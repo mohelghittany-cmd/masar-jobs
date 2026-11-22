@@ -79,7 +79,7 @@ def required_section(full):
     if found:
         ix = found[0]
         return " ".join(lines[ix:ix+60])[:6500]
-    return full.replace("\n", " ")[:7000]
+    return "" # No identifiable requirements: do not pretend the full ad proves qualification
 
 def sample_evidence(req, pattern):
     m = re.search(pattern, req, re.I)
@@ -110,6 +110,8 @@ def assess(title, description, location, country_codes):
     # An unconfirmed remote location or region is not a destination. Global
     # positions should never be presented as a country-specific visa route.
     req = required_section(full)
+    if not req or len(req)<100:
+        return None
     if hits(SECTOR_REQ,req) or hits(MANDATORY_TECH_DEGREE,req):
         return None
     # Banking roles often use ordinary banking software; that alone is not a
@@ -130,7 +132,9 @@ def assess(title, description, location, country_codes):
     # place the requirements outside the labelled section.
     full_german_markers=len(re.findall(r"\b(?:wir|sie|du|deine|dein|und|erfahrung|kenntnisse|aufgaben|voraussetzungen|anforderungen|bewerbung|mitbringen|vertrieb|kunden|deutschkenntnisse|tätigkeit|unternehmen|berufserfahrung|kennt|für|einen|eine|arbeiten|durch|unser|ihre)\b",full,re.I))
     full_english_markers=len(re.findall(r"\b(?:we|you|your|the|and|with|our|requirements|experience|customers|clients|sales|team|skills|responsibilities)\b",full,re.I))
-    if (german_markers>=9 or full_german_markers>=14 and full_german_markers>full_english_markers*1.4) and not hits(r"\b(?:english|englisch)\b",req):
+    if (german_markers>=9 or (full_german_markers>=14 and full_german_markers>full_english_markers*1.4)) and not hits(r"\b(?:german|deutsch)\b.{0,20}\ba2\b|\ba2\b.{0,20}\b(?:german|deutsch)\b",req):
+        return None
+    if (hits(r"\(m/[wfdx]/[wdx]\)",title) or hits(r"\b(?:kundenmanagement|mitarbeiter|vertriebsleiter|sachbearbeiter|kundenbetreuung|außendienst|erfahrung im|deine aufgaben)\b",title.lower())) and "DE" in country_codes and full_german_markers>full_english_markers:
         return None
     if hits(r"\b(?:industrie|industriell|produktionsnah|maschinenbau|erneuerbare energien|wärmepumpe|wärmepumpen|photovoltaik|fachkenntnisse in|technischen vertrieb|saas|b2b.saas|softwarelösungen|cloud computing|it.lösungen)\b",req) and category not in BANK_FIELDS and category!="Photography":
         return None
@@ -161,6 +165,8 @@ def assess(title, description, location, country_codes):
 
     # For relationship, sales and operations alternatives require actual
     # work on clients, service delivery or sales in the requirements.
+    if category in {"Business Development","Client Relationship Management"} and hits(r"\b(?:eyewear|retail fashion|optical wholesale|retail store management|wholesale distribution|medical device|clinical services)\b",req):
+        return None
     if category in {"Business Development","Client Relationship Management","Customer Service","Operations"}:
         if not hits(r"\b(?:customers?|clients?|accounts?|sales|service|operations|relationship|business development|prospecting|support|stakeholders?)\b",req):
             return None
