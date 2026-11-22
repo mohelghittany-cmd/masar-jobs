@@ -100,7 +100,13 @@ def main():
     for name,fn in (("Arbeitnow",arbeitnow),("Remotive",remotive),("Jobicy",jobicy),
                     ("Greenhouse / Monzo",lambda:greenhouse_board("monzo","Monzo")),
                     ("Greenhouse / Tide",lambda:greenhouse_board("tide","Tide")),
-                    ("Greenhouse / Adyen",lambda:greenhouse_board("adyen","Adyen"))):
+                    ("Greenhouse / Adyen",lambda:greenhouse_board("adyen","Adyen")),
+                    ("Greenhouse / Modulr",lambda:greenhouse_board("modulrfinance","Modulr")),
+                    ("Greenhouse / BVNK",lambda:greenhouse_board("bvnk","BVNK")),
+                    ("Greenhouse / Carta",lambda:greenhouse_board("carta","Carta")),
+                    ("Greenhouse / Capco",lambda:greenhouse_board("capco","Capco")),
+                    ("Greenhouse / B2C2",lambda:greenhouse_board("b2c2","B2C2")),
+                    ("Greenhouse / BitGo",lambda:greenhouse_board("bitgo","BitGo"))):
         try:
             got=fn()
             print(name+":",len(got),"qualified role-and-requirement matches")
