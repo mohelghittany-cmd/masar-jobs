@@ -46,7 +46,7 @@ def add(out,title,company,location,url,desc,posted,source,remote=False,salary=""
     d=date(posted)
     if d and (NOW-d).days>40:return
     low=location.lower()
-    destinations=[c for c,p in COUNTRIES.items() if re.search(r"(?<!\\w)(?:"+p+r")(?!\\w)",low,re.I)]
+    destinations=[c for c,p in COUNTRIES.items() if re.search(r"(?<!\w)(?:"+p+r")(?!\w)",low,re.I)]
     # Work locations that cannot be tied to a named target country are not
     # migration leads. No invented country from global/EMEA/remote tags.
     if not destinations:return
@@ -58,7 +58,7 @@ def add(out,title,company,location,url,desc,posted,source,remote=False,salary=""
         "country":destinations[0],"url":url,"source":source,
         "publishedAt":d.date().isoformat() if d else "","location":location,
         "remote":bool(remote),"salary":str(salary or ""),
-        "excerpt":re.sub(r"\\s+"," ",plain(desc))[:320],
+        "excerpt":re.sub(r"\s+"," ",plain(desc))[:320],
         **assessment
     })
 def arbeitnow():
