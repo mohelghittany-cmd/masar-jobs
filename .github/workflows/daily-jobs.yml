@@ -45,6 +45,8 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: public
+      - name: Allow Pages artifact indexing
+        run: sleep 22
       - name: Publish site
         uses: actions/deploy-pages@v4
         id: deployment
