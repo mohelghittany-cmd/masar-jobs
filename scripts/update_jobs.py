@@ -3,20 +3,21 @@
 import datetime as dt
 import html, json, re, urllib.request
 from pathlib import Path
+from matcher import assess, plain
 
 HERE=Path(__file__).resolve().parents[1]
 OUT=HERE/"data"/"daily_jobs.json"
 NOW=dt.datetime.now(dt.timezone.utc)
 COUNTRIES={
-"DE":r"germany|deutschland|berlin|munich|münchen|hamburg|frankfurt|stuttgart",
+"DE":r"germany|deutschland|berlin|munich|münchen|hamburg|frankfurt|stuttgart|hannover|hanover|augsburg|cologne|köln|nürnberg|nuremberg|dortmund|ratingen|bremen|magdeburg|saarbrücken|kaarst|duesseldorf|düsseldorf|leipzig|bonn|dresden|heidelberg|kiel|karlsruhe|regensburg",
 "CA":r"canada|toronto|montreal|vancouver|calgary|ottawa",
 "AU":r"australia|sydney|melbourne|brisbane|perth|adelaide",
 "NZ":r"new zealand|auckland|wellington|christchurch",
-"UK":r"united kingdom|britain|england|london|manchester|edinburgh|glasgow",
+"UK":r"united kingdom|\buk\b|britain|england|london|manchester|edinburgh|glasgow|bristol|birmingham|leeds|liverpool|cardiff|belfast",
 "IE":r"ireland|dublin|cork|galway",
 "MT":r"malta|valletta|sliema",
 "AT":r"austria|vienna|wien|salzburg|graz",
-"US":r"united states|usa|new york|california|texas",
+"US":r"united states|\busa\b|\bus\b|new york|california|texas|florida|chicago|boston|seattle|washington d\.?c\.?",
 "LU":r"luxembourg",
 "CH":r"switzerland|zurich|zürich|geneva|lausanne|basel",
 "BE":r"belgium|brussels|antwerp",
@@ -25,19 +26,6 @@ COUNTRIES={
 "LI":r"liechtenstein|vaduz",
 "AE":r"united arab emirates|uae|dubai|abu dhabi|sharjah",
 }
-ROLES=[
-("KYC / CDD / EDD",r"\bkyc\b|\bcdd\b|\bedd\b|due diligence|client onboarding|customer onboarding"),
-("AML",r"\baml\b|anti.money laundering|financial crime|\bsanctions\b|transaction monitoring"),
-("Trade Finance",r"trade finance|letter of credit|documentary credit|trade operations"),
-("Compliance",r"\bcompliance\b|regulatory compliance|compliance officer"),
-("SME Banking",r"\bsme\b|business banking|small business banking"),
-("Corporate Banking",r"corporate banking|commercial banking"),
-("Client Relationship Management",r"relationship manager|client relation|client success|customer success|account manager"),
-("Business Development",r"business development|b2b sales|partnerships manager|sales manager|sales executive|account executive"),
-("Customer Service",r"customer support|customer service|customer care|customer experience|call center|contact center|client support"),
-("Operations",r"bank operations|financial operations|payment operations|back.office|operations specialist|business operations|onboarding specialist"),
-("Photography",r"photograph|photo editor|photo retouch|videograph"),
-]
 def clean(v):
     return re.sub(r"\s+"," ",html.unescape(re.sub(r"<[^>]+>"," ",str(v or "")))).strip()
 def get(url):
@@ -55,27 +43,24 @@ def date(v):
 def add(out,title,company,location,url,desc,posted,source,remote=False,salary=""):
     title,company,location,url=map(clean,(title,company,location,url))
     if not title or not company or not url.startswith(("https://","http://")):return
-    category=next((c for c,p in ROLES if re.search(p,title,re.I)),None)
-    if category is None:return
     d=date(posted)
     if d and (NOW-d).days>40:return
     low=location.lower()
-    destinations=[c for c,p in COUNTRIES.items() if re.search(r"(?<!\w)(?:"+p+r")(?!\w)",low,re.I)]
-    if not destinations:destinations=["GLOBAL"] # Do not invent country
-    desc=clean(desc);s=desc.lower()
-    english=bool(re.search(r"\benglish\b",s));german=bool(re.search(r"\bgerman\b|\bdeutsch\b",s))
-    language="Other"
-    if english and german:
-        for level in ("A2","B1","B2"):
-            if re.search(r"\b"+level.lower()+r"\b",s):language="English + German "+level
-    elif english and re.search(r"english.only|german (?:is )?not required|english speaking",s):language="English only"
-    visa="unknown"
-    if re.search(r"no visa sponsorship|cannot sponsor|do not sponsor|must (?:already )?have (?:the )?right to work",s):visa="no"
-    elif re.search(r"visa sponsorship (?:is )?(?:available|provided|offered)|offer visa sponsorship",s):visa="yes"
-    out.append({"id":source+":"+re.sub(r"[^a-zA-Z0-9]","_",url)[-140:],"title":title,"company":company,
-        "countries":destinations,"country":destinations[0],"field":category,"language":language,"visa":visa,
-        "url":url,"source":source,"publishedAt":d.date().isoformat() if d else "","location":location,
-        "remote":bool(remote),"salary":str(salary or ""),"excerpt":desc[:300],"verified":False})
+    destinations=[c for c,p in COUNTRIES.items() if re.search(r"(?<!\\w)(?:"+p+r")(?!\\w)",low,re.I)]
+    # Work locations that cannot be tied to a named target country are not
+    # migration leads. No invented country from global/EMEA/remote tags.
+    if not destinations:return
+    assessment=assess(title, desc, location, destinations)
+    if assessment is None:return
+    out.append({
+        "id":source+":"+re.sub(r"[^a-zA-Z0-9]","_",url)[-140:],
+        "title":title,"company":company,"countries":destinations,
+        "country":destinations[0],"url":url,"source":source,
+        "publishedAt":d.date().isoformat() if d else "","location":location,
+        "remote":bool(remote),"salary":str(salary or ""),
+        "excerpt":re.sub(r"\\s+"," ",plain(desc))[:320],
+        **assessment
+    })
 def arbeitnow():
     a=[]
     for page in (1,2):
@@ -102,7 +87,7 @@ def main():
     for name,fn in (("Arbeitnow",arbeitnow),("Remotive",remotive),("Jobicy",jobicy)):
         try:
             got=fn()
-            print(name+":",len(got),"matching job titles")
+            print(name+":",len(got),"qualified role-and-requirement matches")
             passed.append(name)
             for j in got:merged.setdefault(j["url"].split("?")[0].rstrip("/").lower(),j)
         except Exception as e:
@@ -111,15 +96,12 @@ def main():
     if not passed:
         print("All sources failed; keep existing snapshot unchanged.")
         return
-    for j in old.get("jobs",[]):
-        if j.get("source") in ("Arbeitnow","Remotive","Jobicy") and j.get("source") not in passed:
-            d=date(j.get("publishedAt"))
-            if d and (NOW-d).days<=40:
-                merged.setdefault(str(j.get("url","")).split("?")[0].rstrip("/").lower(),j)
+    # Never recycle pre-v2 listings or unscreened source failures.
+    # Fewer accurate results are better than misleading outdated matches.
     rows=sorted(merged.values(),key=lambda x:(x.get("publishedAt") or "",x["title"]),reverse=True)
     OUT.parent.mkdir(parents=True,exist_ok=True)
     OUT.write_text(json.dumps({"lastUpdateUtc":NOW.isoformat(timespec="seconds"),"sourcesSucceeded":passed,
-        "sourcesFailed":failed,"limitations":"Partial public feeds only; not employer, visa or opening verified.",
+        "sourcesFailed":failed,"limitations":"Role title AND full description screened automatically. Not employer, eligibility, or visa verified.",
         "jobs":rows},ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print("Saved",len(rows),"jobs")
 if __name__=="__main__":main()
