@@ -12,6 +12,21 @@
 @media(max-width:800px){.app{display:block}.side{position:sticky;z-index:20;top:0;width:100%;height:auto;padding:8px 12px;gap:6px}.brand{padding:0 5px}.brand-icon{height:32px;width:32px;font-size:15px;border-radius:9px}.brand-name{font-size:19px}.side-bottom,.side small,.brand-note{display:none}.nav{display:flex;overflow-x:auto;gap:4px;scrollbar-width:none}.navbtn{width:auto;white-space:nowrap;flex:none;margin:0;padding:9px}.navbtn .ni{width:auto}.main{width:100%;padding:17px 14px 50px}.topbar{align-items:flex-start}.page-title{font-size:22px}.hero{padding:22px;align-items:flex-start;flex-direction:column}.hero-title{font-size:20px}.form-grid{grid-template-columns:repeat(2,1fr)}.form-grid .wide{grid-column:span 2}}
 @media(max-width:530px){.topbar{flex-direction:column}.top-actions{width:100%;justify-content:flex-start}.stats{gap:9px}.metric{padding:14px}.metric-value{font-size:24px}.panel{padding:14px}.job-list,.role-grid,.settings-grid,.country-pills,.compare-layout{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.form-grid .wide{grid-column:1}.doc-list{grid-template-columns:1fr}.modal-head,.modal-body,.form-footer{padding:13px 15px}.backdrop{padding:7px}.page-title{font-size:21px}}
 </style>
+<style id="masar-lang-style">
+html[lang="en"] body{text-align:left}
+html[lang="en"] .navbtn,
+html[lang="en"] .opp-title,
+html[lang="en"] .company,
+html[lang="en"] .role b,
+html[lang="en"] .data-table,
+html[lang="en"] .data-table th,
+html[lang="en"] .country-box{text-align:left}
+html[lang="en"] .navbtn.active{box-shadow:inset 3px 0 #48cfc0}
+html[lang="en"] .count-label{margin-right:0;margin-left:auto}
+html[lang="en"] .score,html[lang="en"] .country-box,html[lang="en"] .task{direction:ltr}
+#langToggle{font-weight:800;min-width:83px;border-color:#b7d9d7}
+@media(max-width:800px){#langToggle{min-width:70px}}
+</style>
 </head>
 <body>
 <div class="app">
@@ -30,7 +45,7 @@
  <div class="side-bottom"><span>بياناتك محفوظة في هذا المتصفح فقط.</span><span>صدّر نسخة احتياطية بانتظام لحمايتها.</span><span>نسخة مجانية قابلة للنشر • 2026</span></div>
 </aside>
 <main class="main">
- <header class="topbar"><div><div class="eyebrow">CAREER & MIGRATION TRACKER</div><h1 class="page-title" id="pageTitle">لوحة المتابعة</h1><div class="subtitle" id="pageSubtitle">كل فرصك وتقديماتك وخطواتك القادمة في مكان واحد</div></div><div class="top-actions"><button class="btn" id="exportQuick">↓ نسخة احتياطية</button><button class="btn primary" id="addTop">＋ إضافة فرصة</button></div></header>
+ <header class="topbar"><div><div class="eyebrow">CAREER & MIGRATION TRACKER</div><h1 class="page-title" id="pageTitle">لوحة المتابعة</h1><div class="subtitle" id="pageSubtitle">كل فرصك وتقديماتك وخطواتك القادمة في مكان واحد</div></div><div class="top-actions"><button class="btn" id="langToggle" type="button" aria-pressed="false" aria-label="Switch interface to English">English</button><button class="btn" id="exportQuick">↓ نسخة احتياطية</button><button class="btn primary" id="addTop">＋ إضافة فرصة</button></div></header>
  <section class="section active" id="dashboard">
   <div class="hero"><div><div class="hero-title">الخطوة القادمة تبدأ من هنا</div><p>تابع فرص العمل في 16 دولة، وركّز على الوظائف الأقرب لخبرتك في الخدمات المصرفية والامتثال وعلاقات العملاء. الأولوية للوظائف القابلة للتقديم، وليست مجرد روابط محفوظة.</p></div><button class="btn" id="heroAdd">＋ أضف فرصة جديدة</button></div>
   <div class="stats" id="stats"></div>
@@ -188,6 +203,114 @@ async function importJSON(file){if(!file)return;try{if(file.size>8*1024*1024)thr
 function act(type,id){let j=jobs.find(j=>j.id===id);if(type==='add')openModal();if(!j)return;if(type==='edit')openModal(id);if(type==='favorite'){j.favorite=!j.favorite;save();render();toast(j.favorite?'أضيفت للمحفوظة':'أُزيلت من المحفوظة');}if(type==='compare'){if(compare.includes(id))compare=compare.filter(x=>x!==id);else if(compare.length<3)compare.push(id);else{toast('يمكن مقارنة 3 فرص كحد أقصى');return;}render();toast(compare.includes(id)?'أُضيفت للمقارنة':'أُزيلت من المقارنة');}}
 function wire(){load();initSelects();fillSelect('#dailyCountry',[['GLOBAL','عالمي / عن بعد (غير مرتبط بدولة)'],...countries.map(x=>[x[0],x[2]+' '+x[1]])],'كل الدول');fillSelect('#dailyField',fields.map(x=>[x,x]),'كل المجالات');$$('.navbtn').forEach(el=>el.addEventListener('click',()=>navigate(el.dataset.page)));document.addEventListener('click',e=>{let tgt=e.target.closest('[data-go]');if(tgt)navigate(tgt.dataset.go);let action=e.target.closest('[data-action]');if(action)act(action.dataset.action,action.dataset.id);let c=e.target.closest('[data-country]');if(c){dailyCountry=c.dataset.country;$('#dailyCountry').value=dailyCountry;navigate('daily');}let fd=e.target.closest('[data-save-feed]');if(fd)saveFeedJob(fd.dataset.saveFeed);let rt=e.target.closest('[data-role]');if(rt){let [title,field]=roleTemplates[Number(rt.dataset.role)]||[];if(title)openModal(null,{title,field});}});document.addEventListener('change',e=>{if(e.target.matches('[data-stage]')){let j=jobs.find(j=>j.id===e.target.dataset.stage);if(j){j.status=e.target.value;j.updatedAt=new Date().toISOString();save();render();toast('تم تحديث مرحلة التقديم');}}});['#addTop','#heroAdd'].forEach(id=>$(id).addEventListener('click',()=>openModal()));$('#jobForm').addEventListener('submit',formSave);['#closeModal','#cancelModal'].forEach(id=>$(id).addEventListener('click',closeModal));$('#modalBackdrop').addEventListener('click',e=>{if(e.target.id==='modalBackdrop')closeModal();});window.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});$('#editNote').addEventListener('click',e=>{if(e.target.id==='deleteCurrent')removeJob(editing);});for(let [name,sel] of Object.entries({search:'#search',country:'#fcountry',field:'#ffield',language:'#flanguage',status:'#fstatus',visa:'#fvisa',fit:'#ffit'})){$(sel).addEventListener(name==='search'?'input':'change',e=>{filters[name]=e.target.value;renderOpportunities();});}$$('[data-quick]').forEach(el=>el.addEventListener('click',()=>{quick=el.dataset.quick;renderOpportunities();}));$('#resetFilters').addEventListener('click',()=>{filters={search:'',country:'',field:'',language:'',status:'',visa:'',fit:''};for(let [name,sel] of Object.entries({search:'#search',country:'#fcountry',field:'#ffield',language:'#flanguage',status:'#fstatus',visa:'#fvisa',fit:'#ffit'}))$(sel).value='';quick='all';renderOpportunities();});$('#toggleView').addEventListener('click',()=>{listMode=listMode==='cards'?'table':'cards';renderOpportunities();});$('#taskFilter').addEventListener('change',renderTasks);$('#refreshDaily').addEventListener('click',fetchDaily);$('#dailyCountry').addEventListener('change',e=>{dailyCountry=e.target.value;renderDaily();});$('#dailyField').addEventListener('change',e=>{dailyField=e.target.value;renderDaily();});$('#dailySearch').addEventListener('input',e=>{dailySearch=e.target.value;renderDaily();});$('#dailyLanguage').addEventListener('change',e=>{dailyLanguage=e.target.value;renderDaily();});$('#clearCompare').addEventListener('click',()=>{compare=[];renderComparison();renderOpportunities();});['#exportQuick','#backupBtn'].forEach(x=>$(x).addEventListener('click',exportJSON));$('#csvBtn').addEventListener('click',exportCSV);$('#importFile').addEventListener('change',e=>importJSON(e.target.files[0]));$('#clearData').addEventListener('click',()=>{if(confirm('سيتم حذف جميع الفرص من هذا المتصفح. هل تريد المتابعة؟')&&confirm('تأكيد أخير: هل حفظت نسخة احتياطية؟')){jobs=[];compare=[];save();render();toast('تم حذف البيانات');}});render();fetchDaily();}
 wire();
+})();
+</script>
+
+<script id="masar-language-module">
+(function(){
+"use strict";
+const KEY_LANG="masar.uiLanguage.v1";
+const DICT={"مسار | إدارة الهجرة والوظائف":"Masar | Career & Migration Tracker","مسار":"Masar","الهجرة والمسار المهني":"Career & Migration","نظرة عامة":"Overview","وظائف اليوم":"Today's jobs","فرصي المحفوظة":"Saved opportunities","متابعة التقديمات":"Applications tracker","الخطوات القادمة":"Next steps","مقارنة الفرص":"Compare jobs","الدول المستهدفة":"Target countries","الإعدادات والنسخ":"Settings & backups","بياناتك محفوظة في هذا المتصفح فقط.":"Your data is stored in this browser only.","صدّر نسخة احتياطية بانتظام لحمايتها.":"Export a backup regularly to protect it.","نسخة مجانية قابلة للنشر • 2026":"Free publishable version • 2026","لوحة المتابعة":"Dashboard","كل فرصك وتقديماتك وخطواتك القادمة في مكان واحد":"All your opportunities, applications and next steps in one place","↓ نسخة احتياطية":"↓ Backup","＋ إضافة فرصة":"＋ Add opportunity","الخطوة القادمة تبدأ من هنا":"Your next step starts here","تابع فرص العمل في 16 دولة، وركّز على الوظائف الأقرب لخبرتك في الخدمات المصرفية والامتثال وعلاقات العملاء. الأولوية للوظائف القابلة للتقديم، وليست مجرد روابط محفوظة.":"Track jobs across 16 countries, focusing on roles aligned with your banking, compliance and client relationship experience. Prioritize real applications over saved links.","＋ أضف فرصة جديدة":"＋ Add new opportunity","تحديث الوظائف العامة":"Public job updates","عرض الوظائف الجديدة":"Browse new jobs","لم تُحمّل بيانات الوظائف بعد.":"Job data has not loaded yet.","فرص ذات أولوية":"Priority opportunities","عرض الكل":"View all","معدل تقدم التقديمات":"Application progress","حسب الحالة الحالية":"Based on current status","أقرب الخطوات المطلوبة":"Upcoming actions","جميع الخطوات":"All actions","المجالات الأنسب لخبرتك":"Best-matching career fields","مستوى الملاءمة تقديري بناءً على المجال واللغة ورعاية التأشيرة، ولا يعني استيفاء شروط وظيفة بعينها.":"Match scores are estimates based on the role, language and visa sponsorship. They do not confirm eligibility for any specific job.","مسميات وظيفية مقترحة للبحث":"Suggested job titles to search","قوالب بحث وليست إعلانات وظائف مؤكدة":"Search suggestions, not verified job vacancies","الوظائف المنشورة من مصادر عامة":"Jobs from public sources","↻ إعادة تحميل البيانات":"↻ Refresh job listings","يتم قراءة ملف الوظائف المُحدَّث آليًا، دون إرسال بيانات تقديماتك لأي جهة.":"Public job data is loaded automatically. Your application data is not sent anywhere.","مهم: هذه النتائج من واجهات وظائف عامة محدودة، وليس بحثًا شاملًا بكل الشركات. معظمها وظائف عن بُعد. الدولة هنا مكان عمل أو أهلية العمل المعلنة؛ ولا تعني وجود رعاية تأشيرة. افحص رابط الإعلان الأصلي قبل التقديم.":"Important: These results come from limited public job feeds, not an exhaustive search. Many are remote roles. Country indicates the stated workplace or work eligibility, not visa sponsorship. Check the original listing before applying.","الدولة":"Country","المجال":"Field","بحث في المسميات والشركات":"Search job titles and companies","اللغة":"Language","كل اللغات / غير محدد":"All languages / unspecified","English only (مذكور صراحة)":"English only (explicitly stated)","غير محدد":"Unspecified","0 وظيفة":"0 jobs","دليل الفرص":"Opportunities directory","مسح الفلاتر":"Clear filters","عرض جدول":"Table view","عرض بطاقات":"Card view","بحث":"Search","اللغة المطلوبة":"Required language","حالة التقديم":"Application status","التأشيرة / الرعاية":"Visa / sponsorship","مستوى الملاءمة":"Match level","كل الفرص":"All opportunities","إنجليزي فقط":"English only","إنجليزي + ألماني A2/B1/B2":"English + German A2/B1/B2","مع رعاية تأشيرة":"Visa sponsorship","المحفوظة ★":"Saved ★","لوحة مراحل التقديم":"Application stages","غيّر المرحلة من تعديل الفرصة أو أزرار النقل":"Change stage by editing an opportunity or using its stage controls","الإجراءات القادمة والمواعيد":"Next actions and deadlines","الأقرب موعدًا أولًا، والمتأخر مميز باللون الأحمر":"Earliest deadlines first; overdue items appear in red","التصفية":"Filter","الخطوات غير المكتملة":"Pending actions","خلال 7 أيام أو متأخرة":"Within 7 days or overdue","مقارنة حتى 3 فرص":"Compare up to 3 opportunities","مسح الاختيار":"Clear selection","اختر «مقارنة» من بطاقات الفرص. المقارنة تساعد في ترتيب الأولويات، وليست تقييم أهلية رسميًا للهجرة أو التأشيرة.":"Select Compare on opportunity cards. This helps prioritize jobs, but is not an official immigration or visa eligibility assessment.","اضغط على دولة لمشاهدة الوظائف العامة المنشورة فيها":"Select a country to see available public job listings","مسارات اللغة":"Language pathways","يمكنك حفظ وظائف باللغة الإنجليزية وحدها، أو الإنجليزية مع الألمانية A2 أو B1 أو B2. أضف متطلبات التأشيرة الفعلية لكل وظيفة كما يذكرها صاحب العمل.":"Save English-only jobs or roles requiring English and German A2, B1 or B2. Record each employer's actual visa requirements.","النسخ الاحتياطي":"Backups","احفظ نسخة JSON تحتوي كل الفرص والملاحظات والمستندات المطلوبة. يمكنك استيرادها لاحقًا على أي جهاز.":"Save a JSON backup of your opportunities, notes and required documents. You can import it on another device.","↓ تنزيل JSON":"↓ Export JSON","↓ تنزيل CSV":"↓ Export CSV","↑ استيراد نسخة JSON":"↑ Import JSON backup","الاستيراد يستبدل الفرص الموجودة بعد رسالة تأكيد. احتفظ بنسخة قبل الاستيراد.":"Importing replaces existing opportunities after confirmation. Export a backup first.","عن هذا الموقع":"About this site","لوحة خاصة بإدارة فرص الوظائف والهجرة. تبويب وظائف اليوم يعرض نتائج مصادر عامة إذا نجحت جدولة التحديث. لا يعني ظهوره ضمان صلاحية الإعلان أو الرعاية، ولا يُغني عن الرجوع للمصدر الأصلي.":"A dashboard for job and migration opportunities. Today's Jobs displays public listings when scheduled updates succeed. Listings and sponsorship are not guaranteed; always check the source.","التقديمات وملاحظاتك محفوظة محليًا في المتصفح فقط. النتائج العامة تأتي من ملف JSON، ولا تُرسل بيانات التقديمات إلى GitHub. لا توجد مزامنة بين الأجهزة.":"Applications and notes are stored locally in your browser. Public job results come from JSON; your application details are not sent to GitHub. Devices do not sync.","حذف كل البيانات":"Delete all data","حقول كل فرصة":"Opportunity fields","الدولة، الشركة، المسمى، المجال، اللغة، الراتب، الرعاية، نوع التأشيرة، الرابط، الملاءمة، الحالة، تاريخ التقديم، الموعد النهائي، المستندات، الملاحظات، والخطوة التالية.":"Country, company, job title, field, language, salary, sponsorship, visa type, link, match, status, application date, deadline, documents, notes and next action.","كيف تستخدم التقييم؟":"How are scores calculated?","النظام يمنح درجة تقريبية من 100 لنوع الدور واللغة ورعاية التأشيرة. يمكنك اختيار مستوى الملاءمة بنفسك؛ الاستنتاج الآلي لا يمثل قبولًا مضمونًا.":"The system estimates a score out of 100 from job type, language and visa sponsorship. You can override the match level; it never guarantees acceptance.","اذهب للفرص":"Go to opportunities","إضافة فرصة":"Add opportunity","إضافة فرصة جديدة":"Add new opportunity","تعديل الفرصة":"Edit opportunity","الوظيفة والشركة":"Job & company","المسمى الوظيفي *":"Job title *","الشركة *":"Company *","الدولة *":"Country *","المجال *":"Field *","رابط الوظيفة":"Job URL","مصدر الفرصة":"Opportunity source","التأشيرة والملاءمة":"Visa & match","رعاية التأشيرة":"Visa sponsorship","نوع التأشيرة / التصريح":"Visa / permit type","الملاءمة":"Match","متطلبات التأشيرة والشروط":"Visa requirements & conditions","الراتب المعلن":"Advertised salary","متابعة التقديم":"Application tracker","الحالة الحالية":"Current status","تاريخ التقديم":"Application date","آخر موعد للتقديم":"Application deadline","الخطوة التالية":"Next action","موعد الخطوة التالية":"Next action date","ملاحظات وشروط الوظيفة":"Job requirements & notes","المستندات المطلوبة":"Required documents","ضع علامة على المستندات التي جهّزتها بالفعل":"Tick the documents you already have","مستندات إضافية مطلوبة (افصل بينها بفاصلة)":"Additional required documents (comma-separated)","روابط المستندات / مجلد التقديم":"Document links / application folder","حفظ الفرصة":"Save opportunity","إلغاء":"Cancel","اسم الوظيفة أو الشركة أو الملاحظات":"Job title, company or notes","إغلاق":"Close","النص الوارد في إعلان الوظيفة أو الموقع الرسمي":"Text from the job ad or official website","تعديل CV / مراسلة HR / تحضير مقابلة":"Tailor CV / contact HR / prepare for interview","متطلبات الخبرة، تقييم الشركة، جهة الاتصال، سبب الرفض إن وجد...":"Experience requirements, employer assessment, contact, rejection reason...","روابط Google Drive أو ملفات PDF السحابية (رابط في كل سطر)":"Google Drive or cloud PDF links (one per line)","ألمانيا":"Germany","كندا":"Canada","أستراليا":"Australia","نيوزيلندا":"New Zealand","بريطانيا":"United Kingdom","أيرلندا":"Ireland","مالطا":"Malta","النمسا":"Austria","أمريكا":"United States","لوكسمبورج":"Luxembourg","سويسرا":"Switzerland","بلجيكا":"Belgium","الدنمارك":"Denmark","إسبانيا":"Spain","ليختنشتاين":"Liechtenstein","الإمارات":"United Arab Emirates","إنجليزي + ألماني A2":"English + German A2","إنجليزي + ألماني B1":"English + German B1","إنجليزي + ألماني B2":"English + German B2","ألماني C1 أو أعلى":"German C1 or above","أخرى / غير محدد":"Other / unspecified","قيد البحث":"Researching","مراجعة الفرصة":"Reviewing opportunity","تجهيز التقديم":"Preparing application","تم التقديم":"Applied","مقابلة":"Interview","عرض عمل":"Job offer","مرفوضة":"Rejected","مؤرشفة":"Archived","رعاية متاحة / مذكورة":"Sponsorship available / stated","لا توجد رعاية":"No sponsorship","غير معروف / بحاجة تحقق":"Unknown / verify","لا تتطلب رعاية":"Sponsorship not required","عالية":"High","متوسطة":"Medium","منخفضة":"Low","عالية (يدوي)":"High (manual)","متوسطة (يدوي)":"Medium (manual)","منخفضة (يدوي)":"Low (manual)","تقييم آلي":"Automatic assessment","كل الدول":"All countries","كل المجالات":"All fields","كل اللغات":"All languages","كل الحالات":"All statuses","كل شروط التأشيرة":"All visa conditions","كل مستويات الملاءمة":"All match levels","عالمي / عن بعد (غير مرتبط بدولة)":"Global / remote (not country-specific)","إجمالي الفرص":"Total opportunities","كل الوظائف المسجّلة":"All saved jobs","تقديمات مُرسلة":"Applications sent","بما فيها النتائج النهائية":"Including final outcomes","مقابلات":"Interviews","في مرحلة المقابلة":"At interview stage","فرص ملاءمتها عالية":"High-match opportunities","نشطة وقابلة للمتابعة":"Active opportunities","غير معروف":"Unknown","غير متاح":"Unavailable","ملاءمة":"Match","التقييم التقريبي":"Estimated score","الخطوة التالية:":"Next action:","لم تُحدّد بعد":"Not set yet","تعديل":"Edit","فتح":"Open","فتح الإعلان ↗":"Open listing ↗","⇄ مقارنة":"⇄ Compare","✓ مقارنة":"✓ Comparing","مقارنة":"Compare","آخر موعد:":"Deadline:","تغيير مرحلة التقديم":"Change application stage","إلغاء الحفظ":"Remove from favorites","حفظ بالمفضلة":"Add to favorites","إجراء":"Action","الحالة":"Status","الراتب":"Salary","نوع التأشيرة":"Visa type","متطلبات التأشيرة":"Visa requirements","الموعد النهائي":"Deadline","مسمى مقترح":"Suggested title","＋ إضافة وظيفة بهذا المسمى":"＋ Add job with this title","＋ إضافة أول فرصة":"＋ Add your first opportunity","لسه مفيش فرص محفوظة":"No saved opportunities yet","أضف أول وظيفة، وهنا هتظهر الفرص الأعلى ملاءمةً لخبرتك.":"Add your first job to see your best matches here.","مفيش خطوات محددة":"No upcoming actions","حدد الخطوة القادمة وتاريخها عند إضافة أو تعديل كل تقديم.":"Set the next action and its date when adding or editing an application.","لا توجد نتائج مطابقة":"No matching results","ابدأ بإضافة فرصك":"Start adding opportunities","استخدم الفلاتر للبحث، أو أضف فرصة جديدة مع رابطها ومتطلبات التقديم.":"Use filters to search, or add an opportunity with its URL and requirements.","بحث ومراجعة":"Research & review","تجهيز وتقديم":"Prepare & apply","مقابلات وعروض":"Interviews & offers","نتائج مغلقة":"Closed outcomes","لا توجد فرص في هذه المرحلة":"No opportunities at this stage","مراجعة موعد التقديم":"Review application deadline","متأخر:":"Overdue:","دون موعد":"No due date","لم تُحدّد خطوة":"No next action set","لا توجد مهام ضمن هذا العرض":"No tasks in this view","عند تحديد خطوة وتاريخ للفرصة، ستظهر هنا تلقائيًا.":"Set an action and date on an opportunity to see it here.","لم تحدد فرصًا للمقارنة":"No opportunities selected for comparison","افتح «كل الفرص» واضغط «مقارنة» على فرصتين أو ثلاث.":"Open All Opportunities and select Compare on two or three jobs.","إزالة":"Remove","لغة غير مؤكدة":"Language not verified","اللغة غير مؤكدة":"Language unverified","الموقع غير محدد":"Location unspecified","عالمي/غير محدد":"Global / unspecified","عالمي":"Global","نُشر:":"Published:","تاريخ النشر غير متاح":"Publication date unavailable","التأشيرة:":"Visa:","لا يتوفر ملخص. تحقق من شروط الإعلان الأصلي.":"No summary available. Check the original listing.","التقييم تقديري والعرض غير متحقق يدويًا":"Estimated match; vacancy not manually verified","الإعلان الأصلي ↗":"Original listing ↗","حفظ ومتابعة":"Save & track","لا توجد وظائف مطابقة في المصادر المتاحة":"No matching jobs in current sources","لا توجد نتائج بعد":"No results yet","بعض الدول قد لا تظهر فيها نتائج بسبب محدودية المصادر المجانية. لا يعني ذلك عدم وجود وظائف فعلية.":"Some countries may have no results due to limited free sources. This does not mean there are no jobs.","لم يتم التحديث":"Not updated","لم يعمل تحديث البيانات بعد. شغّل تحديث الوظائف في GitHub Actions بعد نشر الموقع.":"Jobs have not updated yet. Run the GitHub Actions job updater after publishing.","تعذّر تحميل بيانات الوظائف. افتح الموقع المنشور على GitHub Pages أو شغّل التحديث يدويًا.":"Could not load jobs. Open the published GitHub Pages site or run the update manually.","التعديل محفوظ محليًا بعد الضغط على حفظ":"Changes are saved locally after pressing Save","حذف الفرصة":"Delete opportunity","اكتب المسمى الوظيفي واسم الشركة.":"Enter the job title and company.","رابط الوظيفة غير صالح. استخدم http أو https.":"Invalid URL. Use http or https.","تم حذف الفرصة":"Opportunity deleted","تم تجهيز النسخة الاحتياطية":"Backup prepared","أُزيلت من المحفوظة":"Removed from saved","أضيفت للمحفوظة":"Added to saved","الدولة غير مدعومة":"Country not supported","تم حفظ الفرصة":"Opportunity saved","مستندات إضافية":"Additional documents","إضافة وظيفة":"Add job","مراجعة شروط الإعلان":"Review job requirements","المصادر:":"Sources:","آخر تحديث للبيانات:":"Last job-data update:","بتوقيت دبي":"Dubai time","توجد مصادر تعذر تحديثها:":"Sources that failed:","فرصة مرشحة في ملفات البحث العام. التقديمات الخاصة محفوظة محليًا فقط.":"suggested jobs from public feeds. Private applications remain local only.","نتيجة عامة":"public results","محفوظة":"saved","وظيفة":"job","فرصة":"opportunity"};
+const PARTIAL={"عالمي / عن بعد (غير مرتبط بدولة)":"Global / remote (not country-specific)","الموقع غير محدد":"Location unspecified","اللغة غير مؤكدة":"Language unverified","عالمي/غير محدد":"Global / unspecified","آخر تحديث للبيانات:":"Last job-data update:","توجد مصادر تعذر تحديثها:":"Sources that failed:","المصادر:":"Sources:","نُشر:":"Published:","التأشيرة:":"Visa:","آخر موعد:":"Deadline:","متأخر:":"Overdue:","بتوقيت دبي":"Dubai time","عالية":"High","متوسطة":"Medium","منخفضة":"Low","ملاءمة":"Match","مسمى مقترح":"Suggested title","نتيجة عامة":"public results","محفوظة":"saved"};
+const arabic=/[\u0600-\u06FF]/;
+const nodeStates=new WeakMap(),attrStates=new WeakMap();
+const button=document.getElementById("langToggle");
+if(!button)return;
+let current="ar";
+try{current=localStorage.getItem(KEY_LANG)==="en"?"en":"ar";}catch(e){}
+function preserveSpaces(value,translated){
+ const lead=value.match(/^\s*/)[0],tail=value.match(/\s*$/)[0];
+ return lead+translated+tail;
+}
+function toEnglish(value){
+ if(!arabic.test(value))return value;
+ const core=value.trim();
+ if(Object.prototype.hasOwnProperty.call(DICT,core))return preserveSpaces(value,DICT[core]);
+ let t=core;
+ // Counts and updates generated when the page renders.
+ t=t.replace(/^(\d+)\s+وظيفة من (\d+)\s+نتيجة مرشحة$/,"$1 jobs out of $2 suggested listings");
+ t=t.replace(/^(\d+)\s+من (\d+)\s+فرصة$/,"$1 of $2 opportunities");
+ t=t.replace(/^(\d+)\s+نتيجة عامة\s+•\s+(\d+)\s+محفوظة$/,"$1 public listings • $2 saved");
+ t=t.replace(/^(\d+)\s+وظيفة$/,"$1 jobs");
+ t=t.replace(/^(\d+)\s+فرصة$/,"$1 opportunities");
+ // Restrict partial replacements to known interface labels; unknown user text remains untouched.
+ for(const a of Object.keys(PARTIAL).sort((a,b)=>b.length-a.length)){
+   t=t.split(a).join(PARTIAL[a]);
+ }
+ t=t.replace(/(\d+)\s+فرصة مرشحة في ملفات البحث العام\. التقديمات الخاصة محفوظة محليًا فقط\./g,
+             "$1 suggested jobs from public feeds. Private applications remain local only.");
+ t=t.replace(/(\d+)\s+نتيجة عامة/g,"$1 public listings");
+ return preserveSpaces(value,t);
+}
+function skipText(n){
+ const p=n.parentElement;
+ return !p||!!p.closest("script,style,noscript,#langToggle,.brand-icon,.opp-title,.company");
+}
+function setText(node){
+ if(skipText(node))return;
+ const now=node.nodeValue;
+ let state=nodeStates.get(node);
+ if(!state||state.last!==now){
+   state={original:now,last:now};
+   nodeStates.set(node,state);
+ }
+ const value=current==="en"?toEnglish(state.original):state.original;
+ if(now!==value)node.nodeValue=value;
+ state.last=value;
+}
+function setAttribute(el,attr){
+ if(el===button||el.closest("script,style"))return;
+ let states=attrStates.get(el);
+ if(!states){states={};attrStates.set(el,states);}
+ const now=el.getAttribute(attr);
+ if(now===null)return;
+ let state=states[attr];
+ if(!state||state.last!==now){
+   state={original:now,last:now};
+   states[attr]=state;
+ }
+ const value=current==="en"?toEnglish(state.original):state.original;
+ if(now!==value)el.setAttribute(attr,value);
+ state.last=value;
+}
+function updateTree(root){
+ if(root.nodeType===Node.TEXT_NODE){setText(root);return;}
+ if(root.nodeType!==Node.ELEMENT_NODE&&root.nodeType!==Node.DOCUMENT_NODE)return;
+ if(root.nodeType===Node.ELEMENT_NODE){
+   for(const attr of ["placeholder","title","aria-label"])if(root.hasAttribute(attr))setAttribute(root,attr);
+ }
+ const walk=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);
+ while(walk.nextNode())setText(walk.currentNode);
+ if(root.querySelectorAll){
+   for(const el of root.querySelectorAll("[placeholder],[title],[aria-label]"))
+     for(const attr of ["placeholder","title","aria-label"])if(el.hasAttribute(attr))setAttribute(el,attr);
+ }
+}
+function apply(){
+ document.documentElement.lang=current;
+ document.documentElement.dir=current==="en"?"ltr":"rtl";
+ document.title=current==="en"?"Masar | Career & Migration Tracker":"مسار | إدارة الهجرة والوظائف";
+ button.textContent=current==="ar"?"English":"العربية";
+ button.setAttribute("aria-label",current==="ar"?"Switch interface to English":"التبديل إلى العربية");
+ button.setAttribute("aria-pressed",String(current==="en"));
+ updateTree(document.body);
+}
+button.addEventListener("click",function(){
+ current=current==="ar"?"en":"ar";
+ try{localStorage.setItem(KEY_LANG,current);}catch(e){}
+ apply();
+});
+const observer=new MutationObserver(function(records){
+ for(const m of records){
+   if(m.type==="characterData")setText(m.target);
+   else if(m.type==="attributes"&&["title","placeholder","aria-label"].includes(m.attributeName))
+     setAttribute(m.target,m.attributeName);
+   else if(m.type==="childList")for(const n of m.addedNodes)updateTree(n);
+ }
+});
+apply();
+observer.observe(document.body,{subtree:true,childList:true,characterData:true,
+ attributes:true,attributeFilter:["title","placeholder","aria-label"]});
 })();
 </script>
 </body>
