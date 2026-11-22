@@ -217,7 +217,7 @@ function renderCvProfiles(){
    '<small>'+(p.group==='banking'?(en?'Banking CVs · 16 countries':'CV بنكي · 16 دولة'):
      p.group==='alternative'?(en?'Transferable career CVs EN/DE':'CV بديل · إنجليزي وألماني'):
      (en?'Photography experience; dedicated CV not found':'خبرة التصوير؛ لم تُعثر على نسخة CV مخصصة'))+'</small>'+
-   '<div class="tagrow" style="margin-top:8px">'+p.skills.slice(0,5).map(v=>'<span class="tag">'+esc(v)+'</span>').join('')+'</div>'+
+   '<div class="tagrow" style="margin-top:8px"><span class="tag green">'+(en?'Search keyword':'مفتاح البحث')+': '+esc(p.apiSearchKeyword||'—')+'</span></div>'+ '<div class="tagrow" style="margin-top:8px">'+p.skills.slice(0,5).map(v=>'<span class="tag">'+esc(v)+'</span>').join('')+'</div>'+
    '<button class="btn sm" data-profile="'+esc(p.id)+'">'+(en?'Show matches':'عرض الفرص')+' ('+n+')</button></div>';
  }).join('');
 }
