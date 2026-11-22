@@ -1,0 +1,611 @@
+{
+  "schemaVersion": 1,
+  "privacy": "Sanitized search signals only. No name, contact details, document text or private resume files included.",
+  "sourceSummary": "22 country-specific banking CV editions (16 English plus 6 German), 6 transferable career tracks in EN and DE, plus photography experience; photography-specific CV not found.",
+  "languageContext": {
+    "english": "C1 stated",
+    "german": "A2 learning; B1/B2 opportunities are developmental, not current proficiency"
+  },
+  "countries": [
+    {
+      "code": "DE",
+      "name": "Germany",
+      "bankingCVEn": true,
+      "bankingCVDe": true
+    },
+    {
+      "code": "CA",
+      "name": "Canada",
+      "bankingCVEn": true,
+      "bankingCVDe": false
+    },
+    {
+      "code": "AU",
+      "name": "Australia",
+      "bankingCVEn": true,
+      "bankingCVDe": false
+    },
+    {
+      "code": "NZ",
+      "name": "New Zealand",
+      "bankingCVEn": true,
+      "bankingCVDe": false
+    },
+    {
+      "code": "UK",
+      "name": "United Kingdom",
+      "bankingCVEn": true,
+      "bankingCVDe": false
+    },
+    {
+      "code": "IE",
+      "name": "Ireland",
+      "bankingCVEn": true,
+      "bankingCVDe": false
+    },
+    {
+      "code": "MT",
+      "name": "Malta",
+      "bankingCVEn": true,
+      "bankingCVDe": false
+    },
+    {
+      "code": "AT",
+      "name": "Austria",
+      "bankingCVEn": true,
+      "bankingCVDe": true
+    },
+    {
+      "code": "US",
+      "name": "United States",
+      "bankingCVEn": true,
+      "bankingCVDe": false
+    },
+    {
+      "code": "LU",
+      "name": "Luxembourg",
+      "bankingCVEn": true,
+      "bankingCVDe": true
+    },
+    {
+      "code": "CH",
+      "name": "Switzerland",
+      "bankingCVEn": true,
+      "bankingCVDe": true
+    },
+    {
+      "code": "BE",
+      "name": "Belgium",
+      "bankingCVEn": true,
+      "bankingCVDe": true
+    },
+    {
+      "code": "DK",
+      "name": "Denmark",
+      "bankingCVEn": true,
+      "bankingCVDe": false
+    },
+    {
+      "code": "ES",
+      "name": "Spain",
+      "bankingCVEn": true,
+      "bankingCVDe": false
+    },
+    {
+      "code": "LI",
+      "name": "Liechtenstein",
+      "bankingCVEn": true,
+      "bankingCVDe": true
+    },
+    {
+      "code": "AE",
+      "name": "United Arab Emirates",
+      "bankingCVEn": true,
+      "bankingCVDe": false
+    }
+  ],
+  "profiles": [
+    {
+      "id": "bank-corporate",
+      "group": "banking",
+      "nameAr": "الخدمات المصرفية للشركات وتطوير المحافظ",
+      "nameEn": "Corporate & Commercial Banking / Acquisition",
+      "fields": [
+        "Corporate Banking",
+        "SME Banking",
+        "Client Relationship Management",
+        "Business Development"
+      ],
+      "cvBasis": "Banking country CVs; Citi Ireland corporate banking specialist",
+      "skills": [
+        "corporate client acquisition",
+        "commercial banking",
+        "business banking",
+        "portfolio management",
+        "relationship management",
+        "customer acquisition",
+        "deposit growth",
+        "CASA",
+        "transaction banking",
+        "cash management",
+        "cross-border payments",
+        "foreign exchange",
+        "credit referrals"
+      ],
+      "titleTerms": [
+        "corporate banker",
+        "corporate relationship manager",
+        "commercial banking",
+        "business banking",
+        "relationship manager",
+        "corporate client acquisition",
+        "portfolio manager",
+        "client portfolio"
+      ],
+      "weight": 1.2
+    },
+    {
+      "id": "bank-sme",
+      "group": "banking",
+      "nameAr": "SME Banking وعلاقات الشركات الصغيرة",
+      "nameEn": "SME / Business Banking Relationship Management",
+      "fields": [
+        "SME Banking",
+        "Corporate Banking",
+        "Client Relationship Management"
+      ],
+      "cvBasis": "16 country banking CVs",
+      "skills": [
+        "SME banking",
+        "business banking",
+        "account opening",
+        "relationship management",
+        "client acquisition",
+        "commercial lending",
+        "portfolio growth",
+        "CASA deposits",
+        "business account management",
+        "cross-selling",
+        "FX",
+        "customer retention"
+      ],
+      "titleTerms": [
+        "sme relationship manager",
+        "business banking",
+        "relationship officer",
+        "commercial banking",
+        "small business banking",
+        "business acquisition"
+      ],
+      "weight": 1.15
+    },
+    {
+      "id": "bank-kyc",
+      "group": "banking",
+      "nameAr": "KYC / CDD / EDD وفحص العملاء",
+      "nameEn": "KYC / CDD / EDD and Client Due Diligence",
+      "fields": [
+        "KYC / CDD / EDD",
+        "AML",
+        "Compliance",
+        "Operations"
+      ],
+      "cvBasis": "Banking country CVs; first-line KYC/CDD/EDD experience",
+      "skills": [
+        "KYC",
+        "CDD",
+        "EDD",
+        "client due diligence",
+        "beneficial ownership",
+        "UBO",
+        "source of funds",
+        "risk assessment",
+        "client screening",
+        "customer onboarding",
+        "ownership structures",
+        "expected transaction flows",
+        "documentation review"
+      ],
+      "titleTerms": [
+        "kyc analyst",
+        "cdd analyst",
+        "onboarding analyst",
+        "onboarding specialist",
+        "customer due diligence",
+        "client due diligence",
+        "kyc officer",
+        "risk analyst"
+      ],
+      "weight": 1.3
+    },
+    {
+      "id": "bank-aml",
+      "group": "banking",
+      "nameAr": "AML وFinancial Crime",
+      "nameEn": "AML / Financial Crime Support",
+      "fields": [
+        "AML",
+        "Compliance",
+        "KYC / CDD / EDD"
+      ],
+      "cvBasis": "Banking CV; AML escalations and case preparation (not final approval authority)",
+      "skills": [
+        "AML",
+        "sanctions screening",
+        "risk assessment",
+        "transaction review",
+        "escalations",
+        "source of funds",
+        "suspicious activity escalation",
+        "financial crime",
+        "documentation",
+        "client screening",
+        "KYC",
+        "CDD"
+      ],
+      "titleTerms": [
+        "aml analyst",
+        "financial crime",
+        "sanctions analyst",
+        "transaction monitoring",
+        "aml operations",
+        "aml officer"
+      ],
+      "weight": 1.2
+    },
+    {
+      "id": "bank-compliance",
+      "group": "banking",
+      "nameAr": "Compliance والرقابة المصرفية",
+      "nameEn": "Banking Compliance / Client Risk Review",
+      "fields": [
+        "Compliance",
+        "AML",
+        "KYC / CDD / EDD"
+      ],
+      "cvBasis": "Banking CVs; first-line compliance reviews, screening and escalations",
+      "skills": [
+        "regulatory compliance",
+        "customer due diligence",
+        "risk review",
+        "KYC",
+        "CDD",
+        "EDD",
+        "sanctions checks",
+        "compliance documentation",
+        "beneficial ownership",
+        "AML escalation",
+        "source of funds",
+        "risk assessment"
+      ],
+      "titleTerms": [
+        "compliance analyst",
+        "compliance officer",
+        "regulatory compliance",
+        "onboarding compliance",
+        "client risk",
+        "financial crime compliance"
+      ],
+      "weight": 1.12
+    },
+    {
+      "id": "bank-trade",
+      "group": "banking",
+      "nameAr": "Trade Finance وعمليات التجارة",
+      "nameEn": "Trade Finance / International Transaction Banking",
+      "fields": [
+        "Trade Finance",
+        "Operations",
+        "Corporate Banking"
+      ],
+      "cvBasis": "Banking CV; international payments, LC enquiries and document reviews",
+      "skills": [
+        "trade finance",
+        "letters of credit",
+        "LC",
+        "trade documents",
+        "bill of lading",
+        "commercial invoices",
+        "certificate of origin",
+        "import export",
+        "international payments",
+        "foreign exchange",
+        "cash management",
+        "multi-currency"
+      ],
+      "titleTerms": [
+        "trade finance",
+        "trade operations",
+        "trade services",
+        "documentary trade",
+        "transaction banking",
+        "international payments"
+      ],
+      "weight": 1.17
+    },
+    {
+      "id": "bank-onboarding",
+      "group": "banking",
+      "nameAr": "Corporate Onboarding وعمليات الحسابات",
+      "nameEn": "Corporate Onboarding / Banking Operations",
+      "fields": [
+        "Operations",
+        "KYC / CDD / EDD",
+        "Corporate Banking"
+      ],
+      "cvBasis": "Banking CVs; corporate/SME account opening and first-line screening",
+      "skills": [
+        "corporate onboarding",
+        "company documentation",
+        "authorised signatories",
+        "UBO",
+        "KYC",
+        "CDD",
+        "EDD",
+        "account opening",
+        "account activation",
+        "banking operations",
+        "case management",
+        "stakeholder coordination",
+        "source of funds"
+      ],
+      "titleTerms": [
+        "corporate onboarding",
+        "account opening",
+        "banking operations",
+        "onboarding operations",
+        "client onboarding",
+        "account maintenance"
+      ],
+      "weight": 1.2
+    },
+    {
+      "id": "alt-consult",
+      "group": "alternative",
+      "nameAr": "استشارات الأعمال التجارية",
+      "nameEn": "Business Consulting & Advisory",
+      "fields": [
+        "Business Development",
+        "Client Relationship Management",
+        "Operations"
+      ],
+      "cvBasis": "Business Consulting & Advisory EN/DE ATS CVs",
+      "skills": [
+        "business needs analysis",
+        "commercial discovery",
+        "client advisory",
+        "solution mapping",
+        "client presentations",
+        "stakeholder alignment",
+        "business model analysis",
+        "working capital needs",
+        "process coordination",
+        "problem solving",
+        "service delivery"
+      ],
+      "titleTerms": [
+        "business consultant",
+        "business advisor",
+        "client advisor",
+        "commercial advisor",
+        "consulting support",
+        "business analyst"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "alt-b2b",
+      "group": "alternative",
+      "nameAr": "تطوير الأعمال ومبيعات B2B",
+      "nameEn": "Business Development & B2B Sales",
+      "fields": [
+        "Business Development",
+        "Client Relationship Management",
+        "SME Banking"
+      ],
+      "cvBasis": "Business Development & B2B Sales EN/DE ATS CVs",
+      "skills": [
+        "B2B sales",
+        "lead generation",
+        "prospecting",
+        "pipeline management",
+        "commercial acquisition",
+        "client conversion",
+        "sales targets",
+        "cross-selling",
+        "negotiation",
+        "account expansion",
+        "team leadership",
+        "partnerships"
+      ],
+      "titleTerms": [
+        "business development manager",
+        "sales manager",
+        "sales executive",
+        "account executive",
+        "sales specialist",
+        "partnerships manager",
+        "b2b sales"
+      ],
+      "weight": 1.12
+    },
+    {
+      "id": "alt-operations",
+      "group": "alternative",
+      "nameAr": "عمليات الأعمال وClient Onboarding",
+      "nameEn": "Business Operations & Client Onboarding",
+      "fields": [
+        "Operations",
+        "KYC / CDD / EDD",
+        "Client Relationship Management"
+      ],
+      "cvBasis": "Business Operations & Client Onboarding EN/DE ATS CVs",
+      "skills": [
+        "client onboarding",
+        "company documents",
+        "request tracking",
+        "process coordination",
+        "operations support",
+        "case management",
+        "document review",
+        "issue resolution",
+        "customer onboarding",
+        "service delivery",
+        "team coordination",
+        "stakeholder management"
+      ],
+      "titleTerms": [
+        "business operations",
+        "operations coordinator",
+        "client onboarding",
+        "customer operations",
+        "operations specialist",
+        "business support",
+        "service delivery"
+      ],
+      "weight": 1.09
+    },
+    {
+      "id": "alt-keyaccounts",
+      "group": "alternative",
+      "nameAr": "إدارة العلاقات والعملاء الرئيسيين",
+      "nameEn": "Client Relationship & Key Accounts",
+      "fields": [
+        "Client Relationship Management",
+        "Business Development",
+        "Customer Service"
+      ],
+      "cvBasis": "Client Relationship & Key Accounts EN/DE ATS CVs",
+      "skills": [
+        "account management",
+        "portfolio ownership",
+        "key accounts",
+        "customer retention",
+        "client relationships",
+        "customer success",
+        "account growth",
+        "stakeholder management",
+        "issue management",
+        "service recovery",
+        "cross-selling",
+        "CRM"
+      ],
+      "titleTerms": [
+        "account manager",
+        "key account manager",
+        "relationship manager",
+        "customer success manager",
+        "client relationship",
+        "account management"
+      ],
+      "weight": 1.1
+    },
+    {
+      "id": "alt-customer",
+      "group": "alternative",
+      "nameAr": "خدمة العملاء وتجربة العميل",
+      "nameEn": "Customer Service & Experience",
+      "fields": [
+        "Customer Service",
+        "Operations",
+        "Client Relationship Management"
+      ],
+      "cvBasis": "Customer Service & Experience EN/DE ATS CVs",
+      "skills": [
+        "customer service",
+        "complaint resolution",
+        "service recovery",
+        "customer experience",
+        "client support",
+        "case handling",
+        "escalation management",
+        "call center",
+        "customer care",
+        "account maintenance",
+        "team coaching",
+        "service quality"
+      ],
+      "titleTerms": [
+        "customer support",
+        "customer service",
+        "client service",
+        "customer experience",
+        "service officer",
+        "customer care",
+        "customer success"
+      ],
+      "weight": 1.07
+    },
+    {
+      "id": "alt-finops",
+      "group": "alternative",
+      "nameAr": "العمليات المالية والمدفوعات",
+      "nameEn": "Finance & Financial Operations",
+      "fields": [
+        "Operations",
+        "Trade Finance",
+        "Corporate Banking"
+      ],
+      "cvBasis": "Finance & Financial Operations EN/DE ATS CVs",
+      "skills": [
+        "financial operations",
+        "transaction analysis",
+        "payments processing",
+        "banking operations",
+        "cross-border payments",
+        "transaction review",
+        "deposit monitoring",
+        "cash management",
+        "trade documentation",
+        "FX",
+        "payment reconciliation",
+        "documentation checks"
+      ],
+      "titleTerms": [
+        "financial operations",
+        "payments operations",
+        "payment specialist",
+        "bank operations",
+        "trade operations",
+        "finance operations",
+        "transaction operations"
+      ],
+      "weight": 1.09
+    },
+    {
+      "id": "photo-creative",
+      "group": "photography",
+      "nameAr": "التصوير وتحرير الصور والفيديو",
+      "nameEn": "Photography / Photo Editing / Videography",
+      "fields": [
+        "Photography"
+      ],
+      "cvBasis": "Photography experience (EurographyDXB); no dedicated photography CV found",
+      "cvExists": false,
+      "skills": [
+        "photography",
+        "portrait photography",
+        "corporate photography",
+        "commercial photography",
+        "photo editing",
+        "photo retouching",
+        "event photography",
+        "content creation",
+        "videography",
+        "visual storytelling"
+      ],
+      "titleTerms": [
+        "photographer",
+        "commercial photographer",
+        "corporate photographer",
+        "event photographer",
+        "portrait photographer",
+        "real estate photographer",
+        "photo editor",
+        "photo retoucher",
+        "videographer"
+      ],
+      "weight": 0.9
+    }
+  ]
+}
