@@ -51,7 +51,7 @@ SENIORITY_EXCLUSION = r"\b(?:director|vice president|vp\b|head of|chief(?: \w+){
 EARLY_ROLE = r"\b(?:intern|internship|graduate program|graduate sales|trainee|apprentice|werkstudent|praktikum|student assistant|volunteer|working student)\b"
 TECH_REQ = r"(?:(?:experience|background|knowledge|expertise|proficiency|proficient|familiarity|understanding|selling|sell|work(?:ed)? with|skilled|hands.on|previous(?:ly)? worked|strong|deep|technical|years)\b.{0,95})(?:\b(?:saas|software|cloud|cybersecurity|cyber security|devops|api integrations?|it infrastructure|enterprise technology|technical solutions?|programming|python|java|javascript|sql|developer tools|data engineering|salesforce implementation|erp implementations?|computer science|machine learning|artificial intelligence|ai infrastructure|hardware|database management|network security)\b)"
 SECTOR_REQ = r"(?:(?:experience|background|knowledge|expertise|specialis(?:e|t)|proven track record|selling|worked|previously)\b.{0,80})(?:\b(?:industrial|manufacturing|renewables?|solar|pv|energy engineering|healthcare|clinical|medical devices?|pharmaceutical|life sciences?|biotech|construction|defen[cs]e|military|warehouse automation|advertising technology|digital advertising|performance marketing|marketing agencies|hospitality software|hotel technology)\b)"
-NON_ENGLISH_LANG = r"(?:\b(?:native|fluent|advanced|excellent|business.level|professional working|c1|c2|b2|b1)\b.{0,50}\b(?:german|deutsch|fran[çc]ais|french|spanish|italian|dutch|hebrew|korean|japanese|polish|swedish|danish|norwegian)\b|\b(?:german|deutsch|fran[çc]ais|french|spanish|italian|dutch|hebrew|korean|japanese|polish|swedish|danish|norwegian)\b.{0,35}\b(?:native|fluent|advanced|excellent|professional|business.level|c1|c2|b2|b1)\b)"
+NON_ENGLISH_LANG = r"(?:\b(?:native|fluent|advanced|excellent|business.level|professional working|c1|c2|b2|b1)\b.{0,50}\b(?:german|deutsch|fran[çc]ais|french|spanish|italian|dutch|hebrew|korean|japanese|mandarin|chinese|polish|swedish|danish|norwegian)\b|\b(?:german|deutsch|fran[çc]ais|french|spanish|italian|dutch|hebrew|korean|japanese|polish|swedish|danish|norwegian)\b.{0,35}\b(?:native|fluent|advanced|excellent|professional|business.level|c1|c2|b2|b1)\b)"
 VISA_NO = r"\b(?:no visa sponsorship|cannot sponsor|do not sponsor|unable to sponsor|must (?:already )?have (?:the )?right to work|must be (?:legally )?authorized to work|valid work permit required|no relocation support|does not offer sponsorship)\b"
 VISA_YES = r"\b(?:visa sponsorship (?:is )?(?:available|provided|offered)|offer(?:s|ing)? visa sponsorship|work visa sponsorship provided)\b"
 MANDATORY_TECH_DEGREE = r"(?:bachelor|degree|master|education|studies)\b.{0,75}\b(?:computer science|software engineering|mechanical engineering|electrical engineering|medicine|pharmacy|nursing|clinical research|biotechnology)\b"
@@ -74,7 +74,7 @@ def required_section(full):
     # Keep text after common explicit requirement/profile headings. The section is a
     # heuristic: we still apply strict title and full-text checks separately.
     lines = [re.sub(r"\s+", " ", x).strip() for x in full.splitlines()]
-    headers = r"^(?:requirements?|qualifications?|what you(?:'ll| will) need|what we(?:'re| are) looking for|about you|your profile|your experience|skills (?:and|&) experience|must.haves?|dein profil|ihr profil|was du mitbringst|anforderungen|voraussetzungen|qualifikationen|das bringst du mit|profil recherché|experience required)"
+    headers = r"^(?:requirements?|qualifications?|what you(?:'ll| will) need|what you(?:'ll| will) bring|what you bring|you should apply if|who you are|you(?:'re| are) a fit if|what we(?:'re| are) looking for|who we(?:'re| are) looking for|we(?:'d| would) love to hear from you if|about you|your profile|your experience|skills (?:and|&) experience|must.haves?|dein profil|ihr profil|was du mitbringst|anforderungen|voraussetzungen|qualifikationen|das bringst du mit|profil recherché|experience required)"
     found = [i for i, line in enumerate(lines) if len(line)<110 and hits(headers, line)]
     if found:
         ix = found[0]
@@ -140,7 +140,7 @@ def assess(title, description, location, country_codes):
         return None
     if hits(r"\b(?:german|deutsch)\b.{0,30}\b(?:b1|b2|c1|c2|native|fluent)\b",full):
         return None
-    if hits(r"\b(?:french|spanish|dutch|hebrew|japanese|korean)\b.{0,35}\b(?:speaking|required|fluency|native|fluent)\b",title+" "+req):
+    if hits(r"\b(?:french|spanish|dutch|hebrew|japanese|korean|mandarin|chinese|italian|polish)\b.{0,35}\b(?:speaking|required|fluency|native|fluent)\b",title+" "+req):
         return None
     # Region/citizenship restrictions and explicit non-sponsorship are hard
     # stops for migration to non-UAE destinations.
