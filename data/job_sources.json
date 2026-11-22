@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "lastReviewed": "2026-11-22",
-  "limitations": "Live feed integrations use documented public APIs. Browse-only sources do not contribute automated vacancies, regardless of daily scheduled refresh.",
+  "limitations": "Only public ATS API/RSS feeds with supported access supply automated listing data. LinkedIn, Indeed, Glassdoor and recruiter sites are browsing links unless a compliant data integration exists. No claim that all pages are scraped.",
   "feeds": [
     {
       "id": "greenhouse_monzo",
@@ -212,6 +212,16 @@
       "countryHints": "IE UK US",
       "mode": "feed",
       "notes": "Public employer ATS board; automatic availability subject to endpoint."
+    },
+    {
+      "id": "teamtailor_jaybro",
+      "name": "Jaybro Group",
+      "adapter": "teamtailor_rss",
+      "slug": "https://careers.jaybrogroup.com.au",
+      "sector": "sales, customer service, finance operations",
+      "countryHints": "AU NZ",
+      "mode": "feed",
+      "notes": "Official Teamtailor RSS careers feed; match using complete requirement text when available."
     }
   ],
   "links": [
@@ -663,6 +673,1086 @@
       "country": "AE",
       "type": "job_board",
       "notes": "UAE jobs",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_50",
+      "name": "Jaybro Group Careers",
+      "url": "https://careers.jaybrogroup.com.au/jobs",
+      "country": "AU",
+      "type": "employer",
+      "notes": "Official careers for Australia and New Zealand; search sales, client service, account management and operations",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_52",
+      "name": "Jaybro Group LinkedIn",
+      "url": "https://au.linkedin.com/company/jaybrogroup/jobs",
+      "country": "AU",
+      "type": "employer",
+      "notes": "Company jobs on LinkedIn; browsing only",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_54",
+      "name": "Glassdoor Ireland",
+      "url": "https://www.glassdoor.ie/Job/ireland-jobs-SRCH_IL.0,7_IN70.htm",
+      "country": "IE",
+      "type": "job_board",
+      "notes": "Glassdoor Irish vacancies; no supported unauthenticated job search API",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_56",
+      "name": "Glassdoor worldwide",
+      "url": "https://www.glassdoor.com/Job/index.htm",
+      "country": "GLOBAL",
+      "type": "job_board",
+      "notes": "International job search and employer reviews; browse only",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_58",
+      "name": "LinkedIn Jobs worldwide",
+      "url": "https://www.linkedin.com/jobs/",
+      "country": "GLOBAL",
+      "type": "job_board",
+      "notes": "Sign-in and platform restrictions may apply",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_60",
+      "name": "Michael Page Global",
+      "url": "https://www.michaelpage.com/",
+      "country": "GLOBAL",
+      "type": "recruiter",
+      "notes": "International recruitment and finance/sales jobs",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_62",
+      "name": "Hays Global",
+      "url": "https://www.hays.com/",
+      "country": "GLOBAL",
+      "type": "recruiter",
+      "notes": "Global banking, compliance, operations and sales recruitment",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_64",
+      "name": "Robert Walters Global",
+      "url": "https://www.robertwalters.com/",
+      "country": "GLOBAL",
+      "type": "recruiter",
+      "notes": "Finance, commercial and operations recruitment",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_66",
+      "name": "Randstad Global",
+      "url": "https://www.randstad.com/",
+      "country": "GLOBAL",
+      "type": "recruiter",
+      "notes": "Global employment services",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_68",
+      "name": "Adecco Global",
+      "url": "https://www.adecco.com/",
+      "country": "GLOBAL",
+      "type": "recruiter",
+      "notes": "International jobs network",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_70",
+      "name": "ManpowerGroup Global",
+      "url": "https://www.manpowergroup.com/",
+      "country": "GLOBAL",
+      "type": "recruiter",
+      "notes": "International recruitment group",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_72",
+      "name": "Page Personnel",
+      "url": "https://www.pagepersonnel.com/",
+      "country": "GLOBAL",
+      "type": "recruiter",
+      "notes": "Operations, office and financial-services vacancies",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_74",
+      "name": "eFinancialCareers Global",
+      "url": "https://www.efinancialcareers.com/",
+      "country": "GLOBAL",
+      "type": "finance_jobs",
+      "notes": "Banking AML/KYC/Trade finance jobs",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_76",
+      "name": "EuroJobs",
+      "url": "https://www.eurojobs.com/",
+      "country": "GLOBAL",
+      "type": "job_board",
+      "notes": "Europe-wide vacancies",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_78",
+      "name": "Welcome to the Jungle",
+      "url": "https://www.welcometothejungle.com/en/jobs",
+      "country": "GLOBAL",
+      "type": "job_board",
+      "notes": "European employers and fintech roles",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_80",
+      "name": "Jooble",
+      "url": "https://jooble.org/",
+      "country": "GLOBAL",
+      "type": "job_board",
+      "notes": "International aggregator",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_82",
+      "name": "Jobrapido",
+      "url": "https://www.jobrapido.com/",
+      "country": "GLOBAL",
+      "type": "job_board",
+      "notes": "Global vacancy aggregator",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_84",
+      "name": "Google Jobs Search",
+      "url": "https://www.google.com/search?q=KYC+AML+Corporate+Banking+jobs",
+      "country": "GLOBAL",
+      "type": "job_board",
+      "notes": "Search engine index; may require manual checks",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_86",
+      "name": "Indeed Germany",
+      "url": "https://de.indeed.com/",
+      "country": "DE",
+      "type": "job_board",
+      "notes": "Local Indeed search; listings not automatically imported",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_88",
+      "name": "Glassdoor Germany",
+      "url": "https://www.glassdoor.de/Job/index.htm",
+      "country": "DE",
+      "type": "job_board",
+      "notes": "Local Glassdoor listings and employer reviews; browse-only",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_90",
+      "name": "LinkedIn Germany",
+      "url": "https://www.linkedin.com/jobs/jobs-in-germany/",
+      "country": "DE",
+      "type": "job_board",
+      "notes": "Local LinkedIn jobs; sign-in may be required",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_92",
+      "name": "Indeed Canada",
+      "url": "https://ca.indeed.com/",
+      "country": "CA",
+      "type": "job_board",
+      "notes": "Local Indeed search; listings not automatically imported",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_94",
+      "name": "Glassdoor Canada",
+      "url": "https://www.glassdoor.ca/Job/index.htm",
+      "country": "CA",
+      "type": "job_board",
+      "notes": "Local Glassdoor listings and employer reviews; browse-only",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_96",
+      "name": "LinkedIn Canada",
+      "url": "https://www.linkedin.com/jobs/jobs-in-canada/",
+      "country": "CA",
+      "type": "job_board",
+      "notes": "Local LinkedIn jobs; sign-in may be required",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_98",
+      "name": "Indeed Australia",
+      "url": "https://au.indeed.com/",
+      "country": "AU",
+      "type": "job_board",
+      "notes": "Local Indeed search; listings not automatically imported",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_100",
+      "name": "Glassdoor Australia",
+      "url": "https://www.glassdoor.com.au/Job/index.htm",
+      "country": "AU",
+      "type": "job_board",
+      "notes": "Local Glassdoor listings and employer reviews; browse-only",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_102",
+      "name": "LinkedIn Australia",
+      "url": "https://www.linkedin.com/jobs/jobs-in-australia/",
+      "country": "AU",
+      "type": "job_board",
+      "notes": "Local LinkedIn jobs; sign-in may be required",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_104",
+      "name": "Indeed New Zealand",
+      "url": "https://nz.indeed.com/",
+      "country": "NZ",
+      "type": "job_board",
+      "notes": "Local Indeed search; listings not automatically imported",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_106",
+      "name": "Glassdoor New Zealand",
+      "url": "https://www.glassdoor.co.nz/Job/index.htm",
+      "country": "NZ",
+      "type": "job_board",
+      "notes": "Local Glassdoor listings and employer reviews; browse-only",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_108",
+      "name": "LinkedIn New Zealand",
+      "url": "https://www.linkedin.com/jobs/jobs-in-new-zealand/",
+      "country": "NZ",
+      "type": "job_board",
+      "notes": "Local LinkedIn jobs; sign-in may be required",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_110",
+      "name": "Indeed United Kingdom",
+      "url": "https://uk.indeed.com/",
+      "country": "UK",
+      "type": "job_board",
+      "notes": "Local Indeed search; listings not automatically imported",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_112",
+      "name": "Glassdoor United Kingdom",
+      "url": "https://www.glassdoor.co.uk/Job/index.htm",
+      "country": "UK",
+      "type": "job_board",
+      "notes": "Local Glassdoor listings and employer reviews; browse-only",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_114",
+      "name": "LinkedIn United Kingdom",
+      "url": "https://www.linkedin.com/jobs/jobs-in-united-kingdom/",
+      "country": "UK",
+      "type": "job_board",
+      "notes": "Local LinkedIn jobs; sign-in may be required",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_116",
+      "name": "Glassdoor Ireland",
+      "url": "https://www.glassdoor.ie/Job/index.htm",
+      "country": "IE",
+      "type": "job_board",
+      "notes": "Local Glassdoor listings and employer reviews; browse-only",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_118",
+      "name": "Indeed Malta",
+      "url": "https://mt.indeed.com/",
+      "country": "MT",
+      "type": "job_board",
+      "notes": "Local Indeed search; listings not automatically imported",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_120",
+      "name": "Glassdoor Malta",
+      "url": "https://www.glassdoor.com/Job/malta-jobs-SRCH_IL.0,5_IN167.htm",
+      "country": "MT",
+      "type": "job_board",
+      "notes": "Local Glassdoor listings and employer reviews; browse-only",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_122",
+      "name": "LinkedIn Malta",
+      "url": "https://www.linkedin.com/jobs/jobs-in-malta/",
+      "country": "MT",
+      "type": "job_board",
+      "notes": "Local LinkedIn jobs; sign-in may be required",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_124",
+      "name": "Indeed Austria",
+      "url": "https://at.indeed.com/",
+      "country": "AT",
+      "type": "job_board",
+      "notes": "Local Indeed search; listings not automatically imported",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_126",
+      "name": "Glassdoor Austria",
+      "url": "https://www.glassdoor.at/Job/index.htm",
+      "country": "AT",
+      "type": "job_board",
+      "notes": "Local Glassdoor listings and employer reviews; browse-only",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_128",
+      "name": "LinkedIn Austria",
+      "url": "https://www.linkedin.com/jobs/jobs-in-austria/",
+      "country": "AT",
+      "type": "job_board",
+      "notes": "Local LinkedIn jobs; sign-in may be required",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_130",
+      "name": "LinkedIn United States",
+      "url": "https://www.linkedin.com/jobs/jobs-in-united-states/",
+      "country": "US",
+      "type": "job_board",
+      "notes": "Local LinkedIn jobs; sign-in may be required",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_132",
+      "name": "Indeed Luxembourg",
+      "url": "https://lu.indeed.com/",
+      "country": "LU",
+      "type": "job_board",
+      "notes": "Local Indeed search; listings not automatically imported",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_134",
+      "name": "Glassdoor Luxembourg",
+      "url": "https://www.glassdoor.com/Job/luxembourg-jobs-SRCH_IL.0,10_IN148.htm",
+      "country": "LU",
+      "type": "job_board",
+      "notes": "Local Glassdoor listings and employer reviews; browse-only",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_136",
+      "name": "LinkedIn Luxembourg",
+      "url": "https://www.linkedin.com/jobs/jobs-in-luxembourg/",
+      "country": "LU",
+      "type": "job_board",
+      "notes": "Local LinkedIn jobs; sign-in may be required",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_138",
+      "name": "Indeed Switzerland",
+      "url": "https://ch.indeed.com/",
+      "country": "CH",
+      "type": "job_board",
+      "notes": "Local Indeed search; listings not automatically imported",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_140",
+      "name": "Glassdoor Switzerland",
+      "url": "https://www.glassdoor.ch/Job/index.htm",
+      "country": "CH",
+      "type": "job_board",
+      "notes": "Local Glassdoor listings and employer reviews; browse-only",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_142",
+      "name": "LinkedIn Switzerland",
+      "url": "https://www.linkedin.com/jobs/jobs-in-switzerland/",
+      "country": "CH",
+      "type": "job_board",
+      "notes": "Local LinkedIn jobs; sign-in may be required",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_144",
+      "name": "Indeed Belgium",
+      "url": "https://be.indeed.com/",
+      "country": "BE",
+      "type": "job_board",
+      "notes": "Local Indeed search; listings not automatically imported",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_146",
+      "name": "Glassdoor Belgium",
+      "url": "https://www.glassdoor.be/Job/index.htm",
+      "country": "BE",
+      "type": "job_board",
+      "notes": "Local Glassdoor listings and employer reviews; browse-only",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_148",
+      "name": "LinkedIn Belgium",
+      "url": "https://www.linkedin.com/jobs/jobs-in-belgium/",
+      "country": "BE",
+      "type": "job_board",
+      "notes": "Local LinkedIn jobs; sign-in may be required",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_150",
+      "name": "Indeed Denmark",
+      "url": "https://dk.indeed.com/",
+      "country": "DK",
+      "type": "job_board",
+      "notes": "Local Indeed search; listings not automatically imported",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_152",
+      "name": "Glassdoor Denmark",
+      "url": "https://www.glassdoor.com/Job/denmark-jobs-SRCH_IL.0,7_IN63.htm",
+      "country": "DK",
+      "type": "job_board",
+      "notes": "Local Glassdoor listings and employer reviews; browse-only",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_154",
+      "name": "LinkedIn Denmark",
+      "url": "https://www.linkedin.com/jobs/jobs-in-denmark/",
+      "country": "DK",
+      "type": "job_board",
+      "notes": "Local LinkedIn jobs; sign-in may be required",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_156",
+      "name": "Indeed Spain",
+      "url": "https://es.indeed.com/",
+      "country": "ES",
+      "type": "job_board",
+      "notes": "Local Indeed search; listings not automatically imported",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_158",
+      "name": "Glassdoor Spain",
+      "url": "https://www.glassdoor.es/Job/index.htm",
+      "country": "ES",
+      "type": "job_board",
+      "notes": "Local Glassdoor listings and employer reviews; browse-only",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_160",
+      "name": "LinkedIn Spain",
+      "url": "https://www.linkedin.com/jobs/jobs-in-spain/",
+      "country": "ES",
+      "type": "job_board",
+      "notes": "Local LinkedIn jobs; sign-in may be required",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_162",
+      "name": "LinkedIn Liechtenstein",
+      "url": "https://www.linkedin.com/jobs/jobs-in-liechtenstein/",
+      "country": "LI",
+      "type": "job_board",
+      "notes": "Local LinkedIn jobs; sign-in may be required",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_164",
+      "name": "Indeed United Arab Emirates",
+      "url": "https://ae.indeed.com/",
+      "country": "AE",
+      "type": "job_board",
+      "notes": "Local Indeed search; listings not automatically imported",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_166",
+      "name": "Glassdoor United Arab Emirates",
+      "url": "https://www.glassdoor.com/Job/united-arab-emirates-jobs-SRCH_IL.0,20_IN6.htm",
+      "country": "AE",
+      "type": "job_board",
+      "notes": "Local Glassdoor listings and employer reviews; browse-only",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_168",
+      "name": "LinkedIn United Arab Emirates",
+      "url": "https://www.linkedin.com/jobs/jobs-in-united-arab-emirates/",
+      "country": "AE",
+      "type": "job_board",
+      "notes": "Local LinkedIn jobs; sign-in may be required",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_170",
+      "name": "FBD Banking Ireland",
+      "url": "https://www.fbdgroup.com/careers",
+      "country": "IE",
+      "type": "bank",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_172",
+      "name": "PTSB Ireland Careers",
+      "url": "https://www.ptsb.ie/about-us/careers/",
+      "country": "IE",
+      "type": "bank",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_174",
+      "name": "HSBC Careers",
+      "url": "https://www.hsbc.com/careers",
+      "country": "GLOBAL",
+      "type": "bank",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_176",
+      "name": "JPMorgan Chase Careers",
+      "url": "https://careers.jpmorgan.com/",
+      "country": "GLOBAL",
+      "type": "bank",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_178",
+      "name": "Standard Chartered Careers",
+      "url": "https://www.sc.com/en/global-careers/",
+      "country": "GLOBAL",
+      "type": "bank",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_180",
+      "name": "Santander Careers",
+      "url": "https://www.santander.com/en/careers",
+      "country": "GLOBAL",
+      "type": "bank",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_182",
+      "name": "Deutsche Bank Careers",
+      "url": "https://careers.db.com/",
+      "country": "GLOBAL",
+      "type": "bank",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_184",
+      "name": "BNP Paribas Careers",
+      "url": "https://group.bnpparibas/en/careers",
+      "country": "GLOBAL",
+      "type": "bank",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_186",
+      "name": "ING Careers",
+      "url": "https://www.ing.jobs/",
+      "country": "GLOBAL",
+      "type": "bank",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_188",
+      "name": "UBS Careers",
+      "url": "https://www.ubs.com/global/en/careers.html",
+      "country": "GLOBAL",
+      "type": "bank",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_190",
+      "name": "RBC Careers",
+      "url": "https://jobs.rbc.com/",
+      "country": "GLOBAL",
+      "type": "bank",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_192",
+      "name": "Scotiabank Careers",
+      "url": "https://jobs.scotiabank.com/",
+      "country": "CA",
+      "type": "bank",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_194",
+      "name": "TD Bank Careers",
+      "url": "https://jobs.td.com/en/",
+      "country": "CA",
+      "type": "bank",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_196",
+      "name": "CIBC Careers",
+      "url": "https://careers.cibc.com/",
+      "country": "CA",
+      "type": "bank",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_198",
+      "name": "Westpac Australia",
+      "url": "https://www.westpac.com.au/about-westpac/careers/",
+      "country": "AU",
+      "type": "bank",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_200",
+      "name": "NAB Careers",
+      "url": "https://www.nab.com.au/about-us/careers",
+      "country": "AU",
+      "type": "bank",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_202",
+      "name": "Commonwealth Bank Careers",
+      "url": "https://www.commbank.com.au/about-us/careers.html",
+      "country": "AU",
+      "type": "bank",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_204",
+      "name": "ANZ Careers",
+      "url": "https://www.anz.com.au/careers/",
+      "country": "AU",
+      "type": "bank",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_206",
+      "name": "ASB Bank NZ",
+      "url": "https://www.asb.co.nz/careers.html",
+      "country": "NZ",
+      "type": "bank",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_208",
+      "name": "BNZ Careers",
+      "url": "https://www.bnz.co.nz/about-us/careers",
+      "country": "NZ",
+      "type": "bank",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_210",
+      "name": "NatWest Careers",
+      "url": "https://jobs.natwestgroup.com/",
+      "country": "UK",
+      "type": "bank",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_212",
+      "name": "Lloyds Careers",
+      "url": "https://www.lloydsbankinggroup.com/careers.html",
+      "country": "UK",
+      "type": "bank",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_214",
+      "name": "Barclays Careers",
+      "url": "https://search.jobs.barclays/",
+      "country": "UK",
+      "type": "bank",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_216",
+      "name": "RBC Luxembourg",
+      "url": "https://www.rbcits.com/en/careers.page",
+      "country": "LU",
+      "type": "bank",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_218",
+      "name": "Societe Generale Luxembourg",
+      "url": "https://careers.societegenerale.com/",
+      "country": "LU",
+      "type": "bank",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_220",
+      "name": "Danske Bank Careers",
+      "url": "https://danskebank.com/careers",
+      "country": "DK",
+      "type": "bank",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_222",
+      "name": "CaixaBank Careers",
+      "url": "https://www.caixabank.com/",
+      "country": "ES",
+      "type": "bank",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_224",
+      "name": "Emirates NBD Careers",
+      "url": "https://www.emiratesnbd.com/en/careers",
+      "country": "AE",
+      "type": "bank",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_226",
+      "name": "Mashreq Careers",
+      "url": "https://www.mashreq.com/en/uae/about-us/careers/",
+      "country": "AE",
+      "type": "bank",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_228",
+      "name": "Michael Page Ireland",
+      "url": "https://www.michaelpage.ie/jobs",
+      "country": "IE",
+      "type": "recruiter",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_230",
+      "name": "Hays Australia",
+      "url": "https://www.hays.com.au/jobs",
+      "country": "AU",
+      "type": "recruiter",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_232",
+      "name": "Hays Canada",
+      "url": "https://www.hays.ca/jobs",
+      "country": "CA",
+      "type": "recruiter",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_234",
+      "name": "Hays UK",
+      "url": "https://www.hays.co.uk/jobs",
+      "country": "UK",
+      "type": "recruiter",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_236",
+      "name": "Michael Page Luxembourg",
+      "url": "https://www.michaelpage.lu/",
+      "country": "LU",
+      "type": "recruiter",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_238",
+      "name": "Randstad Ireland",
+      "url": "https://www.randstad.ie/jobs/",
+      "country": "IE",
+      "type": "recruiter",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_240",
+      "name": "FRS Recruitment Ireland",
+      "url": "https://www.frsrecruitment.com/jobs",
+      "country": "IE",
+      "type": "recruiter",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_242",
+      "name": "Recruiters.ie",
+      "url": "https://www.recruiters.ie/",
+      "country": "IE",
+      "type": "recruiter",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_244",
+      "name": "Prosperity Recruitment Ireland",
+      "url": "https://www.prosperity.ie/jobs",
+      "country": "IE",
+      "type": "recruiter",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_246",
+      "name": "Cpl Finance Ireland",
+      "url": "https://www.cpl.com/",
+      "country": "IE",
+      "type": "recruiter",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_248",
+      "name": "Hays Germany",
+      "url": "https://www.hays.de/jobsuche",
+      "country": "DE",
+      "type": "recruiter",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_250",
+      "name": "Randstad Germany",
+      "url": "https://www.randstad.de/jobs/",
+      "country": "DE",
+      "type": "recruiter",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_252",
+      "name": "Adecco Austria",
+      "url": "https://www.adecco.at/",
+      "country": "AT",
+      "type": "recruiter",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_254",
+      "name": "Hays Switzerland",
+      "url": "https://www.hays.ch/en/jobs",
+      "country": "CH",
+      "type": "recruiter",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_256",
+      "name": "Michael Page Belgium",
+      "url": "https://www.michaelpage.be/",
+      "country": "BE",
+      "type": "recruiter",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_258",
+      "name": "Reed UK Finance",
+      "url": "https://www.reed.co.uk/jobs/finance-jobs",
+      "country": "UK",
+      "type": "recruiter",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_260",
+      "name": "Robert Half Ireland",
+      "url": "https://www.roberthalf.com/ie/en/jobs",
+      "country": "IE",
+      "type": "recruiter",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_262",
+      "name": "Robert Half UK",
+      "url": "https://www.roberthalf.com/gb/en/jobs",
+      "country": "UK",
+      "type": "recruiter",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_264",
+      "name": "Robert Half Canada",
+      "url": "https://www.roberthalf.com/ca/en/jobs",
+      "country": "CA",
+      "type": "recruiter",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_266",
+      "name": "Robert Half Australia",
+      "url": "https://www.roberthalf.com/au/en/jobs",
+      "country": "AU",
+      "type": "recruiter",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_268",
+      "name": "Jobsite UK",
+      "url": "https://www.jobsite.co.uk/",
+      "country": "UK",
+      "type": "job_board",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_270",
+      "name": "Totaljobs UK",
+      "url": "https://www.totaljobs.com/",
+      "country": "UK",
+      "type": "job_board",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_272",
+      "name": "Monster USA",
+      "url": "https://www.monster.com/",
+      "country": "US",
+      "type": "job_board",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_274",
+      "name": "ZipRecruiter USA",
+      "url": "https://www.ziprecruiter.com/",
+      "country": "US",
+      "type": "job_board",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_276",
+      "name": "Jobatlas Malta",
+      "url": "https://www.jobatlas.com.mt/",
+      "country": "MT",
+      "type": "job_board",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_278",
+      "name": "JobsInMalta",
+      "url": "https://www.jobsinmalta.com/",
+      "country": "MT",
+      "type": "job_board",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_280",
+      "name": "Jobs in Austria",
+      "url": "https://www.stepstone.at/",
+      "country": "AT",
+      "type": "job_board",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_282",
+      "name": "Jobup Switzerland",
+      "url": "https://www.jobup.ch/en/",
+      "country": "CH",
+      "type": "job_board",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_284",
+      "name": "Jobat Belgium",
+      "url": "https://www.jobat.be/en/jobs",
+      "country": "BE",
+      "type": "job_board",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_286",
+      "name": "Workindenmark",
+      "url": "https://workindenmark.dk/",
+      "country": "DK",
+      "type": "government",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
+      "mode": "browse_only"
+    },
+    {
+      "id": "browse_288",
+      "name": "JobisJob Spain",
+      "url": "https://www.jobisjob.es/",
+      "country": "ES",
+      "type": "job_board",
+      "notes": "Local/regional employer, recruiter or job board. Original website may require sign-in.",
       "mode": "browse_only"
     }
   ]
