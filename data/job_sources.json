@@ -1,0 +1,669 @@
+{
+  "schemaVersion": 1,
+  "lastReviewed": "2026-11-22",
+  "limitations": "Live feed integrations use documented public APIs. Browse-only sources do not contribute automated vacancies, regardless of daily scheduled refresh.",
+  "feeds": [
+    {
+      "id": "greenhouse_monzo",
+      "name": "Monzo",
+      "adapter": "greenhouse",
+      "slug": "monzo",
+      "sector": "bank",
+      "countryHints": "UK IE",
+      "mode": "feed",
+      "notes": "Public employer ATS board; automatic availability subject to endpoint."
+    },
+    {
+      "id": "greenhouse_tide",
+      "name": "Tide",
+      "adapter": "greenhouse",
+      "slug": "tide",
+      "sector": "fintech",
+      "countryHints": "UK DE",
+      "mode": "feed",
+      "notes": "Public employer ATS board; automatic availability subject to endpoint."
+    },
+    {
+      "id": "greenhouse_adyen",
+      "name": "Adyen",
+      "adapter": "greenhouse",
+      "slug": "adyen",
+      "sector": "fintech",
+      "countryHints": "IE UK DE US",
+      "mode": "feed",
+      "notes": "Public employer ATS board; automatic availability subject to endpoint."
+    },
+    {
+      "id": "greenhouse_modulrfinance",
+      "name": "Modulr",
+      "adapter": "greenhouse",
+      "slug": "modulrfinance",
+      "sector": "fintech",
+      "countryHints": "IE UK",
+      "mode": "feed",
+      "notes": "Public employer ATS board; automatic availability subject to endpoint."
+    },
+    {
+      "id": "greenhouse_bvnk",
+      "name": "BVNK",
+      "adapter": "greenhouse",
+      "slug": "bvnk",
+      "sector": "fintech",
+      "countryHints": "UK EU",
+      "mode": "feed",
+      "notes": "Public employer ATS board; automatic availability subject to endpoint."
+    },
+    {
+      "id": "greenhouse_carta",
+      "name": "Carta",
+      "adapter": "greenhouse",
+      "slug": "carta",
+      "sector": "fintech",
+      "countryHints": "IE UK US",
+      "mode": "feed",
+      "notes": "Public employer ATS board; automatic availability subject to endpoint."
+    },
+    {
+      "id": "greenhouse_capco",
+      "name": "Capco",
+      "adapter": "greenhouse",
+      "slug": "capco",
+      "sector": "consulting",
+      "countryHints": "IE UK DE",
+      "mode": "feed",
+      "notes": "Public employer ATS board; automatic availability subject to endpoint."
+    },
+    {
+      "id": "greenhouse_b2c2",
+      "name": "B2C2",
+      "adapter": "greenhouse",
+      "slug": "b2c2",
+      "sector": "finance",
+      "countryHints": "UK US",
+      "mode": "feed",
+      "notes": "Public employer ATS board; automatic availability subject to endpoint."
+    },
+    {
+      "id": "greenhouse_bitgo",
+      "name": "BitGo",
+      "adapter": "greenhouse",
+      "slug": "bitgo",
+      "sector": "fintech",
+      "countryHints": "DE UK US",
+      "mode": "feed",
+      "notes": "Public employer ATS board; automatic availability subject to endpoint."
+    },
+    {
+      "id": "greenhouse_stripe",
+      "name": "Stripe",
+      "adapter": "greenhouse",
+      "slug": "stripe",
+      "sector": "fintech",
+      "countryHints": "IE UK US",
+      "mode": "feed",
+      "notes": "Public employer ATS board; automatic availability subject to endpoint."
+    },
+    {
+      "id": "ashby_truelayer",
+      "name": "TrueLayer",
+      "adapter": "ashby",
+      "slug": "truelayer",
+      "sector": "fintech",
+      "countryHints": "IE UK",
+      "mode": "feed",
+      "notes": "Public employer ATS board; automatic availability subject to endpoint."
+    },
+    {
+      "id": "ashby_paymentology",
+      "name": "Paymentology",
+      "adapter": "ashby",
+      "slug": "paymentology",
+      "sector": "fintech",
+      "countryHints": "IE UK",
+      "mode": "feed",
+      "notes": "Public employer ATS board; automatic availability subject to endpoint."
+    },
+    {
+      "id": "ashby_inscribeai",
+      "name": "Inscribe",
+      "adapter": "ashby",
+      "slug": "InscribeAI",
+      "sector": "fintech",
+      "countryHints": "IE US",
+      "mode": "feed",
+      "notes": "Public employer ATS board; automatic availability subject to endpoint."
+    },
+    {
+      "id": "ashby_trading212",
+      "name": "Trading 212",
+      "adapter": "ashby",
+      "slug": "trading212",
+      "sector": "finance",
+      "countryHints": "IE UK",
+      "mode": "feed",
+      "notes": "Public employer ATS board; automatic availability subject to endpoint."
+    },
+    {
+      "id": "ashby_seccl",
+      "name": "Seccl",
+      "adapter": "ashby",
+      "slug": "seccl",
+      "sector": "finance",
+      "countryHints": "IE UK",
+      "mode": "feed",
+      "notes": "Public employer ATS board; automatic availability subject to endpoint."
+    },
+    {
+      "id": "ashby_kraken_com",
+      "name": "Kraken",
+      "adapter": "ashby",
+      "slug": "kraken.com",
+      "sector": "finance",
+      "countryHints": "IE EU US",
+      "mode": "feed",
+      "notes": "Public employer ATS board; automatic availability subject to endpoint."
+    },
+    {
+      "id": "ashby_kota",
+      "name": "Kota",
+      "adapter": "ashby",
+      "slug": "kota",
+      "sector": "finance",
+      "countryHints": "IE UK",
+      "mode": "feed",
+      "notes": "Public employer ATS board; automatic availability subject to endpoint."
+    },
+    {
+      "id": "smartrecruiters_bankofchinaluxembourg",
+      "name": "Bank of China Luxembourg",
+      "adapter": "smartrecruiters",
+      "slug": "BankOfChinaLuxembourg",
+      "sector": "bank",
+      "countryHints": "IE LU",
+      "mode": "feed",
+      "notes": "Public employer ATS board; automatic availability subject to endpoint."
+    },
+    {
+      "id": "smartrecruiters_mufginvestorservices",
+      "name": "MUFG Investor Services",
+      "adapter": "smartrecruiters",
+      "slug": "MUFGInvestorServices",
+      "sector": "finance",
+      "countryHints": "IE UK CA",
+      "mode": "feed",
+      "notes": "Public employer ATS board; automatic availability subject to endpoint."
+    },
+    {
+      "id": "smartrecruiters_vusiongroupsa",
+      "name": "VusionGroup",
+      "adapter": "smartrecruiters",
+      "slug": "vusiongroupsa",
+      "sector": "sales",
+      "countryHints": "IE EU",
+      "mode": "feed",
+      "notes": "Public employer ATS board; automatic availability subject to endpoint."
+    },
+    {
+      "id": "lever_jobgether",
+      "name": "Jobgether",
+      "adapter": "lever",
+      "slug": "jobgether",
+      "sector": "recruiter",
+      "countryHints": "IE UK US",
+      "mode": "feed",
+      "notes": "Public employer ATS board; automatic availability subject to endpoint."
+    }
+  ],
+  "links": [
+    {
+      "id": "link_0",
+      "name": "JobsIreland",
+      "url": "https://jobsireland.ie/en-US/browse-jobs",
+      "country": "IE",
+      "type": "government",
+      "notes": "Official Irish employment-service search",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_1",
+      "name": "EURES",
+      "url": "https://eures.europa.eu/index_en",
+      "country": "IE",
+      "type": "government",
+      "notes": "EU jobs portal; includes JobsIreland listings",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_2",
+      "name": "IrishJobs",
+      "url": "https://www.irishjobs.ie/",
+      "country": "IE",
+      "type": "job_board",
+      "notes": "Ireland job board",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_3",
+      "name": "Jobs.ie",
+      "url": "https://www.jobs.ie/",
+      "country": "IE",
+      "type": "job_board",
+      "notes": "Irish jobs portal",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_4",
+      "name": "eFinancialCareers Ireland",
+      "url": "https://www.efinancialcareers.ie/jobs/compliance",
+      "country": "IE",
+      "type": "finance_jobs",
+      "notes": "Financial-services jobs and recruiters; previously used",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_5",
+      "name": "Cpl Ireland Financial Services",
+      "url": "https://www.cpl.com/jobs?jobs.location=IE&jobs.sector=Financial+Services",
+      "country": "IE",
+      "type": "recruiter",
+      "notes": "Previous Cpl application/listings",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_6",
+      "name": "Morgan McKinley Ireland",
+      "url": "https://www.morganmckinley.com/ie/jobs/discipline/banking-financial-services-jobs",
+      "country": "IE",
+      "type": "recruiter",
+      "notes": "Banking and financial services specialists",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_7",
+      "name": "Hays Ireland Banking",
+      "url": "https://www.hays.ie/job-search/banking-jobs",
+      "country": "IE",
+      "type": "recruiter",
+      "notes": "Banking roles in Ireland",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_8",
+      "name": "Robert Walters Ireland",
+      "url": "https://www.robertwalters.ie/expertise/banking-and-financial-services/jobs.html",
+      "country": "IE",
+      "type": "recruiter",
+      "notes": "Banking recruiters",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_9",
+      "name": "Sigmar Recruitment",
+      "url": "https://www.sigmarrecruitment.com/jobs/",
+      "country": "IE",
+      "type": "recruiter",
+      "notes": "Finance and operations recruiters",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_10",
+      "name": "Brightwater Recruitment",
+      "url": "https://www.brightwater.ie/",
+      "country": "IE",
+      "type": "recruiter",
+      "notes": "Financial services recruitment",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_11",
+      "name": "Citi Ireland",
+      "url": "https://jobs.citi.com/location/ireland-jobs/287/2963597/2/1",
+      "country": "IE",
+      "type": "bank",
+      "notes": "Previously shortlisted Citi Ireland roles",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_12",
+      "name": "SMBC Group Ireland",
+      "url": "https://careersemea.smbcgroup.com/",
+      "country": "IE",
+      "type": "bank",
+      "notes": "Previously reviewed Dublin KYC roles",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_13",
+      "name": "AIB Ireland",
+      "url": "https://jobs.aib.ie/go/Search-All-Jobs/3834700/",
+      "country": "IE",
+      "type": "bank",
+      "notes": "Allied Irish Banks official careers",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_14",
+      "name": "Bank of Ireland",
+      "url": "https://careers.bankofireland.com/jobs/search",
+      "country": "IE",
+      "type": "bank",
+      "notes": "Official bank career board",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_15",
+      "name": "RBC UK & Europe",
+      "url": "https://jobs.rbc.com/ca/en/uk-europe-ci?s=1",
+      "country": "IE",
+      "type": "bank",
+      "notes": "RBC international and Europe careers",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_16",
+      "name": "Mastercard Dublin",
+      "url": "https://careers.mastercard.com/us/en/dublin-ireland",
+      "country": "IE",
+      "type": "fintech",
+      "notes": "Official Mastercard Dublin careers",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_17",
+      "name": "Citi Ireland Corporate Banking Associate",
+      "url": "https://jobs.citi.com/job/dublin/corporate-banking-associate/287/94255671856",
+      "country": "IE",
+      "type": "previous_application",
+      "notes": "Previously reviewed, submission not confirmed",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_18",
+      "name": "Fire Ireland (HireHive)",
+      "url": "https://fire.hirehive.com/operations-analyst-dublin-PsdWoO",
+      "country": "IE",
+      "type": "previous_application",
+      "notes": "Previously reviewed Fire Operations Analyst posting",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_19",
+      "name": "Cpl previous listing",
+      "url": "https://www.cpl.com/uk/jobs/976482728",
+      "country": "IE",
+      "type": "previous_application",
+      "notes": "Previously discussed Irish Cpl listing",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_20",
+      "name": "Rippling job portal",
+      "url": "https://ats.rippling.com/rippling/jobs/ca31b1fb-4c3a-4b06-ac01-3cc320dc456f",
+      "country": "IE",
+      "type": "previous_application",
+      "notes": "Previously viewed direct ATS application page",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_21",
+      "name": "EY Ireland Careers",
+      "url": "https://careers.ey.com/",
+      "country": "IE",
+      "type": "consulting",
+      "notes": "Previously prepared EY FSO Risk application",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_22",
+      "name": "Accenture Ireland Careers",
+      "url": "https://www.accenture.com/ie-en/careers",
+      "country": "IE",
+      "type": "consulting",
+      "notes": "Previous Irish applications",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_23",
+      "name": "Deloitte Careers",
+      "url": "https://www.deloitte.com/ie/en/careers.html",
+      "country": "IE",
+      "type": "consulting",
+      "notes": "Deloitte Ireland careers",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_24",
+      "name": "Google Careers Ireland",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/",
+      "country": "IE",
+      "type": "technology_employer",
+      "notes": "Previous application portal; only nontechnical jobs",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_25",
+      "name": "LinkedIn Jobs Ireland",
+      "url": "https://www.linkedin.com/jobs/jobs-in-ireland/",
+      "country": "IE",
+      "type": "job_board",
+      "notes": "Sign-in may be required",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_26",
+      "name": "Indeed Ireland",
+      "url": "https://ie.indeed.com/",
+      "country": "IE",
+      "type": "job_board",
+      "notes": "Search and alerts may require sign-in",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_27",
+      "name": "Germany Federal Employment Agency",
+      "url": "https://www.arbeitsagentur.de/jobsuche/",
+      "country": "DE",
+      "type": "government",
+      "notes": "Public German jobs search",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_28",
+      "name": "StepStone Germany",
+      "url": "https://www.stepstone.de/",
+      "country": "DE",
+      "type": "job_board",
+      "notes": "Germany vacancies",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_29",
+      "name": "Canada Job Bank",
+      "url": "https://www.jobbank.gc.ca/home",
+      "country": "CA",
+      "type": "government",
+      "notes": "Canadian public jobs",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_30",
+      "name": "SEEK Australia",
+      "url": "https://www.seek.com.au/",
+      "country": "AU",
+      "type": "job_board",
+      "notes": "Australia jobs",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_31",
+      "name": "Workforce Australia",
+      "url": "https://www.workforceaustralia.gov.au/",
+      "country": "AU",
+      "type": "government",
+      "notes": "Australia jobs search",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_32",
+      "name": "SEEK New Zealand",
+      "url": "https://www.seek.co.nz/",
+      "country": "NZ",
+      "type": "job_board",
+      "notes": "NZ jobs",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_33",
+      "name": "Trade Me Jobs",
+      "url": "https://www.trademe.co.nz/a/jobs",
+      "country": "NZ",
+      "type": "job_board",
+      "notes": "New Zealand job market",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_34",
+      "name": "Find a job UK (GOV.UK)",
+      "url": "https://findajob.dwp.gov.uk/",
+      "country": "UK",
+      "type": "government",
+      "notes": "UK public job search",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_35",
+      "name": "Reed UK",
+      "url": "https://www.reed.co.uk/jobs",
+      "country": "UK",
+      "type": "job_board",
+      "notes": "UK jobs",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_36",
+      "name": "Jobsplus Malta",
+      "url": "https://jobsplus.gov.mt/",
+      "country": "MT",
+      "type": "government",
+      "notes": "Malta employment services",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_37",
+      "name": "Keepmeposted Malta",
+      "url": "https://www.keepmeposted.com.mt/",
+      "country": "MT",
+      "type": "job_board",
+      "notes": "Malta vacancies",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_38",
+      "name": "AMS Austria",
+      "url": "https://www.ams.at/arbeitsuchende",
+      "country": "AT",
+      "type": "government",
+      "notes": "Austria jobs service",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_39",
+      "name": "karriere.at",
+      "url": "https://www.karriere.at/jobs",
+      "country": "AT",
+      "type": "job_board",
+      "notes": "Austria jobs",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_40",
+      "name": "USAJobs",
+      "url": "https://www.usajobs.gov/",
+      "country": "US",
+      "type": "government",
+      "notes": "US public sector; work authorization often required",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_41",
+      "name": "Indeed US",
+      "url": "https://www.indeed.com/",
+      "country": "US",
+      "type": "job_board",
+      "notes": "US jobs",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_42",
+      "name": "ADEM Luxembourg",
+      "url": "https://adem.public.lu/en.html",
+      "country": "LU",
+      "type": "government",
+      "notes": "Luxembourg public employment service",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_43",
+      "name": "Moovijob Luxembourg",
+      "url": "https://www.moovijob.com/",
+      "country": "LU",
+      "type": "job_board",
+      "notes": "Luxembourg jobs",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_44",
+      "name": "jobs.ch Switzerland",
+      "url": "https://www.jobs.ch/en/",
+      "country": "CH",
+      "type": "job_board",
+      "notes": "Swiss employment market",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_45",
+      "name": "VDAB Belgium",
+      "url": "https://www.vdab.be/vindeenjob/vacatures",
+      "country": "BE",
+      "type": "government",
+      "notes": "Flanders employment service",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_46",
+      "name": "Jobindex Denmark",
+      "url": "https://www.jobindex.dk/",
+      "country": "DK",
+      "type": "job_board",
+      "notes": "Denmark vacancies",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_47",
+      "name": "InfoJobs Spain",
+      "url": "https://www.infojobs.net/",
+      "country": "ES",
+      "type": "job_board",
+      "notes": "Spain vacancies",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_48",
+      "name": "Liechtenstein Career Portal",
+      "url": "https://www.amsfl.li/",
+      "country": "LI",
+      "type": "government",
+      "notes": "Liechtenstein public job search",
+      "mode": "browse_only"
+    },
+    {
+      "id": "link_49",
+      "name": "Bayt UAE",
+      "url": "https://www.bayt.com/en/uae/jobs/",
+      "country": "AE",
+      "type": "job_board",
+      "notes": "UAE jobs",
+      "mode": "browse_only"
+    }
+  ]
+}
