@@ -48,6 +48,16 @@ class ProfileScreenTests(unittest.TestCase):
         self.assertIsNone(assess("Customer Service Manager",d,"Berlin",["DE"]))
     def test_no_visa_sponsor(self):
         self.checkno("AML Analyst","Experience in AML screening and KYC risk assessment at a bank. We cannot sponsor work visas.")
+    def test_not_technology_sales(self):
+        self.checkno("Sales Manager, ANZ","Experience in selling technology solutions into the hospitality software industry with B2B account management targets.","AU")
+    def test_not_paralegal(self):
+        self.checkno("Compliance Paralegal","Experience with customer KYC processes and financial compliance plus legal drafting and paralegal case files.")
+    def test_not_part_time(self):
+        self.checkno("Operations Specialist, Part Time","Experience in banking and financial services operations, customer support and payment reconciliation.")
+    def test_not_product_tech_compliance(self):
+        self.checkno("Product Compliance Officer, Growth","Strong payments experience and technical program management background, cross-functional product operations and regulatory compliance.")
+    def test_not_private_equity_sales(self):
+        self.checkno("Senior Account Executive, PE Strategic","Successful enterprise account management and sales in private equity and venture capital markets with required fund administration background.")
     def test_no_description(self):
         self.assertIsNone(assess("AML Analyst","Apply now.","Dublin",["IE"]))
     def test_not_title_only(self):
