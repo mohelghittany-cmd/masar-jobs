@@ -38,6 +38,8 @@ jobs:
           cp index.html public/index.html
           cp data/daily_jobs.json public/data/daily_jobs.json
           cp data/cv_search_profiles.json public/data/cv_search_profiles.json
+          cp data/job_sources.json public/data/job_sources.json
+          cp sources.js public/sources.js
           touch public/.nojekyll
       - name: Configure Pages
         uses: actions/configure-pages@v5
