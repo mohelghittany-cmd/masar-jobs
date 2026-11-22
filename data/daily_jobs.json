@@ -1,9 +1,12 @@
 {
-  "lastUpdateUtc": "2026-11-22T15:52:20+00:00",
+  "lastUpdateUtc": "2026-11-22T15:53:42+00:00",
   "sourcesSucceeded": [
     "Arbeitnow",
     "Remotive",
-    "Jobicy"
+    "Jobicy",
+    "Greenhouse / Monzo",
+    "Greenhouse / Tide",
+    "Greenhouse / Adyen"
   ],
   "sourcesFailed": [],
   "limitations": "Role title AND full description screened automatically. Not employer, eligibility, or visa verified.",
