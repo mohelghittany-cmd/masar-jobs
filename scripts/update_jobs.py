@@ -80,11 +80,27 @@ def jobicy():
         add(a,j.get("jobTitle"),j.get("companyName"),j.get("jobGeo"),j.get("url"),
             j.get("jobDescription") or j.get("jobExcerpt"),j.get("pubDate"),"Jobicy",True,salary)
     return a
+def greenhouse_board(board, label):
+    """Live public employer ATS, with each posting's full job description."""
+    a=[]
+    payload=get("https://boards-api.greenhouse.io/v1/boards/"+board+"/jobs?content=true")
+    for j in payload.get("jobs",[]):
+        location=j.get("location") or {}
+        location=location.get("name","") if isinstance(location,dict) else str(location)
+        # Updated timestamp is NOT the publication date. Do not label it as such.
+        add(a,j.get("title"),label,location,j.get("absolute_url"),
+            j.get("content"),j.get("first_published"),"Greenhouse / "+label,
+            "remote" in location.lower())
+    return a
+
 def main():
     try:old=json.loads(OUT.read_text("utf-8"))
     except (FileNotFoundError,ValueError):old={"jobs":[]}
     merged={};passed=[];failed=[]
-    for name,fn in (("Arbeitnow",arbeitnow),("Remotive",remotive),("Jobicy",jobicy)):
+    for name,fn in (("Arbeitnow",arbeitnow),("Remotive",remotive),("Jobicy",jobicy),
+                    ("Greenhouse / Monzo",lambda:greenhouse_board("monzo","Monzo")),
+                    ("Greenhouse / Tide",lambda:greenhouse_board("tide","Tide")),
+                    ("Greenhouse / Adyen",lambda:greenhouse_board("adyen","Adyen"))):
         try:
             got=fn()
             print(name+":",len(got),"qualified role-and-requirement matches")
