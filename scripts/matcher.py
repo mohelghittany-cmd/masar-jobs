@@ -24,7 +24,7 @@ class PlainText(HTMLParser):
 def plain(text):
     parser = PlainText()
     try:
-        parser.feed(str(text or ""))
+        parser.feed(html.unescape(str(text or "")))
         t = parser.get()
     except (ValueError, AssertionError):
         t = html.unescape(re.sub(r"<[^>]*>", " ", str(text or "")))
@@ -47,6 +47,7 @@ ROLE_RULES = (
     ("Customer Service", r"customer support|customer service|customer care|customer experience|call.center|contact.center|client support|service representative|customer advisor"),
 )
 TECH_TITLE = r"\b(?:technical|engineer(?:ing)?|software|developer|programmer|cybersecurity|cyber security|devops|cloud architect|data scientist|database|infrastructure|it consultant|it support|network engineer|gis|geographic information system|hardware|sap consultant|industrial|manufacturing|automation|robotics|defen[cs]e|clinical|medical|pharmaceutical|biotech|solar|photovoltaic|pv.montage|renewable energy|construction|marketing|influencer|recruitment|recruiter|electric|mechanical|legal counsel|dentist|patient|pharmacist|nursing|specialist nurse)\b"
+SENIORITY_EXCLUSION = r"\b(?:director|vice president|vp\b|head of|chief(?: \w+){0,2} officer|principal consultant|executive director)\b"
 EARLY_ROLE = r"\b(?:intern|internship|graduate program|graduate sales|trainee|apprentice|werkstudent|praktikum|student assistant|volunteer|working student)\b"
 TECH_REQ = r"(?:(?:experience|background|knowledge|expertise|proficiency|proficient|familiarity|understanding|selling|sell|work(?:ed)? with|skilled|hands.on|previous(?:ly)? worked|strong|deep|technical|years)\b.{0,95})(?:\b(?:saas|software|cloud|cybersecurity|cyber security|devops|api integrations?|it infrastructure|enterprise technology|technical solutions?|programming|python|java|javascript|sql|developer tools|data engineering|salesforce implementation|erp implementations?|computer science|machine learning|artificial intelligence|ai infrastructure|hardware|database management|network security)\b)"
 SECTOR_REQ = r"(?:(?:experience|background|knowledge|expertise|specialis(?:e|t)|proven track record|selling|worked|previously)\b.{0,80})(?:\b(?:industrial|manufacturing|renewables?|solar|pv|energy engineering|healthcare|clinical|medical devices?|pharmaceutical|life sciences?|biotech|construction|defen[cs]e|military|warehouse automation|advertising technology|digital advertising|performance marketing|marketing agencies|hospitality software|hotel technology)\b)"
@@ -98,7 +99,9 @@ def assess(title, description, location, country_codes):
     category = next((c for c,p in ROLE_RULES if hits(p,title)), None)
     if not category:
         return None
-    if hits(EARLY_ROLE,title) or hits(TECH_TITLE,title):
+    if hits(EARLY_ROLE,title) or hits(TECH_TITLE,title) or hits(SENIORITY_EXCLUSION,title):
+        return None
+    if hits(r"wärmepumpe|photovoltaik|fördermittel|energieberatung|bauwesen|tiefbau|messeb[ao]u",title):
         return None
     if category == "Compliance" and hits(r"marketing|clinical|pharmac|industrial|health|security compliance|data privacy engineering|software", title):
         return None
@@ -123,7 +126,13 @@ def assess(title, description, location, country_codes):
     # German-only vacancy written chiefly in German is not a reliable
     # English/A2 opportunity even if language requirements are unspecified.
     german_markers=len(re.findall(r"\b(?:wir|sie|du|deine|dein|und|erfahrung|kenntnisse|aufgaben|voraussetzungen|anforderungen|bewerbung|mitbringen|vertrieb|kunden|deutschkenntnisse)\b",req,re.I))
-    if german_markers>=9 and not hits(r"\b(?:english|englisch)\b",req):
+    # Explicitly screen the *whole* description: German profiles sometimes
+    # place the requirements outside the labelled section.
+    full_german_markers=len(re.findall(r"\b(?:wir|sie|du|deine|dein|und|erfahrung|kenntnisse|aufgaben|voraussetzungen|anforderungen|bewerbung|mitbringen|vertrieb|kunden|deutschkenntnisse|tätigkeit|unternehmen|berufserfahrung|kennt|für|einen|eine|arbeiten|durch|unser|ihre)\b",full,re.I))
+    full_english_markers=len(re.findall(r"\b(?:we|you|your|the|and|with|our|requirements|experience|customers|clients|sales|team|skills|responsibilities)\b",full,re.I))
+    if (german_markers>=9 or full_german_markers>=14 and full_german_markers>full_english_markers*1.4) and not hits(r"\b(?:english|englisch)\b",req):
+        return None
+    if hits(r"\b(?:industrie|industriell|produktionsnah|maschinenbau|erneuerbare energien|wärmepumpe|wärmepumpen|photovoltaik|fachkenntnisse in|technischen vertrieb|saas|b2b.saas|softwarelösungen|cloud computing|it.lösungen)\b",req) and category not in BANK_FIELDS and category!="Photography":
         return None
     if hits(r"\b(?:german|deutsch)\b.{0,30}\b(?:b1|b2|c1|c2|native|fluent)\b",full):
         return None
@@ -147,7 +156,7 @@ def assess(title, description, location, country_codes):
     # Finance-compliance jobs must be aligned to financial regulation or
     # regulated institutions. Marketing, medical or general software
     # compliance is not equivalent to banking AML/KYC experience.
-    if category=="Compliance" and not hits(r"\b(?:bank|banking|financial|fintech|regulatory|aml|kyc|anti.money laundering|transaction monitoring|sanctions|payments|money services|financial crime)\b",req):
+    if category=="Compliance" and not hits(r"\b(?:bank|banking|financial|fintech|aml|kyc|anti.money laundering|transaction monitoring|sanctions|payments|money services|financial crime)\b",req):
         return None
 
     # For relationship, sales and operations alternatives require actual
