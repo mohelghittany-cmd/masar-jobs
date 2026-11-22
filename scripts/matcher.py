@@ -107,9 +107,23 @@ def assess(title, description, location, country_codes):
     # An unconfirmed remote location or region is not a destination. Global
     # positions should never be presented as a country-specific visa route.
     req = required_section(full)
-    if hits(TECH_REQ,req) or hits(SECTOR_REQ,req) or hits(MANDATORY_TECH_DEGREE,req):
+    if hits(SECTOR_REQ,req) or hits(MANDATORY_TECH_DEGREE,req):
+        return None
+    # Banking roles often use ordinary banking software; that alone is not a
+    # computer-science requirement. For nonbanking sales, required technical
+    # product expertise is a material mismatch.
+    if category not in BANK_FIELDS and category!="Photography" and hits(TECH_REQ,req):
+        return None
+    if category in BANK_FIELDS and hits(r"(?:required|must have|proficient|experience with).{0,65}(?:software development|software engineering|programming|devops|cloud architecture|cybersecurity engineering|computer science degree)",req):
         return None
     if hits(NON_ENGLISH_LANG,req) or hits(NON_ENGLISH_LANG,title):
+        return None
+    if hits(r"\b(?:native|mother tongue)\s+english\b|\benglish\s+native\s+(?:speaker|level)\b",req):
+        return None
+    # German-only vacancy written chiefly in German is not a reliable
+    # English/A2 opportunity even if language requirements are unspecified.
+    german_markers=len(re.findall(r"\b(?:wir|sie|du|deine|dein|und|erfahrung|kenntnisse|aufgaben|voraussetzungen|anforderungen|bewerbung|mitbringen|vertrieb|kunden|deutschkenntnisse)\b",req,re.I))
+    if german_markers>=9 and not hits(r"\b(?:english|englisch)\b",req):
         return None
     if hits(r"\b(?:german|deutsch)\b.{0,30}\b(?:b1|b2|c1|c2|native|fluent)\b",full):
         return None
@@ -127,6 +141,9 @@ def assess(title, description, location, country_codes):
     if not requirements_evidence:
         return None
 
+    # Generic customer onboarding is not banking KYC due diligence.
+    if category=="KYC / CDD / EDD" and not hits(r"\b(?:kyc|cdd|edd|aml|bank|banking|financial|fintech|regulated|screening|beneficial ownership|risk assessment|identity verification|financial crime)\b",req):
+        return None
     # Finance-compliance jobs must be aligned to financial regulation or
     # regulated institutions. Marketing, medical or general software
     # compliance is not equivalent to banking AML/KYC experience.
@@ -191,6 +208,7 @@ def assess(title, description, location, country_codes):
         "matchScore":score,
         "matchTier":"strong" if score>=80 else "review",
         "matchReason":reason,
+        "matchReasonAr":({"AML":"يتوافق مع خبرتك العملية في الامتثال ومكافحة غسل الأموال", "KYC / CDD / EDD":"يتوافق مع خبرتك في فحص العملاء والعناية الواجبة وتجهيز حالات فتح الحساب", "Trade Finance":"يتوافق مع خبرتك في الخدمات المصرفية وعمليات التجارة الدولية", "Compliance":"يتوافق مع خبرتك في الالتزام والامتثال المصرفي", "SME Banking":"يتوافق مع خبرتك في إدارة عملاء الشركات الصغيرة والمتوسطة", "Corporate Banking":"يتوافق مع خبرتك في إدارة العلاقات المصرفية للشركات", "Photography":"يتوافق مع خبرتك في التصوير وإعداد المحتوى البصري", "Operations":"يتقاطع مع خبرتك في العمليات المصرفية وخدمة العملاء", "Customer Service":"يتوافق مع خبرتك في خدمة العملاء", "Client Relationship Management":"يتوافق مع خبرتك في إدارة علاقات العملاء", "Business Development":"يتقاطع مع خبرتك في المبيعات وتطوير الأعمال"}.get(category,"تشابه مبدئي مع خبرتك")),
         "requirementEvidence":requirements_evidence,
         "requirementsChecked":True,
         "language":language,
