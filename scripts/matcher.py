@@ -48,8 +48,9 @@ ROLE_RULES = (
 )
 TECH_TITLE = r"\b(?:technical|engineer(?:ing)?|software|developer|programmer|cybersecurity|cyber security|devops|cloud architect|data scientist|database|infrastructure|it consultant|it support|network engineer|gis|geographic information system|hardware|sap consultant|industrial|manufacturing|automation|robotics|defen[cs]e|clinical|medical|pharmaceutical|biotech|solar|photovoltaic|pv.montage|renewable energy|construction|marketing|influencer|recruitment|recruiter|electric|mechanical|legal counsel|dentist|patient|pharmacist|nursing|specialist nurse)\b"
 SENIORITY_EXCLUSION = r"\b(?:director|vice president|vp\b|head of|chief(?: \w+){0,2} officer|principal consultant|executive director)\b"
+BAD_ROLE = r"\b(?:paralegal|solicitor|attorney|barrister|legal counsel|legal advisor|part[ -]?time|fractional|contract attorney|private equity|pe strategic|product compliance|programmatic advertising)\b"
 EARLY_ROLE = r"\b(?:intern|internship|graduate program|graduate sales|trainee|apprentice|werkstudent|praktikum|student assistant|volunteer|working student)\b"
-TECH_REQ = r"(?:(?:experience|background|knowledge|expertise|proficiency|proficient|familiarity|understanding|selling|sell|work(?:ed)? with|skilled|hands.on|previous(?:ly)? worked|strong|deep|technical|years)\b.{0,95})(?:\b(?:saas|software|cloud|cybersecurity|cyber security|devops|api integrations?|it infrastructure|enterprise technology|technical solutions?|programming|python|java|javascript|sql|developer tools|data engineering|salesforce implementation|erp implementations?|computer science|machine learning|artificial intelligence|ai infrastructure|hardware|database management|network security)\b)"
+TECH_REQ = r"(?:(?:experience|background|knowledge|expertise|proficiency|proficient|familiarity|understanding|selling|sell|work(?:ed)? with|skilled|hands.on|previous(?:ly)? worked|strong|deep|technical|years)\b.{0,95})(?:\b(?:saas|software|cloud|cybersecurity|cyber security|devops|api integrations?|it infrastructure|enterprise technology|technology solutions?|technical solutions?|programming|python|java|javascript|sql|developer tools|data engineering|salesforce implementation|erp implementations?|computer science|machine learning|artificial intelligence|ai infrastructure|hardware|database management|network security)\b)"
 SECTOR_REQ = r"(?:(?:experience|background|knowledge|expertise|specialis(?:e|t)|proven track record|selling|worked|previously)\b.{0,80})(?:\b(?:industrial|manufacturing|renewables?|solar|pv|energy engineering|healthcare|clinical|medical devices?|pharmaceutical|life sciences?|biotech|construction|defen[cs]e|military|warehouse automation|advertising technology|digital advertising|performance marketing|marketing agencies|hospitality software|hotel technology)\b)"
 NON_ENGLISH_LANG = r"(?:\b(?:native|fluent|advanced|excellent|business.level|professional working|c1|c2|b2|b1)\b.{0,50}\b(?:german|deutsch|fran[çc]ais|french|spanish|italian|dutch|hebrew|korean|japanese|mandarin|chinese|polish|swedish|danish|norwegian)\b|\b(?:german|deutsch|fran[çc]ais|french|spanish|italian|dutch|hebrew|korean|japanese|polish|swedish|danish|norwegian)\b.{0,35}\b(?:native|fluent|advanced|excellent|professional|business.level|c1|c2|b2|b1)\b)"
 VISA_NO = r"\b(?:no visa sponsorship|cannot sponsor|do not sponsor|unable to sponsor|must (?:already )?have (?:the )?right to work|must be (?:legally )?authorized to work|valid work permit required|no relocation support|does not offer sponsorship)\b"
@@ -99,7 +100,7 @@ def assess(title, description, location, country_codes):
     category = next((c for c,p in ROLE_RULES if hits(p,title)), None)
     if not category:
         return None
-    if hits(EARLY_ROLE,title) or hits(TECH_TITLE,title) or hits(SENIORITY_EXCLUSION,title):
+    if hits(EARLY_ROLE,title) or hits(TECH_TITLE,title) or hits(SENIORITY_EXCLUSION,title) or hits(BAD_ROLE,title):
         return None
     if hits(r"wärmepumpe|photovoltaik|fördermittel|energieberatung|bauwesen|tiefbau|messeb[ao]u",title):
         return None
@@ -165,7 +166,7 @@ def assess(title, description, location, country_codes):
 
     # For relationship, sales and operations alternatives require actual
     # work on clients, service delivery or sales in the requirements.
-    if category in {"Business Development","Client Relationship Management"} and hits(r"\b(?:eyewear|retail fashion|optical wholesale|retail store management|wholesale distribution|medical device|clinical services)\b",req):
+    if category in {"Business Development","Client Relationship Management"} and hits(r"\b(?:private equity|venture capital|investment banking mandates|eyewear|retail fashion|optical wholesale|retail store management|wholesale distribution|medical device|clinical services)\b",req):
         return None
     if category in {"Business Development","Client Relationship Management","Customer Service","Operations"}:
         if not hits(r"\b(?:customers?|clients?|accounts?|sales|service|operations|relationship|business development|prospecting|support|stakeholders?)\b",req):
