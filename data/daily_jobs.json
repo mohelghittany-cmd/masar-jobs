@@ -1,5 +1,5 @@
 {
-  "lastUpdateUtc": "2026-11-22T15:51:32+00:00",
+  "lastUpdateUtc": "2026-11-22T15:52:20+00:00",
   "sourcesSucceeded": [
     "Arbeitnow",
     "Remotive",
@@ -7,69 +7,5 @@
   ],
   "sourcesFailed": [],
   "limitations": "Role title AND full description screened automatically. Not employer, eligibility, or visa verified.",
-  "jobs": [
-    {
-      "id": "Arbeitnow:https___www_arbeitnow_com_jobs_companies_trinkkontor_gmbh_mitarbeiter_service_operations_und_kundenmanagement_cologne_148846",
-      "title": "Mitarbeiter (m/w/d) Service Operations und Kundenmanagement",
-      "company": "trinkkontor GmbH",
-      "countries": [
-        "DE"
-      ],
-      "country": "DE",
-      "url": "https://www.arbeitnow.com/jobs/companies/trinkkontor-gmbh/mitarbeiter-service-operations-und-kundenmanagement-cologne-148846",
-      "source": "Arbeitnow",
-      "publishedAt": "2026-11-22",
-      "location": "Cologne",
-      "remote": false,
-      "salary": "",
-      "excerpt": "Du koordinierst und verantwortest die Abrechnungs‑ sowie Kunden- und Vertragsprozesse inklusive Qualitätssicherung, Klärung von Differenzen und Sicherstellung fristgerechter Abläufe. Gleichzeitig steuerst du fachlich das Team, optimierst Prozesse und begleitest Digitalisierungs- und Systemprojekte in enger Zusammenarbe",
-      "field": "Operations",
-      "matchScore": 73,
-      "matchTier": "review",
-      "matchReason": "Operations responsibilities overlap with your banking and client-onboarding work",
-      "matchReasonAr": "يتقاطع مع خبرتك في العمليات المصرفية وخدمة العملاء",
-      "requirementEvidence": "freuen wir uns auf Deine Bewerbung unter dem Stichwort „Mitarbeiter (m/w/d) Service Operations und Kundenmanagement“ . Die trinkkontor GmbH setzt sich für Chancengleichheit ein und nimmt d",
-      "requirementsChecked": true,
-      "language": "English only",
-      "visa": "unknown",
-      "matchWarnings": [
-        "Visa sponsorship not stated or not established",
-        "No clearly labelled requirements section; matched against description"
-      ],
-      "screeningMethod": "title_and_full_description_heuristic_v2",
-      "verified": false
-    },
-    {
-      "id": "Jobicy:https___jobicy_com_jobs_163731_key_account_manager_4",
-      "title": "Key Account Manager",
-      "company": "Pair Eyewear, Inc.",
-      "countries": [
-        "CA",
-        "US"
-      ],
-      "country": "CA",
-      "url": "https://jobicy.com/jobs/163731-key-account-manager-4",
-      "source": "Jobicy",
-      "publishedAt": "2026-11-22",
-      "location": "Canada, USA",
-      "remote": true,
-      "salary": "",
-      "excerpt": "At Pair Eyewear, we believe in placing our people at the center of everything we do. We are dedicated to fostering a joyful and dynamic workplace, providing our employees with an environment where they can thrive and make a meaningful impact. Pair Eyewear is looking for a Key Account Manager (North America) to join our",
-      "field": "Client Relationship Management",
-      "matchScore": 68,
-      "matchTier": "review",
-      "matchReason": "Commercial / relationship-management duties overlap with your sales and client portfolio experience",
-      "matchReasonAr": "يتوافق مع خبرتك في إدارة علاقات العملاء",
-      "requirementEvidence": "sistently engaging with active accounts, identifying new opportunities, and managing customer relationships Lead business development, sales prospecting, and engagement with targeted new accounts Own",
-      "requirementsChecked": true,
-      "language": "Other",
-      "visa": "unknown",
-      "matchWarnings": [
-        "Language requirement not independently confirmed",
-        "Visa sponsorship not stated or not established"
-      ],
-      "screeningMethod": "title_and_full_description_heuristic_v2",
-      "verified": false
-    }
-  ]
+  "jobs": []
 }
