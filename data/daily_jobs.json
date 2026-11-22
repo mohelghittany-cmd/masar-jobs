@@ -1,14 +1,176 @@
 {
-  "lastUpdateUtc": "2026-11-22T15:53:42+00:00",
+  "lastUpdateUtc": "2026-11-22T15:54:30+00:00",
   "sourcesSucceeded": [
     "Arbeitnow",
     "Remotive",
     "Jobicy",
     "Greenhouse / Monzo",
     "Greenhouse / Tide",
-    "Greenhouse / Adyen"
+    "Greenhouse / Adyen",
+    "Greenhouse / Modulr",
+    "Greenhouse / BVNK",
+    "Greenhouse / Carta",
+    "Greenhouse / Capco",
+    "Greenhouse / B2C2",
+    "Greenhouse / BitGo"
   ],
   "sourcesFailed": [],
   "limitations": "Role title AND full description screened automatically. Not employer, eligibility, or visa verified.",
-  "jobs": []
+  "jobs": [
+    {
+      "id": "Greenhouse / Carta:https___job_boards_greenhouse_io_carta_jobs_7980732003",
+      "title": "Compliance Paralegal",
+      "company": "Carta",
+      "countries": [
+        "UK"
+      ],
+      "country": "UK",
+      "url": "https://job-boards.greenhouse.io/carta/jobs/7980732003",
+      "source": "Greenhouse / Carta",
+      "publishedAt": "2026-11-17",
+      "location": "London",
+      "remote": false,
+      "salary": "",
+      "excerpt": "The Company You’ll Join Carta is the connected platform and AI-native ecosystem for private capital. Built to replace fragmented tools with a single system of record, Carta brings together the software, services, and legal infrastructure that founders use to manage equity, fund managers use to run administration and re",
+      "field": "Compliance",
+      "matchScore": 88,
+      "matchTier": "strong",
+      "matchReason": "Banking / financial-crime role matches your core banking and pre-onboarding due-diligence experience",
+      "matchReasonAr": "يتوافق مع خبرتك في الالتزام والامتثال المصرفي",
+      "requirementEvidence": "rrent requests against tight deadlines Confident and client-ready. You enjoy client KYC conversations with senior stakeholders and counterparties, assertive, professional, and knowin",
+      "requirementsChecked": true,
+      "language": "Other",
+      "visa": "unknown",
+      "matchWarnings": [
+        "Language requirement not independently confirmed",
+        "Visa sponsorship not stated or not established"
+      ],
+      "screeningMethod": "title_and_full_description_heuristic_v2",
+      "verified": false
+    },
+    {
+      "id": "Greenhouse / BitGo:https___job_boards_greenhouse_io_bitgo_jobs_8895667002",
+      "title": "Operations Specialist, Part Time",
+      "company": "BitGo",
+      "countries": [
+        "DE"
+      ],
+      "country": "DE",
+      "url": "https://job-boards.greenhouse.io/bitgo/jobs/8895667002",
+      "source": "Greenhouse / BitGo",
+      "publishedAt": "2026-10-26",
+      "location": "Frankfurt am Main, Hesse, Germany",
+      "remote": false,
+      "salary": "",
+      "excerpt": "BitGo (NYSE: BTGO) is the digital asset infrastructure company delivering custody, wallets, staking, trading, financing, stablecoins, and settlement services from regulated cold storage. Since 2013, BitGo has focused on accelerating the transition of the financial system to a digital asset economy. BitGo maintains a gl",
+      "field": "Operations",
+      "matchScore": 77,
+      "matchTier": "review",
+      "matchReason": "Operations responsibilities overlap with your banking and client-onboarding work",
+      "matchReasonAr": "يتقاطع مع خبرتك في العمليات المصرفية وخدمة العملاء",
+      "requirementEvidence": "Requirements Bachelor’s degree or equivalent, or 1–2 years of experience in operations, banking or financial services, with a genuine interest in digital assets. Prior exposure to",
+      "requirementsChecked": true,
+      "language": "Other",
+      "visa": "unknown",
+      "matchWarnings": [
+        "Language requirement not independently confirmed",
+        "Visa sponsorship not stated or not established"
+      ],
+      "screeningMethod": "title_and_full_description_heuristic_v2",
+      "verified": false
+    },
+    {
+      "id": "Greenhouse / BitGo:https___job_boards_greenhouse_io_bitgo_jobs_8895626002",
+      "title": "Operations Specialist",
+      "company": "BitGo",
+      "countries": [
+        "DE"
+      ],
+      "country": "DE",
+      "url": "https://job-boards.greenhouse.io/bitgo/jobs/8895626002",
+      "source": "Greenhouse / BitGo",
+      "publishedAt": "2026-10-26",
+      "location": "Frankfurt am Main, Hesse, Germany",
+      "remote": false,
+      "salary": "",
+      "excerpt": "BitGo (NYSE: BTGO) is the digital asset infrastructure company delivering custody, wallets, staking, trading, financing, stablecoins, and settlement services from regulated cold storage. Since 2013, BitGo has focused on accelerating the transition of the financial system to a digital asset economy. BitGo maintains a gl",
+      "field": "Operations",
+      "matchScore": 77,
+      "matchTier": "review",
+      "matchReason": "Operations responsibilities overlap with your banking and client-onboarding work",
+      "matchReasonAr": "يتقاطع مع خبرتك في العمليات المصرفية وخدمة العملاء",
+      "requirementEvidence": "Requirements Bachelor’s degree or equivalent, and 2–3 years of experience in operations, banking or financial services, with a genuine interest in digital assets. Solid knowledge of",
+      "requirementsChecked": true,
+      "language": "Other",
+      "visa": "unknown",
+      "matchWarnings": [
+        "Language requirement not independently confirmed",
+        "Visa sponsorship not stated or not established"
+      ],
+      "screeningMethod": "title_and_full_description_heuristic_v2",
+      "verified": false
+    },
+    {
+      "id": "Greenhouse / B2C2:https___job_boards_eu_greenhouse_io_b2c2_jobs_5012707101",
+      "title": "Onboarding - KYC Onboarding - Senior Associate",
+      "company": "B2C2",
+      "countries": [
+        "US"
+      ],
+      "country": "US",
+      "url": "https://job-boards.eu.greenhouse.io/b2c2/jobs/5012707101",
+      "source": "Greenhouse / B2C2",
+      "publishedAt": "2026-10-21",
+      "location": "New York",
+      "remote": false,
+      "salary": "",
+      "excerpt": "About us: Founded in 2015, B2C2 is a global leader for institutional liquidity within digital assets. We bring 24/7 365 days a year deep, reliable pricing for spot, futures, options, CFDs, and NDFs across all market conditions. Our growing team has deep expertise across pricing, structuring, risk, systems, and regulati",
+      "field": "KYC / CDD / EDD",
+      "matchScore": 82,
+      "matchTier": "strong",
+      "matchReason": "Banking / financial-crime role matches your core banking and pre-onboarding due-diligence experience",
+      "matchReasonAr": "يتوافق مع خبرتك في فحص العملاء والعناية الواجبة وتجهيز حالات فتح الحساب",
+      "requirementEvidence": "requirements; difference between CDD and EDD; etc), Dodd-Frank, 5MLD, MLR 2017, MLR 2019 among others High competency in research",
+      "requirementsChecked": true,
+      "language": "Other",
+      "visa": "unknown",
+      "matchWarnings": [
+        "Language requirement not independently confirmed",
+        "Visa sponsorship not stated or not established"
+      ],
+      "screeningMethod": "title_and_full_description_heuristic_v2",
+      "verified": false
+    },
+    {
+      "id": "Greenhouse / Carta:https___job_boards_greenhouse_io_carta_jobs_8031297003",
+      "title": "Senior Account Executive, PE Strategic",
+      "company": "Carta",
+      "countries": [
+        "US"
+      ],
+      "country": "US",
+      "url": "https://job-boards.greenhouse.io/carta/jobs/8031297003",
+      "source": "Greenhouse / Carta",
+      "publishedAt": "2026-10-14",
+      "location": "San Francisco, CA, New York City, New York",
+      "remote": false,
+      "salary": "",
+      "excerpt": "The Company You’ll Join Carta is the connected platform and AI-native ecosystem for private capital. Built to replace fragmented tools with a single system of record, Carta brings together the software, services, and legal infrastructure that founders use to manage equity, fund managers use to run administration and re",
+      "field": "Business Development",
+      "matchScore": 66,
+      "matchTier": "review",
+      "matchReason": "Commercial / relationship-management duties overlap with your sales and client portfolio experience",
+      "matchReasonAr": "يتقاطع مع خبرتك في المبيعات وتطوير الأعمال",
+      "requirementEvidence": "plex organizations with multiple stakeholders Proven ability to execute, especially negotiation and closing Flexible and resilient Interest in being part of a ‘startup within a startup’ S",
+      "requirementsChecked": true,
+      "language": "Other",
+      "visa": "unknown",
+      "matchWarnings": [
+        "Language requirement not independently confirmed",
+        "Visa sponsorship not stated or not established"
+      ],
+      "screeningMethod": "title_and_full_description_heuristic_v2",
+      "verified": false
+    }
+  ]
 }
