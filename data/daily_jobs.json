@@ -1,5 +1,5 @@
 {
-  "lastUpdateUtc": "2026-11-22T16:00:14+00:00",
+  "lastUpdateUtc": "2026-11-22T16:00:37+00:00",
   "sourcesSucceeded": [
     "Arbeitnow",
     "Remotive",
@@ -15,7 +15,7 @@
     "Greenhouse / BitGo"
   ],
   "sourcesFailed": [],
-  "limitations": "Role title AND full description screened automatically. Not employer, eligibility, or visa verified.",
+  "limitations": "Title, responsibilities and job requirements compared to sanitized CV role profiles. Estimated ATS-like score, not employer ATS, work authorization, or a visa decision.",
   "jobs": [
     {
       "id": "Greenhouse / Adyen:https___job_boards_greenhouse_io_adyen_jobs_8331933",
@@ -33,7 +33,7 @@
       "salary": "",
       "excerpt": "This is Adyen Adyen provides payments, data, and financial products in a single solution for customers like Meta, Uber, H&M, and Microsoft - making us the financial technology platform of choice. At Adyen, everything we do is engineered for ambition. For our teams, we create an environment with opportunities for our pe",
       "field": "KYC / CDD / EDD",
-      "matchScore": 84,
+      "matchScore": 94,
       "matchTier": "strong",
       "matchReason": "Banking / financial-crime role matches your core banking and pre-onboarding due-diligence experience",
       "matchReasonAr": "يتوافق مع خبرتك في فحص العملاء والعناية الواجبة وتجهيز حالات فتح الحساب",
@@ -45,102 +45,71 @@
         "Language requirement not independently confirmed",
         "Visa sponsorship not stated or not established"
       ],
-      "screeningMethod": "title_and_full_description_heuristic_v2",
-      "verified": false
-    },
-    {
-      "id": "Greenhouse / BitGo:https___job_boards_greenhouse_io_bitgo_jobs_8895626002",
-      "title": "Operations Specialist",
-      "company": "BitGo",
-      "countries": [
-        "DE"
+      "screeningMethod": "title_and_requirements_plus_cv_profiles_v3",
+      "verified": false,
+      "cvMatches": [
+        {
+          "id": "bank-kyc",
+          "group": "banking",
+          "nameAr": "KYC / CDD / EDD وفحص العملاء",
+          "nameEn": "KYC / CDD / EDD and Client Due Diligence",
+          "score": 94,
+          "matchingSkills": [
+            "KYC",
+            "CDD",
+            "EDD",
+            "UBO"
+          ],
+          "titleSignals": [
+            "risk analyst"
+          ],
+          "extraContext": [
+            "customer onboarding"
+          ],
+          "cvRecommendation": "Banking CV — US (EN)",
+          "cvNotes": [],
+          "scoringMethod": "requirements_64_title_19_context_12_v1"
+        },
+        {
+          "id": "bank-onboarding",
+          "group": "banking",
+          "nameAr": "Corporate Onboarding وعمليات الحسابات",
+          "nameEn": "Corporate Onboarding / Banking Operations",
+          "score": 63,
+          "matchingSkills": [
+            "UBO",
+            "KYC",
+            "CDD",
+            "EDD"
+          ],
+          "titleSignals": [],
+          "extraContext": [],
+          "cvRecommendation": "Banking CV — US (EN)",
+          "cvNotes": [],
+          "scoringMethod": "requirements_64_title_19_context_12_v1"
+        },
+        {
+          "id": "bank-aml",
+          "group": "banking",
+          "nameAr": "AML وFinancial Crime",
+          "nameEn": "AML / Financial Crime Support",
+          "score": 52,
+          "matchingSkills": [
+            "AML",
+            "KYC",
+            "CDD"
+          ],
+          "titleSignals": [],
+          "extraContext": [
+            "escalations"
+          ],
+          "cvRecommendation": "Banking CV — US (EN)",
+          "cvNotes": [],
+          "scoringMethod": "requirements_64_title_19_context_12_v1"
+        }
       ],
-      "country": "DE",
-      "url": "https://job-boards.greenhouse.io/bitgo/jobs/8895626002",
-      "source": "Greenhouse / BitGo",
-      "publishedAt": "2026-10-26",
-      "location": "Frankfurt am Main, Hesse, Germany",
-      "remote": false,
-      "salary": "",
-      "excerpt": "BitGo (NYSE: BTGO) is the digital asset infrastructure company delivering custody, wallets, staking, trading, financing, stablecoins, and settlement services from regulated cold storage. Since 2013, BitGo has focused on accelerating the transition of the financial system to a digital asset economy. BitGo maintains a gl",
-      "field": "Operations",
-      "matchScore": 77,
-      "matchTier": "review",
-      "matchReason": "Operations responsibilities overlap with your banking and client-onboarding work",
-      "matchReasonAr": "يتقاطع مع خبرتك في العمليات المصرفية وخدمة العملاء",
-      "requirementEvidence": "Requirements Bachelor’s degree or equivalent, and 2–3 years of experience in operations, banking or financial services, with a genuine interest in digital assets. Solid knowledge of",
-      "requirementsChecked": true,
-      "language": "Other",
-      "visa": "unknown",
-      "matchWarnings": [
-        "Language requirement not independently confirmed",
-        "Visa sponsorship not stated or not established"
-      ],
-      "screeningMethod": "title_and_full_description_heuristic_v2",
-      "verified": false
-    },
-    {
-      "id": "Greenhouse / B2C2:https___job_boards_eu_greenhouse_io_b2c2_jobs_5012707101",
-      "title": "Onboarding - KYC Onboarding - Senior Associate",
-      "company": "B2C2",
-      "countries": [
-        "US"
-      ],
-      "country": "US",
-      "url": "https://job-boards.eu.greenhouse.io/b2c2/jobs/5012707101",
-      "source": "Greenhouse / B2C2",
-      "publishedAt": "2026-10-21",
-      "location": "New York",
-      "remote": false,
-      "salary": "",
-      "excerpt": "About us: Founded in 2015, B2C2 is a global leader for institutional liquidity within digital assets. We bring 24/7 365 days a year deep, reliable pricing for spot, futures, options, CFDs, and NDFs across all market conditions. Our growing team has deep expertise across pricing, structuring, risk, systems, and regulati",
-      "field": "KYC / CDD / EDD",
-      "matchScore": 82,
-      "matchTier": "strong",
-      "matchReason": "Banking / financial-crime role matches your core banking and pre-onboarding due-diligence experience",
-      "matchReasonAr": "يتوافق مع خبرتك في فحص العملاء والعناية الواجبة وتجهيز حالات فتح الحساب",
-      "requirementEvidence": "requirements; difference between CDD and EDD; etc), Dodd-Frank, 5MLD, MLR 2017, MLR 2019 among others High competency in research",
-      "requirementsChecked": true,
-      "language": "Other",
-      "visa": "unknown",
-      "matchWarnings": [
-        "Language requirement not independently confirmed",
-        "Visa sponsorship not stated or not established"
-      ],
-      "screeningMethod": "title_and_full_description_heuristic_v2",
-      "verified": false
-    },
-    {
-      "id": "Greenhouse / Adyen:https___job_boards_greenhouse_io_adyen_jobs_8269079",
-      "title": "CDD Risk Analyst, Event Driven Reviews",
-      "company": "Adyen",
-      "countries": [
-        "US"
-      ],
-      "country": "US",
-      "url": "https://job-boards.greenhouse.io/adyen/jobs/8269079",
-      "source": "Greenhouse / Adyen",
-      "publishedAt": "2026-10-12",
-      "location": "Chicago",
-      "remote": false,
-      "salary": "",
-      "excerpt": "This is Adyen Adyen provides payments, data, and financial products in a single solution for customers like Meta, Uber, H&M, and Microsoft - making us the financial technology platform of choice. At Adyen, everything we do is engineered for ambition. For our teams, we create an environment with opportunities for our pe",
-      "field": "KYC / CDD / EDD",
-      "matchScore": 80,
-      "matchTier": "strong",
-      "matchReason": "Banking / financial-crime role matches your core banking and pre-onboarding due-diligence experience",
-      "matchReasonAr": "يتوافق مع خبرتك في فحص العملاء والعناية الواجبة وتجهيز حالات فتح الحساب",
-      "requirementEvidence": "iven mindset, exceptional professional judgment, and the ability to conduct holistic risk assessments. You are someone who does not wait for step-by-step playbooks—you proactively create directi",
-      "requirementsChecked": true,
-      "language": "Other",
-      "visa": "unknown",
-      "matchWarnings": [
-        "Language requirement not independently confirmed",
-        "Visa sponsorship not stated or not established",
-        "No clearly labelled requirements section; matched against description"
-      ],
-      "screeningMethod": "title_and_full_description_heuristic_v2",
-      "verified": false
+      "bestCVId": "bank-kyc",
+      "bestCVLabel": "KYC / CDD / EDD and Client Due Diligence"
     }
   ]
 }
