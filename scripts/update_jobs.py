@@ -2,6 +2,8 @@
 """Masar: refresh job feed from public, key-free APIs. Not a visa verification service."""
 import datetime as dt
 import html, json, re, time, urllib.request
+import email.utils
+import xml.etree.ElementTree as ET
 from urllib.parse import urlencode
 from pathlib import Path
 from matcher import assess, plain, required_section, ROLE_RULES, hits
@@ -205,6 +207,48 @@ def smartrecruiters_board(board, label):
         if not items or offset>=total:break
     return a
 
+def teamtailor_rss_board(board_url, label):
+    """Official Teamtailor public RSS, not an undocumented employer API.
+
+    Some feeds contain summaries only; the general requirement screener rejects
+    summaries without clear experience requirements rather than inventing them.
+    """
+    a=[]
+    url=board_url.rstrip("/")+"/jobs.rss"
+    request=urllib.request.Request(url,headers={"User-Agent":"MasarJobs/1.0 (public RSS feed)","Accept":"application/rss+xml, application/xml, text/xml"})
+    with urllib.request.urlopen(request,timeout=30) as response:
+        payload=response.read(3_000_000)
+    root=ET.fromstring(payload)
+    items=root.findall(".//channel/item")
+    if not items:
+        items=root.findall(".//{*}entry")
+    for j in items[:100]:
+        def value(tag):
+            obj=j.find(tag)
+            if obj is None:obj=j.find("{*}"+tag)
+            return obj.text or "" if obj is not None else ""
+        title=value("title")
+        link=value("link")
+        if not link:
+            alt=j.find("link")
+            if alt is not None:link=alt.attrib.get("href","")
+        description=value("description") or value("summary") or value("content")
+        posted=value("pubDate") or value("published") or value("updated")
+        published=""
+        if posted:
+            try:published=email.utils.parsedate_to_datetime(posted).isoformat()
+            except (TypeError,ValueError):published=posted
+        # The feed's location tag is not consistently present; use the
+        # text/location fields only. If country cannot be proven, do not show.
+        location=value("location")
+        if not location:
+            location=value("city")
+        if not location:
+            location="Australia" if "jaybrogroup.com.au" in board_url else ""
+        add(a,title,label,location,link,description,published,
+            "Teamtailor / "+label,False)
+    return a
+
 def configured_feed(src):
     adapter=src.get("adapter")
     slug=src.get("slug")
@@ -213,6 +257,7 @@ def configured_feed(src):
     if adapter=="lever":return lever_board(slug,name)
     if adapter=="ashby":return ashby_board(slug,name)
     if adapter=="smartrecruiters":return smartrecruiters_board(slug,name)
+    if adapter=="teamtailor_rss":return teamtailor_rss_board(slug,name)
     raise ValueError("Unknown ATS adapter "+str(adapter))
 
 def main():
