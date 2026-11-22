@@ -4,11 +4,12 @@ import datetime as dt
 import html, json, re, time, urllib.request
 from urllib.parse import urlencode
 from pathlib import Path
-from matcher import assess, plain, required_section
+from matcher import assess, plain, required_section, ROLE_RULES, hits
 from profile_matcher import rank_profiles, load as load_cv_profiles
 
 HERE=Path(__file__).resolve().parents[1]
 OUT=HERE/"data"/"daily_jobs.json"
+SOURCES=HERE/"data"/"job_sources.json"
 NOW=dt.datetime.now(dt.timezone.utc)
 COUNTRIES={
 "DE":r"germany|deutschland|berlin|munich|münchen|hamburg|frankfurt|stuttgart|hannover|hanover|augsburg|cologne|köln|nürnberg|nuremberg|dortmund|ratingen|bremen|magdeburg|saarbrücken|kaarst|duesseldorf|düsseldorf|leipzig|bonn|dresden|heidelberg|kiel|karlsruhe|regensburg",
@@ -51,6 +52,14 @@ def add(out,title,company,location,url,desc,posted,source,remote=False,salary=""
     destinations=[c for c,p in COUNTRIES.items() if re.search(r"(?<!\w)(?:"+p+r")(?!\w)",low,re.I)]
     # Work locations that cannot be tied to a named target country are not
     # migration leads. No invented country from global/EMEA/remote tags.
+    if not destinations:
+        # Most ATS providers also use ISO country codes in structured locations.
+        # Avoid CA (California ambiguity) and broad region codes.
+        tokens=set(re.findall(r"(?<![A-Za-z])[A-Z]{2}(?![A-Za-z])", location))
+        iso={"IE":"IE","DE":"DE","GB":"UK","UK":"UK","AU":"AU",
+             "NZ":"NZ","MT":"MT","AT":"AT","LU":"LU","CH":"CH",
+             "BE":"BE","DK":"DK","ES":"ES","LI":"LI","AE":"AE","US":"US"}
+        destinations=list(dict.fromkeys(iso[t] for t in tokens if t in iso))
     if not destinations:return
     assessment=assess(title, desc, location, destinations)
     if assessment is None:return
@@ -122,27 +131,111 @@ def greenhouse_board(board, label):
             "remote" in location.lower())
     return a
 
+
+def lever_board(board, label):
+    """Official publicly readable Lever postings API; complete description."""
+    a=[]
+    endpoint="https://api.lever.co/v0/postings/"+board+"?mode=json"
+    data=get(endpoint)
+    if not isinstance(data,list):raise ValueError("Unexpected Lever response")
+    for j in data:
+        cat=j.get("categories") or {}
+        places=j.get("allLocations") or [cat.get("location") or ""]
+        location=", ".join(dict.fromkeys(str(x) for x in places if x)) or str(cat.get("location") or "")
+        blocks=[j.get("descriptionPlain") or j.get("description") or ""]
+        for row in j.get("lists") or []:
+            blocks.append(str(row.get("text") or ""))
+            blocks.append(str(row.get("content") or ""))
+        blocks.append(j.get("additionalPlain") or j.get("additional") or "")
+        created=j.get("createdAt")
+        published=(created/1000 if isinstance(created,(int,float)) and created>10**11 else created)
+        add(a,j.get("text"),label,location,j.get("hostedUrl") or j.get("applyUrl"),
+            "\n".join(str(x) for x in blocks),published,"Lever / "+label,
+            "remote" in location.lower())
+    return a
+
+def ashby_board(board, label):
+    """Official public Ashby job board API; no authentication required."""
+    a=[]
+    response=get("https://api.ashbyhq.com/posting-api/job-board/"+board)
+    jobs=response.get("jobs",[])
+    for j in jobs:
+        if j.get("isListed") is False:continue
+        location=j.get("location") or ""
+        if isinstance(location,dict):
+            location=location.get("name") or str(location)
+        places=j.get("secondaryLocations") or []
+        if isinstance(places,list):
+            location="; ".join([str(location)]+[str(p.get("location") or p.get("name") or "") for p in places if isinstance(p,dict)])
+        add(a,j.get("title"),label,location,
+            j.get("jobUrl") or j.get("applyUrl"),j.get("descriptionHtml") or j.get("descriptionPlain"),
+            j.get("publishedAt"),"Ashby / "+label,bool(j.get("isRemote")))
+    return a
+
+def smartrecruiters_board(board, label):
+    """Official SmartRecruiters listings plus detail per role-relevant title."""
+    a=[]
+    root="https://api.smartrecruiters.com/v1/companies/"+board+"/postings"
+    offset=0
+    for _ in range(2):
+        resp=get(root+"?"+urlencode({"limit":100,"offset":offset}))
+        items=resp.get("content") or []
+        for item in items:
+            title=item.get("name") or ""
+            if not any(hits(p,title) for _,p in ROLE_RULES):continue
+            postid=item.get("id")
+            if not postid:continue
+            try:detail=get(root+"/"+str(postid))
+            except Exception as e:
+                print("SmartRecruiters detail failed",label,postid,type(e).__name__)
+                continue
+            loc=detail.get("location") or item.get("location") or {}
+            if isinstance(loc,dict):
+                location=", ".join(str(loc.get(z) or "") for z in ("city","region","country") if loc.get(z))
+            else:location=str(loc)
+            ad=(detail.get("jobAd") or {}).get("sections") or {}
+            description="\n".join(str(x.get("text") or "") for x in ad.values() if isinstance(x,dict))
+            if not description:continue
+            add(a,title,label,location,detail.get("ref") or item.get("ref") or
+                "https://jobs.smartrecruiters.com/"+board+"/"+str(postid),
+                description,detail.get("releasedDate") or item.get("releasedDate"),
+                "SmartRecruiters / "+label,False)
+        total=resp.get("totalFound") or len(items)
+        offset+=len(items)
+        if not items or offset>=total:break
+    return a
+
+def configured_feed(src):
+    adapter=src.get("adapter")
+    slug=src.get("slug")
+    name=src.get("name")
+    if adapter=="greenhouse":return greenhouse_board(slug,name)
+    if adapter=="lever":return lever_board(slug,name)
+    if adapter=="ashby":return ashby_board(slug,name)
+    if adapter=="smartrecruiters":return smartrecruiters_board(slug,name)
+    raise ValueError("Unknown ATS adapter "+str(adapter))
+
 def main():
     try:old=json.loads(OUT.read_text("utf-8"))
     except (FileNotFoundError,ValueError):old={"jobs":[]}
     merged={};passed=[];failed=[]
-    for name,fn in (("Arbeitnow",arbeitnow),("Remotive",remotive),("Jobicy",jobicy),
-                    ("Greenhouse / Monzo",lambda:greenhouse_board("monzo","Monzo")),
-                    ("Greenhouse / Tide",lambda:greenhouse_board("tide","Tide")),
-                    ("Greenhouse / Adyen",lambda:greenhouse_board("adyen","Adyen")),
-                    ("Greenhouse / Modulr",lambda:greenhouse_board("modulrfinance","Modulr")),
-                    ("Greenhouse / BVNK",lambda:greenhouse_board("bvnk","BVNK")),
-                    ("Greenhouse / Carta",lambda:greenhouse_board("carta","Carta")),
-                    ("Greenhouse / Capco",lambda:greenhouse_board("capco","Capco")),
-                    ("Greenhouse / B2C2",lambda:greenhouse_board("b2c2","B2C2")),
-                    ("Greenhouse / BitGo",lambda:greenhouse_board("bitgo","BitGo"))):
+    source_registry=json.loads(SOURCES.read_text("utf-8"))
+    candidates=[("Arbeitnow",arbeitnow,"general"),("Remotive",remotive,"general"),
+                ("Jobicy",jobicy,"general")]
+    candidates.extend((s["name"],(lambda src=s:configured_feed(src)),s["adapter"]) for s in source_registry.get("feeds",[]))
+    reports=[]
+    for name,fn,adapter in candidates:
         try:
             got=fn()
-            print(name+":",len(got),"qualified role-and-requirement matches")
+            print(name+":",len(got),"qualified CV matches")
             passed.append(name)
-            for j in got:merged.setdefault(j["url"].split("?")[0].rstrip("/").lower(),j)
+            reports.append({"name":name,"adapter":adapter,"status":"ok","matched":len(got)})
+            for j in got:
+                merged.setdefault(j["url"].split("?")[0].rstrip("/").lower(),j)
         except Exception as e:
-            failed.append(name+": "+type(e).__name__+" "+str(e)[:120])
+            err=type(e).__name__+" "+str(e)[:125]
+            failed.append(name+": "+err)
+            reports.append({"name":name,"adapter":adapter,"status":"failed","matched":0,"error":err})
             print("WARNING",failed[-1])
     if not passed:
         print("All sources failed; keep existing snapshot unchanged.")
@@ -152,7 +245,7 @@ def main():
     rows=sorted(merged.values(),key=lambda x:(x.get("publishedAt") or "",x["title"]),reverse=True)
     OUT.parent.mkdir(parents=True,exist_ok=True)
     OUT.write_text(json.dumps({"lastUpdateUtc":NOW.isoformat(timespec="seconds"),"sourcesSucceeded":passed,
-        "sourcesFailed":failed,"limitations":"Title, responsibilities and job requirements compared to sanitized CV role profiles. Estimated ATS-like score, not employer ATS, work authorization, or a visa decision.",
+        "sourcesFailed":failed,"sourceReports":reports,"sourceRegistryCount":{"feed":len(source_registry.get("feeds",[])),"browseOnly":len(source_registry.get("links",[]))},"limitations":"Title, responsibilities and job requirements compared to sanitized CV role profiles. Estimated ATS-like score, not employer ATS, work authorization, or a visa decision.",
         "jobs":rows},ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print("Saved",len(rows),"jobs")
 if __name__=="__main__":main()
