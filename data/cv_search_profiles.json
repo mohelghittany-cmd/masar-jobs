@@ -142,7 +142,8 @@
         "portfolio manager",
         "client portfolio"
       ],
-      "weight": 1.2
+      "weight": 1.2,
+      "apiSearchKeyword": "commercial banking"
     },
     {
       "id": "bank-sme",
@@ -177,7 +178,8 @@
         "small business banking",
         "business acquisition"
       ],
-      "weight": 1.15
+      "weight": 1.15,
+      "apiSearchKeyword": "business banking"
     },
     {
       "id": "bank-kyc",
@@ -216,7 +218,8 @@
         "kyc officer",
         "risk analyst"
       ],
-      "weight": 1.3
+      "weight": 1.3,
+      "apiSearchKeyword": "KYC"
     },
     {
       "id": "bank-aml",
@@ -251,7 +254,8 @@
         "aml operations",
         "aml officer"
       ],
-      "weight": 1.2
+      "weight": 1.2,
+      "apiSearchKeyword": "AML"
     },
     {
       "id": "bank-compliance",
@@ -286,7 +290,8 @@
         "client risk",
         "financial crime compliance"
       ],
-      "weight": 1.12
+      "weight": 1.12,
+      "apiSearchKeyword": "financial compliance"
     },
     {
       "id": "bank-trade",
@@ -321,7 +326,8 @@
         "transaction banking",
         "international payments"
       ],
-      "weight": 1.17
+      "weight": 1.17,
+      "apiSearchKeyword": "trade finance"
     },
     {
       "id": "bank-onboarding",
@@ -357,7 +363,8 @@
         "client onboarding",
         "account maintenance"
       ],
-      "weight": 1.2
+      "weight": 1.2,
+      "apiSearchKeyword": "corporate onboarding"
     },
     {
       "id": "alt-consult",
@@ -391,7 +398,8 @@
         "consulting support",
         "business analyst"
       ],
-      "weight": 1
+      "weight": 1,
+      "apiSearchKeyword": "business advisor"
     },
     {
       "id": "alt-b2b",
@@ -427,7 +435,8 @@
         "partnerships manager",
         "b2b sales"
       ],
-      "weight": 1.12
+      "weight": 1.12,
+      "apiSearchKeyword": "business development"
     },
     {
       "id": "alt-operations",
@@ -463,7 +472,8 @@
         "business support",
         "service delivery"
       ],
-      "weight": 1.09
+      "weight": 1.09,
+      "apiSearchKeyword": "operations coordinator"
     },
     {
       "id": "alt-keyaccounts",
@@ -498,7 +508,8 @@
         "client relationship",
         "account management"
       ],
-      "weight": 1.1
+      "weight": 1.1,
+      "apiSearchKeyword": "account manager"
     },
     {
       "id": "alt-customer",
@@ -534,7 +545,8 @@
         "customer care",
         "customer success"
       ],
-      "weight": 1.07
+      "weight": 1.07,
+      "apiSearchKeyword": "customer support"
     },
     {
       "id": "alt-finops",
@@ -570,7 +582,8 @@
         "finance operations",
         "transaction operations"
       ],
-      "weight": 1.09
+      "weight": 1.09,
+      "apiSearchKeyword": "payment operations"
     },
     {
       "id": "photo-creative",
@@ -605,7 +618,8 @@
         "photo retoucher",
         "videographer"
       ],
-      "weight": 0.9
+      "weight": 0.9,
+      "apiSearchKeyword": "photographer"
     }
   ]
 }
